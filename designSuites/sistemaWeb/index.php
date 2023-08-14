@@ -1,1 +1,3 @@
-header('Location: builder.php?sec=home');
+<script>
+    header('Location: builder.php?sec=home');
+</script>
