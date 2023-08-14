@@ -1,3 +1,3 @@
-<script>
+<?php
     header('Location: builder.php?sec=home');
-</script>
+?>

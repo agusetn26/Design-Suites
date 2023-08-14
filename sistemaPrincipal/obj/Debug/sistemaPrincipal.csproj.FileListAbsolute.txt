@@ -1,0 +1,10 @@
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\bin\Debug\sistemaPrincipal.exe.config
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\bin\Debug\sistemaPrincipal.exe
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\bin\Debug\sistemaPrincipal.pdb
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.Form1.resources
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.Properties.Resources.resources
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.csproj.GenerateResource.cache
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.exe
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.pdb
