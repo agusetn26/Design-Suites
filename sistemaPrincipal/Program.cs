@@ -16,7 +16,7 @@ namespace sistemaPrincipal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new builderForm());
+            Application.Run(new menu());
         }
     }
 }
