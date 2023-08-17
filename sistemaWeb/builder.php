@@ -12,9 +12,31 @@
 <body>
     <!-- Nav bar -->
 
+    <div class="row py-2 mx-5">
+        <div class="col-lg-2 text-center">
+            <img src="../img/logo.png" alt="DESING SUITES LOGO">
+        </div>
+        <div class="navmenu col-lg-10 d-lg-flex justify-content-end align-items-center text-center fs-4 pt-2">
+            <a href="#" class="fw-light text-dark text-uppercase ms-3">Buenos Aires</a>
+            <a href="#" class="fw-light text-dark text-uppercase ms-3">Bariloche</a>
+            <a href="#" class="fw-light text-dark text-uppercase ms-3">Calafate</a>
+            <a href="#" class="fw-light text-dark text-uppercase ms-3">Salta</a>
+            <a href="#" class="fw-light text-dark text-uppercase ms-3">Contacto</a>
+        </div>
+    </div>
+
 
     <!-- Reservas -->
 
+    <div class="row text-uppercase text-white fw-bold py-2" style="background-color: #5555FF;">
+        <p class="col-md-2 text-center m-0">Reservas Online</p>
+        <select name="" id="" class="col-md-3 ms-2">
+            <option selected="selected">Seleccione el hotel</option>
+        </select>
+        <input type="date" placeholder="ENTRADA" class="col-md-2 ms-2">
+        <input type="date" placeholder="SALIDA" class="col-md-2 ms-2">
+        <input type="submit" value="RESERVAR" class="col-md-2 ms-2 p-0">
+    </div>
 
     <!-- Apartados -->
 

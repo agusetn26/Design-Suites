@@ -17,3 +17,12 @@ body {
     max-width: 200px;
     margin-bottom: 40px;
 }
+
+
+.navmenu a{
+    font-family: sans-serif
+}
+
+a{
+    text-decoration: none;
+}
