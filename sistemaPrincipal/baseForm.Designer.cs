@@ -34,7 +34,7 @@ namespace sistemaPrincipal
             // 
             // title
             // 
-            this.title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Dock = System.Windows.Forms.DockStyle.Top;
             this.title.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.Color.White;
@@ -50,10 +50,10 @@ namespace sistemaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(134)))), ((int)(((byte)(209)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.title);
             this.Name = "baseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DSMS";
             this.ResumeLayout(false);
 

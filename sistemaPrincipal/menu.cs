@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace sistemaPrincipal
 {
     public partial class menu : baseForm
+
     {
         public menu()
         {
@@ -25,13 +26,13 @@ namespace sistemaPrincipal
         private void transparent_controls() 
         {
             items.Parent = hotelBoton;
-            items.BackColor = Color.Transparent;
+            
             items1.Parent = transaccionBoton;
-            items1.BackColor = Color.Transparent;
+         
             items2.Parent = proveedorBoton;
-            items2.BackColor = Color.Transparent;
+         
             items3.Parent = productosBoton;
-            items3.BackColor = Color.Transparent;
+           
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
