@@ -1,4 +1,4 @@
-<!-- carrusel chafa -->
+<!-- carrusel prestado -->
 
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
