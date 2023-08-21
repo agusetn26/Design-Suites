@@ -14,27 +14,42 @@ namespace sistemaPrincipal
 {
     public partial class baseForm : Form
     {
+        public Form currentForm = null;
         public baseForm()
         {
             InitializeComponent();
-            this.Paint += degradado;
+            changeForm(new menu(this));
         }
 
-        private void degradado(object sender, PaintEventArgs e)
+        public void changeForm(Form newForm)
         {
-            //Configuracion para el formuario
-            Color startColorForm = Color.FromArgb(3, 116, 180);
-            Color endColorForm = Color.FromArgb(1, 134, 209);
+            releaseForm(currentForm);
+           
+            newForm.TopLevel = false;
+            newForm.FormBorderStyle = FormBorderStyle.None;
+            newForm.Dock = DockStyle.Fill;
+            newForm.BackgroundImage = this.body.BackgroundImage;
+            newForm.BackgroundImageLayout = ImageLayout.Stretch;
 
-            //Configuracion para el titulo
-            Color startColorTitle = Color.FromArgb(235, 235, 235);
-            Color endColorTitle = Color.FromArgb(194, 191, 191);
+            currentForm = newForm;
+            this.body.Controls.Add(currentForm);
+            this.body.Tag = currentForm;
 
-            LinearGradientBrush degradadoForm = new LinearGradientBrush(this.ClientRectangle, startColorForm, endColorForm, LinearGradientMode.Horizontal);
-            LinearGradientBrush degradadoTitle = new LinearGradientBrush(title.ClientRectangle, startColorTitle, endColorTitle, LinearGradientMode.Horizontal);
-            
-            e.Graphics.FillRectangle(degradadoForm, this.ClientRectangle);
-            e.Graphics.FillRectangle(degradadoTitle, title.ClientRectangle);
+            currentForm.Show();
+        }
+
+        private void releaseForm(Form lastForm)
+        {
+            if (currentForm != null)
+            {
+                body.Controls.Clear();
+                lastForm.Close();
+                lastForm.Dispose();
+            }
+        }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -10,23 +10,17 @@ using System.Windows.Forms;
 
 namespace sistemaPrincipal
 {
-    public partial class hoteles : Form
+    public partial class formularioProveedor : Form
     {
         private baseForm currentBaseIns;
-        public hoteles(baseForm form)
+        public formularioProveedor(baseForm form)
         {
             InitializeComponent();
             currentBaseIns = form;
         }
-
         private void back(object sender, EventArgs e)
         {
-            currentBaseIns.changeForm(new menu(currentBaseIns));
-        }
-
-        private void addHotel(object sender, EventArgs e)
-        {
-            currentBaseIns.changeForm(new formularioHotel(currentBaseIns));
+            currentBaseIns.changeForm(new proveedores(currentBaseIns));
         }
     }
 }

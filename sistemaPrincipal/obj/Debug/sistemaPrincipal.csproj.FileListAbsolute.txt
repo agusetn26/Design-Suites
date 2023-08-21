@@ -9,3 +9,10 @@ C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.exe
 C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.pdb
 C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.baseForm.resources
 C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.menu.resources
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.hoteles.resources
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.formularioHotel.resources
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.transacciones.resources
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.proveedores.resources
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.formularioProveedor.resources
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.formularioProducto.resources
+C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.productos.resources

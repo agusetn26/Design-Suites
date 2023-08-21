@@ -1,7 +1,7 @@
 ﻿
 namespace sistemaPrincipal
 {
-    partial class hoteles
+    partial class proveedores
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@ namespace sistemaPrincipal
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hoteles));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(proveedores));
             this.panelEstructura = new System.Windows.Forms.TableLayoutPanel();
             this.backBoton = new System.Windows.Forms.Button();
             this.contenedorHoteles = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelEstructura.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contenedorHoteles)).BeginInit();
             this.SuspendLayout();
@@ -48,8 +48,8 @@ namespace sistemaPrincipal
             this.panelEstructura.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.panelEstructura.Controls.Add(this.backBoton, 0, 0);
             this.panelEstructura.Controls.Add(this.contenedorHoteles, 1, 1);
-            this.panelEstructura.Controls.Add(this.button1, 2, 0);
             this.panelEstructura.Controls.Add(this.label1, 1, 0);
+            this.panelEstructura.Controls.Add(this.button1, 2, 0);
             this.panelEstructura.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEstructura.Location = new System.Drawing.Point(0, 0);
             this.panelEstructura.Name = "panelEstructura";
@@ -57,7 +57,7 @@ namespace sistemaPrincipal
             this.panelEstructura.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.panelEstructura.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.panelEstructura.Size = new System.Drawing.Size(800, 380);
-            this.panelEstructura.TabIndex = 0;
+            this.panelEstructura.TabIndex = 2;
             // 
             // backBoton
             // 
@@ -89,6 +89,19 @@ namespace sistemaPrincipal
             this.contenedorHoteles.Size = new System.Drawing.Size(474, 298);
             this.contenedorHoteles.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(167, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(465, 39);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "LISTA DE PROVEEDORES";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
@@ -100,34 +113,23 @@ namespace sistemaPrincipal
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(643, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 70);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.addHotel);
+            this.button1.Click += new System.EventHandler(this.addProvider);
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(208, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 42);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "LISTA DE HOTELES";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // hoteles
+            // proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 380);
             this.Controls.Add(this.panelEstructura);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "hoteles";
+            this.Name = "proveedores";
             this.Text = "Form1";
             this.panelEstructura.ResumeLayout(false);
             this.panelEstructura.PerformLayout();
@@ -141,7 +143,7 @@ namespace sistemaPrincipal
         private System.Windows.Forms.TableLayoutPanel panelEstructura;
         private System.Windows.Forms.Button backBoton;
         private System.Windows.Forms.DataGridView contenedorHoteles;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

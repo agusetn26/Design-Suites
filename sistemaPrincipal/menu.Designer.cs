@@ -30,396 +30,214 @@ namespace sistemaPrincipal
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
-            this.panelPrincipal = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.items = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.hotelBoton = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.items1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.transaccionBoton = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.items2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.proveedorBoton = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.items3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.productosBoton = new System.Windows.Forms.Button();
-            this.atomixIcon = new System.Windows.Forms.PictureBox();
-            this.panelPrincipal.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.items.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.items1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.items2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.items3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atomixIcon)).BeginInit();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panelEstructura = new System.Windows.Forms.TableLayoutPanel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.panelEstructura.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelPrincipal
+            // button4
             // 
-            this.panelPrincipal.BackColor = System.Drawing.Color.Transparent;
-            this.panelPrincipal.ColumnCount = 3;
-            this.panelPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.panelPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.panelPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.panelPrincipal.Controls.Add(this.panel1, 0, 0);
-            this.panelPrincipal.Controls.Add(this.panel2, 2, 0);
-            this.panelPrincipal.Controls.Add(this.panel3, 0, 1);
-            this.panelPrincipal.Controls.Add(this.panel4, 2, 1);
-            this.panelPrincipal.Controls.Add(this.atomixIcon, 1, 0);
-            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Padding = new System.Windows.Forms.Padding(30);
-            this.panelPrincipal.RowCount = 3;
-            this.panelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.panelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.panelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.panelPrincipal.Size = new System.Drawing.Size(800, 450);
-            this.panelPrincipal.TabIndex = 6;
-            this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(446, 240);
+            this.button4.Margin = new System.Windows.Forms.Padding(0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(308, 123);
+            this.button4.TabIndex = 3;
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // button3
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.items);
-            this.panel1.Controls.Add(this.hotelBoton);
-            this.panel1.Location = new System.Drawing.Point(33, 65);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 114);
-            this.panel1.TabIndex = 8;
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(46, 240);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(308, 123);
+            this.button3.TabIndex = 2;
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // items
+            // button2
             // 
-            this.items.BackColor = System.Drawing.Color.Transparent;
-            this.items.ColumnCount = 2;
-            this.items.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.items.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.items.Controls.Add(this.pictureBox2, 0, 0);
-            this.items.Controls.Add(this.label1, 1, 0);
-            this.items.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.items.Enabled = false;
-            this.items.Location = new System.Drawing.Point(0, 0);
-            this.items.Name = "items";
-            this.items.RowCount = 1;
-            this.items.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.items.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 114F));
-            this.items.Size = new System.Drawing.Size(216, 114);
-            this.items.TabIndex = 7;
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(446, 39);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(308, 123);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // button1
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox2.Enabled = false;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 18);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(86, 78);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(46, 39);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(308, 123);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // panelEstructura
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(89, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 28);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "HOTELES";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.panelEstructura.BackColor = System.Drawing.Color.Transparent;
+            this.panelEstructura.ColumnCount = 2;
+            this.panelEstructura.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelEstructura.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelEstructura.Controls.Add(this.button5, 1, 1);
+            this.panelEstructura.Controls.Add(this.button6, 0, 1);
+            this.panelEstructura.Controls.Add(this.button7, 1, 0);
+            this.panelEstructura.Controls.Add(this.button8, 0, 0);
+            this.panelEstructura.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEstructura.Location = new System.Drawing.Point(0, 0);
+            this.panelEstructura.Margin = new System.Windows.Forms.Padding(0);
+            this.panelEstructura.Name = "panelEstructura";
+            this.panelEstructura.RowCount = 2;
+            this.panelEstructura.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelEstructura.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelEstructura.Size = new System.Drawing.Size(800, 380);
+            this.panelEstructura.TabIndex = 7;
+            this.panelEstructura.Tag = "";
             // 
-            // hotelBoton
+            // button5
             // 
-            this.hotelBoton.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.hotelBoton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hotelBoton.Location = new System.Drawing.Point(0, 0);
-            this.hotelBoton.Name = "hotelBoton";
-            this.hotelBoton.Size = new System.Drawing.Size(216, 114);
-            this.hotelBoton.TabIndex = 0;
-            this.hotelBoton.UseVisualStyleBackColor = true;
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(446, 223);
+            this.button5.Margin = new System.Windows.Forms.Padding(0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(308, 123);
+            this.button5.TabIndex = 3;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.productos);
             // 
-            // panel2
+            // button6
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.items1);
-            this.panel2.Controls.Add(this.transaccionBoton);
-            this.panel2.Location = new System.Drawing.Point(551, 62);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(216, 120);
-            this.panel2.TabIndex = 10;
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(46, 223);
+            this.button6.Margin = new System.Windows.Forms.Padding(0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(308, 123);
+            this.button6.TabIndex = 2;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.proveedores);
             // 
-            // items1
+            // button7
             // 
-            this.items1.BackColor = System.Drawing.Color.Transparent;
-            this.items1.ColumnCount = 2;
-            this.items1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.items1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.items1.Controls.Add(this.pictureBox3, 0, 0);
-            this.items1.Controls.Add(this.label2, 1, 0);
-            this.items1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.items1.Enabled = false;
-            this.items1.Location = new System.Drawing.Point(0, 0);
-            this.items1.Name = "items1";
-            this.items1.RowCount = 1;
-            this.items1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.items1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.items1.Size = new System.Drawing.Size(216, 120);
-            this.items1.TabIndex = 11;
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(446, 33);
+            this.button7.Margin = new System.Windows.Forms.Padding(0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(308, 123);
+            this.button7.TabIndex = 1;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.transacciones);
             // 
-            // pictureBox3
+            // button8
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox3.Enabled = false;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 21);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(86, 78);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(89, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 56);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "TRANSACCIONES";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // transaccionBoton
-            // 
-            this.transaccionBoton.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.transaccionBoton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.transaccionBoton.Location = new System.Drawing.Point(0, 0);
-            this.transaccionBoton.Name = "transaccionBoton";
-            this.transaccionBoton.Size = new System.Drawing.Size(216, 120);
-            this.transaccionBoton.TabIndex = 9;
-            this.transaccionBoton.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.items2);
-            this.panel3.Controls.Add(this.proveedorBoton);
-            this.panel3.Location = new System.Drawing.Point(33, 253);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(216, 108);
-            this.panel3.TabIndex = 11;
-            // 
-            // items2
-            // 
-            this.items2.BackColor = System.Drawing.Color.Transparent;
-            this.items2.ColumnCount = 2;
-            this.items2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.items2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.items2.Controls.Add(this.label3, 1, 0);
-            this.items2.Controls.Add(this.pictureBox4, 0, 0);
-            this.items2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.items2.Enabled = false;
-            this.items2.Location = new System.Drawing.Point(0, 0);
-            this.items2.Name = "items2";
-            this.items2.RowCount = 1;
-            this.items2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.items2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 108F));
-            this.items2.Size = new System.Drawing.Size(216, 108);
-            this.items2.TabIndex = 12;
-            this.items2.Paint += new System.Windows.Forms.PaintEventHandler(this.items2_Paint);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(89, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 56);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "PROVEEDORES";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox4.Enabled = false;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(0, 15);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(86, 78);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // proveedorBoton
-            // 
-            this.proveedorBoton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.proveedorBoton.Location = new System.Drawing.Point(0, 0);
-            this.proveedorBoton.Name = "proveedorBoton";
-            this.proveedorBoton.Size = new System.Drawing.Size(216, 108);
-            this.proveedorBoton.TabIndex = 7;
-            this.proveedorBoton.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.items3);
-            this.panel4.Controls.Add(this.productosBoton);
-            this.panel4.Location = new System.Drawing.Point(551, 252);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(216, 110);
-            this.panel4.TabIndex = 12;
-            // 
-            // items3
-            // 
-            this.items3.AutoScroll = true;
-            this.items3.BackColor = System.Drawing.Color.Transparent;
-            this.items3.ColumnCount = 2;
-            this.items3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.items3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.items3.Controls.Add(this.label4, 1, 0);
-            this.items3.Controls.Add(this.pictureBox5, 0, 0);
-            this.items3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.items3.Enabled = false;
-            this.items3.Location = new System.Drawing.Point(0, 0);
-            this.items3.Name = "items3";
-            this.items3.RowCount = 1;
-            this.items3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.items3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.items3.Size = new System.Drawing.Size(216, 110);
-            this.items3.TabIndex = 13;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(89, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 56);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "PRODUCTOS";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox5.Enabled = false;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(0, 16);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(86, 78);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
-            // 
-            // productosBoton
-            // 
-            this.productosBoton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productosBoton.Location = new System.Drawing.Point(0, 0);
-            this.productosBoton.Name = "productosBoton";
-            this.productosBoton.Size = new System.Drawing.Size(216, 110);
-            this.productosBoton.TabIndex = 7;
-            this.productosBoton.UseVisualStyleBackColor = true;
-            this.productosBoton.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // atomixIcon
-            // 
-            this.atomixIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.atomixIcon.BackColor = System.Drawing.Color.Transparent;
-            this.atomixIcon.Image = ((System.Drawing.Image)(resources.GetObject("atomixIcon.Image")));
-            this.atomixIcon.Location = new System.Drawing.Point(255, 68);
-            this.atomixIcon.MaximumSize = new System.Drawing.Size(0, 1500);
-            this.atomixIcon.Name = "atomixIcon";
-            this.panelPrincipal.SetRowSpan(this.atomixIcon, 2);
-            this.atomixIcon.Size = new System.Drawing.Size(290, 294);
-            this.atomixIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.atomixIcon.TabIndex = 13;
-            this.atomixIcon.TabStop = false;
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(46, 33);
+            this.button8.Margin = new System.Windows.Forms.Padding(0);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(308, 123);
+            this.button8.TabIndex = 0;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.hoteles);
             // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelPrincipal);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(800, 380);
+            this.Controls.Add(this.panelEstructura);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "menu";
-            this.Load += new System.EventHandler(this.menu_Load);
-            this.Controls.SetChildIndex(this.panelPrincipal, 0);
-            this.panelPrincipal.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.items.ResumeLayout(false);
-            this.items.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.items1.ResumeLayout(false);
-            this.items1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.items2.ResumeLayout(false);
-            this.items2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.items3.ResumeLayout(false);
-            this.items3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.atomixIcon)).EndInit();
+            this.Text = "Form1";
+            this.panelEstructura.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel panelPrincipal;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button hotelBoton;
-        private System.Windows.Forms.TableLayoutPanel items;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button transaccionBoton;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TableLayoutPanel items1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TableLayoutPanel items2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TableLayoutPanel items3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button proveedorBoton;
-        private System.Windows.Forms.Button productosBoton;
-        private System.Windows.Forms.PictureBox atomixIcon;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel panelEstructura;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
