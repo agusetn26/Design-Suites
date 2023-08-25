@@ -220,6 +220,7 @@ namespace sistemaPrincipal
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 380);
             this.Controls.Add(this.panelEstructura);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "menu";
             this.Text = "Form1";

@@ -33,7 +33,6 @@ namespace sistemaPrincipal
 
             currentForm = newForm;
             this.body.Controls.Add(currentForm);
-            this.body.Tag = currentForm;
 
             currentForm.Show();
         }

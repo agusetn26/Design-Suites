@@ -46,84 +46,85 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="baseForm.cs">
+    <Compile Include="DAL\baseDeDatos.cs" />
+    <Compile Include="UI\baseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="baseForm.Designer.cs">
+    <Compile Include="UI\baseForm.Designer.cs">
       <DependentUpon>baseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="formularioProducto.cs">
+    <Compile Include="UI\formularioProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularioProducto.Designer.cs">
+    <Compile Include="UI\formularioProducto.Designer.cs">
       <DependentUpon>formularioProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="productos.cs">
+    <Compile Include="UI\productos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="productos.Designer.cs">
+    <Compile Include="UI\productos.Designer.cs">
       <DependentUpon>productos.cs</DependentUpon>
     </Compile>
-    <Compile Include="formularioProveedor.cs">
+    <Compile Include="UI\formularioProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularioProveedor.Designer.cs">
+    <Compile Include="UI\formularioProveedor.Designer.cs">
       <DependentUpon>formularioProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="proveedores.cs">
+    <Compile Include="UI\proveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="proveedores.Designer.cs">
+    <Compile Include="UI\proveedores.Designer.cs">
       <DependentUpon>proveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="transacciones.cs">
+    <Compile Include="UI\transacciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="transacciones.Designer.cs">
+    <Compile Include="UI\transacciones.Designer.cs">
       <DependentUpon>transacciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="formularioHotel.cs">
+    <Compile Include="UI\formularioHotel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularioHotel.Designer.cs">
+    <Compile Include="UI\formularioHotel.Designer.cs">
       <DependentUpon>formularioHotel.cs</DependentUpon>
     </Compile>
-    <Compile Include="hoteles.cs">
+    <Compile Include="UI\hoteles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="hoteles.Designer.cs">
+    <Compile Include="UI\hoteles.Designer.cs">
       <DependentUpon>hoteles.cs</DependentUpon>
     </Compile>
-    <Compile Include="menu.cs">
+    <Compile Include="UI\menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menu.Designer.cs">
+    <Compile Include="UI\menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="baseForm.resx">
+    <EmbeddedResource Include="UI\baseForm.resx">
       <DependentUpon>baseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularioProducto.resx">
+    <EmbeddedResource Include="UI\formularioProducto.resx">
       <DependentUpon>formularioProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="productos.resx">
+    <EmbeddedResource Include="UI\productos.resx">
       <DependentUpon>productos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularioProveedor.resx">
+    <EmbeddedResource Include="UI\formularioProveedor.resx">
       <DependentUpon>formularioProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="proveedores.resx">
+    <EmbeddedResource Include="UI\proveedores.resx">
       <DependentUpon>proveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularioHotel.resx">
+    <EmbeddedResource Include="UI\formularioHotel.resx">
       <DependentUpon>formularioHotel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="hoteles.resx">
+    <EmbeddedResource Include="UI\hoteles.resx">
       <DependentUpon>hoteles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menu.resx">
+    <EmbeddedResource Include="UI\menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,7 +136,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="transacciones.resx">
+    <EmbeddedResource Include="UI\transacciones.resx">
       <DependentUpon>transacciones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -150,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

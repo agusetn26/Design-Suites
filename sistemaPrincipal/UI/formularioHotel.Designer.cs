@@ -347,6 +347,7 @@ namespace sistemaPrincipal
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 341);
             this.Controls.Add(this.panelEstructura);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formularioHotel";
             this.Text = "Form1";

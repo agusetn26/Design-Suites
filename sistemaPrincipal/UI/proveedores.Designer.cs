@@ -128,6 +128,7 @@ namespace sistemaPrincipal
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 380);
             this.Controls.Add(this.panelEstructura);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "proveedores";
             this.Text = "Form1";

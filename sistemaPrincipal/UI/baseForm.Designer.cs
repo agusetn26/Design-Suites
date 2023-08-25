@@ -43,7 +43,7 @@ namespace sistemaPrincipal
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 70);
+            this.panel1.Size = new System.Drawing.Size(884, 70);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -56,7 +56,7 @@ namespace sistemaPrincipal
             this.body.Location = new System.Drawing.Point(0, 70);
             this.body.Margin = new System.Windows.Forms.Padding(5);
             this.body.Name = "body";
-            this.body.Size = new System.Drawing.Size(800, 380);
+            this.body.Size = new System.Drawing.Size(884, 411);
             this.body.TabIndex = 1;
             this.body.TabStop = true;
             // 
@@ -66,10 +66,11 @@ namespace sistemaPrincipal
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(884, 481);
             this.Controls.Add(this.body);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
+            this.MinimumSize = new System.Drawing.Size(900, 520);
             this.Name = "baseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DSMS";
