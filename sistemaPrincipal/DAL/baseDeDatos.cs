@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace sistemaPrincipal.DAL
 {
@@ -12,21 +13,20 @@ namespace sistemaPrincipal.DAL
     {
         private string connStr = "Data Source=DESKTOP-L8KEE59; Initial Catalog=design_suites; Integrated Security=True";
         SqlConnection conn;
-        public SqlConnection conexion()
+
+        public baseDeDatos()
         {
             conn = new SqlConnection(connStr);
-            return conn;
         }
 
-        public DataSet consultas()
+        public DataSet consultasConR(string sqlStr)
         {
             DataSet data = new DataSet();
             SqlDataAdapter adapter = new SqlDataAdapter();
 
+            try {
 
-            try { 
-                SqlCommand sqlCom = new SqlCommand("SELECT * FROM hoteles");
-                sqlCom.Connection = conexion();
+                SqlCommand sqlCom = new SqlCommand(sqlStr, conn);
                 adapter.SelectCommand = sqlCom;
                 conn.Open();
                 adapter.Fill(data);
@@ -36,8 +36,29 @@ namespace sistemaPrincipal.DAL
                 return data;
             } 
             catch (Exception ex) {
-                Console.WriteLine(ex);
-                return data;
+
+                MessageBox.Show(ex.Message);
+                DataSet emptyTable = new DataSet();
+                emptyTable.Tables.Add(new DataTable());
+
+                return emptyTable;
+            }
+        }
+
+        public void consultasSinR(string sqlStr)
+        {
+            try
+            {
+                SqlCommand sqlCom = new SqlCommand(sqlStr, conn);
+                conn.Open();
+                sqlCom.ExecuteNonQuery();
+                conn.Close();
+                Console.WriteLine("success");
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

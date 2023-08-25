@@ -84,7 +84,7 @@ namespace sistemaPrincipal
             this.backBoton.ForeColor = System.Drawing.Color.White;
             this.backBoton.Location = new System.Drawing.Point(3, 3);
             this.backBoton.Name = "backBoton";
-            this.backBoton.Size = new System.Drawing.Size(150, 69);
+            this.backBoton.Size = new System.Drawing.Size(150, 70);
             this.backBoton.TabIndex = 0;
             this.backBoton.UseVisualStyleBackColor = false;
             this.backBoton.Click += new System.EventHandler(this.back);
@@ -97,7 +97,7 @@ namespace sistemaPrincipal
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(159, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 75);
+            this.label1.Size = new System.Drawing.Size(464, 76);
             this.label1.TabIndex = 3;
             this.label1.Text = "RELLENE FORMULARIO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,7 +116,7 @@ namespace sistemaPrincipal
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(159, 78);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(159, 79);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -124,14 +124,14 @@ namespace sistemaPrincipal
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(464, 248);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(464, 247);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(232, 73);
+            this.textBox2.Location = new System.Drawing.Point(232, 71);
             this.textBox2.Margin = new System.Windows.Forms.Padding(0);
             this.textBox2.MaxLength = 200;
             this.textBox2.Name = "textBox2";
@@ -143,7 +143,7 @@ namespace sistemaPrincipal
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(232, 11);
+            this.textBox1.Location = new System.Drawing.Point(232, 10);
             this.textBox1.Margin = new System.Windows.Forms.Padding(0);
             this.textBox1.MaxLength = 200;
             this.textBox1.Name = "textBox1";
@@ -157,10 +157,10 @@ namespace sistemaPrincipal
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 189);
+            this.label5.Location = new System.Drawing.Point(3, 186);
             this.label5.Margin = new System.Windows.Forms.Padding(3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(226, 56);
+            this.label5.Size = new System.Drawing.Size(226, 58);
             this.label5.TabIndex = 11;
             this.label5.Text = "Oferta:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,7 +169,7 @@ namespace sistemaPrincipal
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(232, 135);
+            this.textBox3.Location = new System.Drawing.Point(232, 132);
             this.textBox3.Margin = new System.Windows.Forms.Padding(0);
             this.textBox3.MaxLength = 200;
             this.textBox3.Name = "textBox3";
@@ -183,10 +183,10 @@ namespace sistemaPrincipal
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 127);
+            this.label3.Location = new System.Drawing.Point(3, 125);
             this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(226, 56);
+            this.label3.Size = new System.Drawing.Size(226, 55);
             this.label3.TabIndex = 9;
             this.label3.Text = "Contacto:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -197,10 +197,10 @@ namespace sistemaPrincipal
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 65);
+            this.label4.Location = new System.Drawing.Point(3, 64);
             this.label4.Margin = new System.Windows.Forms.Padding(3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(226, 56);
+            this.label4.Size = new System.Drawing.Size(226, 55);
             this.label4.TabIndex = 6;
             this.label4.Text = "Dirección:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -214,7 +214,7 @@ namespace sistemaPrincipal
             this.label2.Location = new System.Drawing.Point(3, 3);
             this.label2.Margin = new System.Windows.Forms.Padding(3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(226, 56);
+            this.label2.Size = new System.Drawing.Size(226, 55);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nombre del proveedor:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,7 +223,7 @@ namespace sistemaPrincipal
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(232, 197);
+            this.textBox4.Location = new System.Drawing.Point(232, 195);
             this.textBox4.Margin = new System.Windows.Forms.Padding(0);
             this.textBox4.MaxLength = 200;
             this.textBox4.Name = "textBox4";
@@ -233,12 +233,12 @@ namespace sistemaPrincipal
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(629, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(629, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(152, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;

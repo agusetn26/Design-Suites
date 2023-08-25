@@ -15,10 +15,10 @@ namespace sistemaPrincipal
     public partial class hoteles : Form
     {
         private baseForm currentBaseIns;
-        private baseDeDatos db;
+        private hotelDAL dal;
         public hoteles(baseForm form)
         {
-            db = new baseDeDatos();
+            hotelDAL dal = new hotelDAL();
             currentBaseIns = form;
             InitializeComponent();
             tableContent();
@@ -26,12 +26,16 @@ namespace sistemaPrincipal
 
         private void tableContent()
         {
-            contenedorHoteles.DataSource = db.consultas().Tables[0];
+            DataSet rows = dal.select("SELECT * FROM hoteles;");
+            contenedorHoteles.DataSource = rows.Tables[0];
+
             DataGridViewCheckBoxColumn checkboxCol = new DataGridViewCheckBoxColumn();
             checkboxCol.HeaderText = "seleccionar";
             checkboxCol.Name = "seleccionar";
             checkboxCol.ReadOnly = false;
             contenedorHoteles.Columns.Add(checkboxCol);
+
+
         }
 
         private void back(object sender, EventArgs e)

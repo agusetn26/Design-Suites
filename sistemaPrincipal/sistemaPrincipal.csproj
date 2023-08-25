@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\hotelBLL.cs" />
     <Compile Include="DAL\baseDeDatos.cs" />
+    <Compile Include="DAL\hotelDAL.cs" />
     <Compile Include="UI\baseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,8 +154,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
