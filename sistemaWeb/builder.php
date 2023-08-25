@@ -47,45 +47,23 @@
     <nav class="">
         <div class="container">
             <header class="d-flex flex-wrap justify-content-center py-3" style="align-items: center;">
-                <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <a href="?sec=home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                     <img src="../img/logo.png" alt="logo" width="150" height="75">
                 </a>
 
                 <ul class="nav col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            BUENOS AIRES
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-dark" href="#">HABITACIONES</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            BARILOCHE
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-dark" href="#">HABITACIONES</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            CALAFATE
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-dark" href="#">HABITACIONES</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            SALTA
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-dark" href="#">HABITACIONES</a></li>
-                        </ul>
-                    </li>
+                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=buenosAires" id="navbarDropdown" role="button">
+                        BUENOS AIRES
+                    </a>
+                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=bariloche" id="navbarDropdown" role="button">
+                        BARILOCHE
+                    </a>
+                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=calafate" id="navbarDropdown" role="button">
+                        CALAFATE
+                    </a>
+                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=salta" id="navbarDropdown" role="button">
+                        SALTA
+                    </a>
                     <li class="nav-item"><a href="#" class="nav-link text-dark">CONTACTO</a></li>
                 </ul>
             </header>
@@ -124,8 +102,8 @@
     <!-- Apartados -->
 
     <div id="contenedorPrincipal">
-        <?php 
-            require_once 'views/' . $_GET['sec'] . ".php";
+        <?php
+        require_once 'views/' . $_GET['sec'] . ".php";
         ?>
     </div>
 
