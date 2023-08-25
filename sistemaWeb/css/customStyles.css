@@ -30,3 +30,12 @@ a {
 /*------------------------------------*/
 
 /*!!!!!!!!NO TOCAR, EL QUE LO TOCA ES GAY¡¡¡¡¡¡¡¡¡: https://bbbootstrap.com/snippets/simple-image-overlay-hover-effect-38877551 */
+/*😈*/
+.imgCard {
+    transition: transform .2s;
+    cursor: pointer; 
+}
+ 
+.imgCard:hover {
+    transform: scale(1.05); 
+}
