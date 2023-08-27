@@ -1,0 +1,19 @@
+En el archivo "design_suites.txt" se encuentra el codigo SQL de la db, esta crea tanto las tablas y los registros.
+
+Para que no tengan problema al importarla, deberan fijarse una cosa en el archivo de esta db y algo de un script de db que genere la maquina en donde quieran importar esta db.
+
+Pasos:
+1. En nustro archivo, al comienzo encontrar una parte que esta comentada, dice algo como "cambiar MSSQLSERVER (o algo asi)", eso sirve como guia para saber donde deberan cambiar.
+
+2. Creen una db (con alguna tabla y algunos registros) en la computadora donde quieran importar nuestra db y exportenla correctamente.
+
+3. Abran el archivo que exportaron en txt o en el mismo SQL Server Management, y comparen la primera parte de nuestro archivo con el que generaron. En donde deje el mensaje comentado (de nuestro archivo), deberia haber una diferencia en la url/directorio, en el nuestro cambienla como dice en el que generaron, asi coicide y no hay problemas al ejecutarlo.
+ALERT: Si no hay diferencia, no deberia de haber problema al ejecutarlo.
+
+4. Estos cambios que hicieron en nuestro archivo no lo suban a github asi no generamos confusion, es solo para que lo puedan importar en su computadora (ya sea la de su casa o en la escuela).
+
+IMPORTANTE: Es necesario que memorizen esto asi cuando hagamos cambios en la db (tablas o registros) y tengamos que exportarla, ya sepamos lo que tenemos que hacer. Igual voy a dejar el txt de la db base asi lo usan como guia, en caso de que haya mas diferencias ademas de la url/directorio que mencione antes.
+
+Cualquier duda avisen me.
+
+Att: Pirbik
