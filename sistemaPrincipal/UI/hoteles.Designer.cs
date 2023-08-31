@@ -30,6 +30,7 @@ namespace sistemaPrincipal
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hoteles));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelEstructura = new System.Windows.Forms.TableLayoutPanel();
             this.backBoton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -116,12 +117,16 @@ namespace sistemaPrincipal
             this.contenedorHoteles.AllowUserToDeleteRows = false;
             this.contenedorHoteles.AllowUserToResizeColumns = false;
             this.contenedorHoteles.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
+            this.contenedorHoteles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.contenedorHoteles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.contenedorHoteles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.contenedorHoteles.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
             this.contenedorHoteles.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.contenedorHoteles.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.contenedorHoteles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.contenedorHoteles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedorHoteles.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.contenedorHoteles.Location = new System.Drawing.Point(163, 79);
             this.contenedorHoteles.Name = "contenedorHoteles";
             this.contenedorHoteles.ReadOnly = true;
@@ -134,6 +139,7 @@ namespace sistemaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 380);
             this.Controls.Add(this.panelEstructura);
             this.DoubleBuffered = true;

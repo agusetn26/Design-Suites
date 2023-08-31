@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace sistemaPrincipal.DAL
 {
-    internal class hotelDAL
+    class hotelDAL
     {
         baseDeDatos db;
         public hotelDAL() 
@@ -18,7 +18,6 @@ namespace sistemaPrincipal.DAL
         
         public DataSet select(string sql) {
             return db.consultasConR(sql);
-
         }
     }
 }

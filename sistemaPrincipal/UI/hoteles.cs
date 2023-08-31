@@ -18,7 +18,7 @@ namespace sistemaPrincipal
         private hotelDAL dal;
         public hoteles(baseForm form)
         {
-            hotelDAL dal = new hotelDAL();
+            dal = new hotelDAL();
             currentBaseIns = form;
             InitializeComponent();
             tableContent();

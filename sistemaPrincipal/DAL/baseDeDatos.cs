@@ -17,8 +17,8 @@ namespace sistemaPrincipal.DAL
         public baseDeDatos()
         {
             conn = new SqlConnection(connStr);
-        }
 
+        }
         public DataSet consultasConR(string sqlStr)
         {
             DataSet data = new DataSet();
