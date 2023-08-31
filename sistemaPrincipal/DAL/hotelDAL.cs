@@ -16,8 +16,8 @@ namespace sistemaPrincipal.DAL
             db = new baseDeDatos();
         }
         
-        public DataSet select(string sql) {
-            return db.consultasConR(sql);
+        public DataSet select() {
+            return db.consultasConR("SELECT * FROM hoteles;");
         }
     }
 }

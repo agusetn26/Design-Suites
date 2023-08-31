@@ -131,10 +131,19 @@ a {
 
     
     .hentai{
-    transition: transform 0.3s ease;
+        transition: transform 0.3s ease;
     }
     
     .hentai:hover{
         transform: scale(1.05);
     }
     
+/*😈*/
+.imgCard {
+    transition: transform .2s;
+    cursor: pointer; 
+}
+ 
+.imgCard:hover {
+    transform: scale(1.05); 
+}

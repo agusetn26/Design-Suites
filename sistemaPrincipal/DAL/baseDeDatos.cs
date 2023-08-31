@@ -38,10 +38,9 @@ namespace sistemaPrincipal.DAL
             catch (Exception ex) {
 
                 MessageBox.Show(ex.Message);
-                DataSet emptyTable = new DataSet();
-                emptyTable.Tables.Add(new DataTable());
+                data.Tables.Add(new DataTable());
 
-                return emptyTable;
+                return data;
             }
         }
 
