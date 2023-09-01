@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/customStyles.css">
     <link rel="shortcut icon" href="../img/logo-dark.png" type="image/x-icon">
-    <title> <?php echo(ucfirst($_GET['sec'])); ?> - Design Suites</title>
+    <title> <?php echo (ucfirst($_GET['sec'])); ?> - Design Suites</title>
 </head>
 
 <body>
@@ -51,7 +51,20 @@
                 <a href="?sec=home">
                     <img src="../img/logo.png" alt="logo" width="150" height="75">
                 </a>
+                <div class="nav col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Hoteles
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Buenos Aires" id="navbarDropdown" role="button">BUENOS AIRES</a></li>
+                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Bariloche" id="navbarDropdown" role="button">BARILOCHE</a></li>
+                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Calafate" id="navbarDropdown" role="button">CALAFATE</a></li>
+                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Salta" id="navbarDropdown" role="button">SALTA</a></li>
+                        </ul>
+                    </div>
 
+<<<<<<< HEAD
                 <ul class="nav col-lg-auto my-2 justify-content-center my-md-0 text-small">
                     <a class="nav-link text-dark" href="?sec=hoteles&ubi=0" id="navbarDropdown" role="button">
                         BUENOS AIRES
@@ -67,6 +80,10 @@
                     </a>
                     <li class="nav-item"><a href="?sec=contacto" class="nav-link text-dark">CONTACTO</a></li>
                 </ul>
+=======
+                    <li class="nav-item"><a href="#" class="nav-link text-dark">CONTACTO</a></li>
+                </div>
+>>>>>>> 79119047369a2498d8a6f509ff3eca3c7bba74bc
             </header>
         </div>
     </nav>
