@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/customStyles.css">
     <link rel="shortcut icon" href="../img/logo-dark.png" type="image/x-icon">
-    <title> <?php echo (ucfirst($_GET['sec'])); ?> - Design Suites</title>
+    <title>
+        <?php echo (ucfirst($_GET['sec'])); ?> - Design Suites
+    </title>
 </head>
 
 <body>
@@ -21,21 +24,26 @@
                     <span class="material-symbols-outlined">
                         call
                     </span>
-                    <a class="nav-link active" href="#" aria-current="page">(+54)11 4896-6340</a>
+                    <a class="nav-link active" href="#" aria-current="page">(+54) 11 4896-6340</a>
                 </li>
                 <br>
                 <li class="nav-item d-flex align-items-center text-white mx-5">
                     <span class="material-symbols-outlined">
                         verified_user
                     </span>
-                    <a class="nav-link active" href="https://www.designsuites.com/protocolo.php" aria-current="page">PROTOCOLO DE SEGURIDAD</a>
+                    <a class="nav-link active" href="https://www.designsuites.com/protocolo.php"
+                        aria-current="page">PROTOCOLO DE SEGURIDAD</a>
                 </li>
                 <br>
                 <li class="nav-item d-flex align-items-center mx-5">
-                    <a class="nav-link active border border-light mx-2 text-center" style="height: 42px; width: 42px" href="https://www.facebook.com/designsuites" aria-current="page">
+                    <a class="nav-link active border border-light mx-2 text-center" target="_blank"
+                        style="height: 42px; width: 42px" href="https://www.facebook.com/designsuites"
+                        aria-current="page">
                         <img src="../img/f.png" alt="facebooklogo" width="20">
                     </a>
-                    <a class="nav-link active border border-light mx-2 text-center" style="height: 42px; width: 42px" href="https://www.instagram.com/designsuites/" aria-current="page">
+                    <a class="nav-link active border border-light mx-2 text-center" target="_blank"
+                        style="height: 42px; width: 42px" href="https://www.instagram.com/designsuites/"
+                        aria-current="page">
                         <img src="../img/i.png" alt="instagramlogo" width="20">
                     </a>
                 </li>
@@ -47,43 +55,36 @@
 
     <nav>
         <div class="container">
-            <header class="d-flex flex-wrap justify-content-center py-3" style="align-items: center;">
-                <a href="?sec=home">
+            <header class="d-flex flex-wrap flex-column justify-content-center my-3" style="align-items: center;">
+                <a href="?sec=home" class="mb-3">
                     <img src="../img/logo.png" alt="logo" width="150" height="75">
                 </a>
-                <div class="nav col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                    <div class="dropdown">
-                        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Hoteles
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Buenos Aires" id="navbarDropdown" role="button">BUENOS AIRES</a></li>
-                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Bariloche" id="navbarDropdown" role="button">BARILOCHE</a></li>
-                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Calafate" id="navbarDropdown" role="button">CALAFATE</a></li>
-                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Salta" id="navbarDropdown" role="button">SALTA</a></li>
-                        </ul>
-                    </div>
 
-<<<<<<< HEAD
-                <ul class="nav col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=0" id="navbarDropdown" role="button">
-                        BUENOS AIRES
-                    </a>
-                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=1" id="navbarDropdown" role="button">
-                        BARILOCHE
-                    </a>
-                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=2" id="navbarDropdown" role="button">
-                        CALAFATE
-                    </a>
-                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=3" id="navbarDropdown" role="button">
-                        SALTA
-                    </a>
-                    <li class="nav-item"><a href="?sec=contacto" class="nav-link text-dark">CONTACTO</a></li>
-                </ul>
-=======
-                    <li class="nav-item"><a href="#" class="nav-link text-dark">CONTACTO</a></li>
+                <div class="nav col-lg-auto my-2 justify-content-center text-small">
+                    <ul class="navbar-nav d-flex flex-row gap-3 align-items-center">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    HOTELES
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="?sec=hoteles&ubi=Buenos Aires"
+                                            id="navbarDropdown" role="button">BUENOS AIRES</a></li>
+                                    <li><a class="dropdown-item" href="?sec=hoteles&ubi=Bariloche" id="navbarDropdown"
+                                            role="button">BARILOCHE</a></li>
+                                    <li><a class="dropdown-item" href="?sec=hoteles&ubi=Calafate" id="navbarDropdown"
+                                            role="button">CALAFATE</a></li>
+                                    <li><a class="dropdown-item" href="?sec=hoteles&ubi=Salta" id="navbarDropdown"
+                                            role="button">SALTA</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a href="?sec=contacto" class="nav-link bg-dark text-light px-3 rounded"
+                                style="padding-top: 7px; padding-bottom: 7px;">CONTACTO</a></li>
+                    </ul>
                 </div>
->>>>>>> 79119047369a2498d8a6f509ff3eca3c7bba74bc
             </header>
         </div>
     </nav>
@@ -93,32 +94,81 @@
 
 
     <?php
-    if($_GET['sec'] != 'contacto') { ?>
+    if ($_GET['sec'] != 'contacto') { ?>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <ul class="navbar-nav flex-wrap justify-content-center align-items-center mx-auto">
-            <li class="nav-item px-3">
-                <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">RESERVAS ONLINE</a>
-            </li>
-            <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
-                <select class="form-select" style="width: 260px; height: 30px; line-height: 14px;">
-                    <option selected>Seleccione el hotel</option>
-                    <option value="1">Buenos Aires</option>
-                    <option value="2">Bariloche</option>
-                    <option value="3">Calafate</option>
-                    <option value="4">Salta</option>
-                </select>
-            </li>
-            <li class="nav-item d-flex flex-wrap justify-content-center px-3 py-md-2 py-sm-2 py-2 py-xl-0">
-                <input type="date" name="data" class="border-0 m-2 px-2" style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-                <input type="date" name="data" class="border-0 m-2 px-2" style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-            </li>
-            <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
-                <a class="nav-link active bg-light text-dark rounded text-center" style="width: 130px; line-height: 14px; font-weight: 700;" href="#" aria-current="page">RESERVAR</a>
-            </li>
-        </ul>
-    </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <ul class="navbar-nav flex-wrap justify-content-center align-items-center mx-auto">
+                <li class="nav-item mx-3">
+                    <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">RESERVAS ONLINE</a>
+                </li>
+                <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
+                    <button type="button" class="btn px-3 py-0 bg-light" style="font-weight: 700; line-height: 29px">HABITACIONES</button>
+                </li>
+                <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
+                    <button type="button" class="btn px-3 py-0 bg-light" style="font-weight: 700; line-height: 29px">SALA DE EVENTOS</button>
+                </li>
+            </ul>
+        </nav>
+<!--
+        <br>
 
+        <nav id="nav-bar-hab" class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <ul class="navbar-nav flex-wrap justify-content-center align-items-center mx-auto">
+                <li class="nav-item px-3">
+                    <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">RESERVAS ONLINE</a>
+                </li>
+                <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
+                    <select class="form-select" style="width: 260px; height: 30px; line-height: 14px;">
+                        <option selected>Seleccione el hotel</option>
+                        <option value="1">Buenos Aires</option>
+                        <option value="2">Bariloche</option>
+                        <option value="3">Calafate</option>
+                        <option value="4">Salta</option>
+                    </select>
+                </li>
+                <li class="nav-item d-flex flex-wrap justify-content-center py-md-2 py-sm-2 py-2 py-xl-0">
+                    <input type="date" name="data" class="mx-3 border-0 m-2 px-2"
+                        style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
+                    <input type="date" name="data" class="mx-3 border-0 m-2 px-2"
+                        style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
+                </li>
+                <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
+                    <a class="nav-link active bg-light text-dark rounded text-center"
+                        style="width: 130px; line-height: 14px; font-weight: 700;" href="#" aria-current="page">RESERVAR</a>
+                </li>
+            </ul>
+            
+        </nav>
+
+        <br>
+
+        <nav id="nav-bar-eve" class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <ul class="navbar-nav flex-wrap justify-content-center align-items-center mx-auto">
+                <li class="nav-item px-3">
+                    <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">RESERVAS ONLINE</a>
+                </li>
+                <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
+                    <select class="form-select" style="width: 260px; height: 30px; line-height: 14px;">
+                        <option selected>Seleccione el hotel</option>
+                        <option value="1">Buenos Aires</option>
+                        <option value="2">Bariloche</option>
+                        <option value="3">Calafate</option>
+                        <option value="4">Salta</option>
+                    </select>
+                </li>
+                <li class="nav-item d-flex flex-wrap justify-content-center py-md-2 py-sm-2 py-2 py-xl-0">
+                    <input type="date" name="data" class="mx-3 border-0 m-2 px-2"
+                        style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
+                    <input type="date" name="data" class="mx-3 border-0 m-2 px-2"
+                        style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
+                </li>
+                <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
+                    <a class="nav-link active bg-light text-dark rounded text-center"
+                        style="width: 130px; line-height: 14px; font-weight: 700;" href="#" aria-current="page">RESERVAR</a>
+                </li>
+            </ul>
+            
+        </nav> -->
     <?php } ?>
 
     <!-- Apartados -->
