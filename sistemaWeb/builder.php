@@ -65,7 +65,7 @@
                     <a class="nav-link text-dark" href="?sec=hoteles&ubi=3" id="navbarDropdown" role="button">
                         SALTA
                     </a>
-                    <li class="nav-item"><a href="#" class="nav-link text-dark">CONTACTO</a></li>
+                    <li class="nav-item"><a href="?sec=contacto" class="nav-link text-dark">CONTACTO</a></li>
                 </ul>
             </header>
         </div>
@@ -73,6 +73,10 @@
 
 
     <!-- Reservas -->
+
+
+    <?php
+    if($_GET['sec'] != 'contacto') { ?>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <ul class="navbar-nav flex-wrap justify-content-center align-items-center mx-auto">
@@ -98,7 +102,7 @@
         </ul>
     </nav>
 
-
+    <?php } ?>
 
     <!-- Apartados -->
 
