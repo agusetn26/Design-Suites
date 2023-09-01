@@ -163,5 +163,40 @@ a {
 .imgCard:hover {
     transform: scale(1.05); 
 }
+.bg-gris{
+    /*GRIS OSCURO*/
+    background-color: #3a3d3c;
+}
+.imgReserva{
+    transition: opacity 0.3s ease;
+    cursor: pointer; 
+}
+.imgReserva:hover{
+    opacity: 0.8;
+}
+.w-40{
+    width: 40%;
+}
 
-/*------------------  ----------------------*/
+/*------------------ CONTACTOS ----------------------*/
+
+
+.form-group{
+    margin: 20px;
+}
+
+.form-group1{
+    position: relative;
+    right: 15px;
+    width: auto;
+}
+
+.send-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+

@@ -61,29 +61,24 @@
                 </a>
 
                 <div class="nav col-lg-auto my-2 justify-content-center text-small">
-                    <ul class="navbar-nav d-flex flex-row gap-3 align-items-center">
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    HOTELES
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="?sec=hoteles&ubi=Buenos Aires"
-                                            id="navbarDropdown" role="button">BUENOS AIRES</a></li>
-                                    <li><a class="dropdown-item" href="?sec=hoteles&ubi=Bariloche" id="navbarDropdown"
-                                            role="button">BARILOCHE</a></li>
-                                    <li><a class="dropdown-item" href="?sec=hoteles&ubi=Calafate" id="navbarDropdown"
-                                            role="button">CALAFATE</a></li>
-                                    <li><a class="dropdown-item" href="?sec=hoteles&ubi=Salta" id="navbarDropdown"
-                                            role="button">SALTA</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            HOTELES
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Buenos Aires"
+                                    id="navbarDropdown" role="button">BUENOS AIRES</a></li>
+                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Bariloche" id="navbarDropdown"
+                                    role="button">BARILOCHE</a></li>
+                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Calafate" id="navbarDropdown"
+                                    role="button">CALAFATE</a></li>
+                            <li><a class="dropdown-item" href="?sec=hoteles&ubi=Salta" id="navbarDropdown"
+                                    role="button">SALTA</a></li>
+                        </ul>
+                    </div>
 
-                        <li class="nav-item"><a href="?sec=contacto" class="nav-link bg-dark text-light px-3 rounded"
-                                style="padding-top: 7px; padding-bottom: 7px;">CONTACTO</a></li>
-                    </ul>
+                    <li class="nav-item"><a href="?sec=contacto" class="nav-link text-dark">CONTACTO</a></li>
                 </div>
             </header>
         </div>
