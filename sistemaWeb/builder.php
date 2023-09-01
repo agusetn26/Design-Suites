@@ -73,6 +73,10 @@
 
     <!-- Reservas -->
 
+
+    <?php
+    if($_GET['sec'] != 'contacto') { ?>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <ul class="navbar-nav flex-wrap justify-content-center align-items-center mx-auto">
             <li class="nav-item px-3">
@@ -97,7 +101,7 @@
         </ul>
     </nav>
 
-
+    <?php } ?>
 
     <!-- Apartados -->
 

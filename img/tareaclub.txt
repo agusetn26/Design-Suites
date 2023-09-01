@@ -1,0 +1,46 @@
+un club de futbol necesita un sistema para la gestion de sus necesidades.
+sabemos que el club tiene un nombre, una direccion(calle, altura y ciudad), un anio de fundacion y tiene un equipo para cada categoria. las categorias existentes son PRIMERA, SEGUNDA, TERCERA, y cada equipo (aparte de tener la categoria) tiene una lista de jugadores. cada jugador tiene un nombre un apellido y un dorsal. el equipo tambien tiene entrenador, del que sabemos nombre, apellido y tactica(puede ser defensiva, ofensiva o equilibrada) y el club, para sus operaciones, tiene empleados administrativos, de los que sabemos el nombre, el apellido y su funcion. 
+
+club
+-nombre
+-direccion(calle, altura y ciudad)
+-anio de fundacion
+tiene un equipo por cada categoria
+tiene empleados administrativos
+
+empleados
+-nombre
+-apellido 
+-funcion
+
+categorias
+-PRIMERA
+-SEGUNDA
+-TERCERA
+
+equipo 
+-lista de jugadores
+tiene entrenador
+
+entrenador 
+-nombre
+-apellido
+-tactica(efensiva, ofensiva o equilibrada)
+
+jugador 
+-nombre
+-apellido
+-dorsal
+
+
+
+
+
+
+
+diseñar el diagrama UML con todas las clases y relacione necesarias, implementar en codigo(C#) y en una clase aparte del de nuestro modelo, instanciar 10 jugadores con todos sus datos completos, 3 entrenadores , 3 equipos , 3 empleados administrativos , 1 club. 
+los jugadores, los entrenadores, y los empleados se saben presentar. en los 3 casos dicen su nombre y apellido, pero el jugador tambien nombra su dorsal, el entrenado su tactica, el empleado administrativo su funcion. 
+desarrollar los metodos del equipo para agregar o quitar jugadores de un equipo. el metodo sera "agregar jugador" y recibe un equipo y un jugador, y tambien el metodo "remover jugador". 
+desarrollar los metodos del club par agregar o quitar equipos. el metodo sera "agregar equipo" que recibira un equipo y "remover equipo" que tambien devolvera un equipo 
+desarrolar el metodo del club para "agregar empleado" que devolvera un empleado y "remover empleado" que tambien devolvera un empleado
+modelar todos los getters y setters necesarios 

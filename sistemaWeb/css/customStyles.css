@@ -57,11 +57,11 @@ a {
         font-size: 16px;
         font-family: 'Raleway', sans-serif
     }
-
+/*
     .container {
-        /*margin-top: 200px*/
+        margin-top: 200px
     }
-
+*/
     .title {
         color: #1a1a1a;
         text-align: center;
@@ -177,3 +177,26 @@ a {
 .w-40{
     width: 40%;
 }
+
+/*------------------ CONTACTOS ----------------------*/
+
+
+.form-group{
+    margin: 20px;
+}
+
+.form-group1{
+    position: relative;
+    right: 15px;
+    width: auto;
+}
+
+.send-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
