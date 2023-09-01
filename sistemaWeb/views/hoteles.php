@@ -1,4 +1,4 @@
-<div class="container my-5">
+<div class="container my-4">
     <p class="h1"><?php echo $_GET['ubi']; ?></p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat illo quae pariatur nemo fugit voluptates ipsa est iure nulla sapiente magnam consequatur reiciendis ipsam iste eaque harum, distinctio saepe? Dolore!
         Sint laborum minima quod eligendi culpa nemo sunt facere dolore optio dolorem excepturi cupiditate saepe quia beatae, praesentium reprehenderit ab autem delectus illum cumque, impedit fuga officiis. Non, laborum deleniti!

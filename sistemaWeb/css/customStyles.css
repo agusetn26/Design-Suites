@@ -163,3 +163,17 @@ a {
 .imgCard:hover {
     transform: scale(1.05); 
 }
+.bg-gris{
+    /*GRIS OSCURO*/
+    background-color: #3a3d3c;
+}
+.imgReserva{
+    transition: opacity 0.3s ease;
+    cursor: pointer; 
+}
+.imgReserva:hover{
+    opacity: 0.8;
+}
+.w-40{
+    width: 40%;
+}
