@@ -9,14 +9,13 @@ namespace sistemaPrincipal.BLL
 {
     internal class hotelBLL
     {
-        public int attrId;
         public string attrNombre;
         public string attrDescripcion;
         public string attrUbicacion;
         public string attrDireccion;
         public string attrTelefono;
-        public byte[] attrImg;
-        public string attrCategoria;
         public string attrGerente;
+        public string attrCategoria;
+        public string attrImg;
     }
 }

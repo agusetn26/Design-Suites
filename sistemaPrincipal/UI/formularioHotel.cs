@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using sistemaPrincipal.BLL;
 using sistemaPrincipal.DAL;
@@ -28,9 +29,10 @@ namespace sistemaPrincipal
         {
             hotelBLL hotel = new hotelBLL();
 
-            if (string.IsNullOrWhiteSpace(nombre.Text) || string.IsNullOrWhiteSpace(descripcion.Text) || string.IsNullOrWhiteSpace(ubicacion.Text) ||
-        string.IsNullOrWhiteSpace(direccion.Text) || string.IsNullOrWhiteSpace(telefono.Text) || string.IsNullOrWhiteSpace(gerente.Text) ||
-        string.IsNullOrWhiteSpace(categoria.Text))
+            if (string.IsNullOrWhiteSpace(nombre.Text)    || string.IsNullOrWhiteSpace(descripcion.Text) || string.IsNullOrWhiteSpace(ubicacion.Text) ||
+                string.IsNullOrWhiteSpace(direccion.Text) || string.IsNullOrWhiteSpace(telefono.Text)    || string.IsNullOrWhiteSpace(gerente.Text)   ||
+                string.IsNullOrWhiteSpace(categoria.Text)
+                )
             {
                 MessageBox.Show("Por favor, complete todos los campos obligatorios.");
                 return null;

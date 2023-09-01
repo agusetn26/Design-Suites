@@ -35,29 +35,29 @@ namespace sistemaPrincipal.DAL
 
                 return data;
             } 
-            catch (Exception ex) {
+            catch {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Hubo un error al tratar de comunicarse con la base de datos, comuniquese con soporte.");
                 data.Tables.Add(new DataTable());
 
                 return data;
             }
         }
 
-        public void consultasSinR(string sqlStr)
+        public void consultasSinR(SqlCommand sqlCom)
         {
             try
             {
-                SqlCommand sqlCom = new SqlCommand(sqlStr, conn);
+                sqlCom.Connection = conn;
                 conn.Open();
                 sqlCom.ExecuteNonQuery();
                 conn.Close();
                 Console.WriteLine("success");
 
             }
-            catch(Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Hubo un error con la confirmación del formulario, comuniquese con soporte para más i");
             }
         }
     }
