@@ -1,8 +1,5 @@
-<?php
-$ubicaciones = ["Buenos Aires", "Bariloche", "Calafate", "Salta",];
-?>
 <div class="container my-5">
-    <p class="h1"><?php echo ($ubicaciones[$_GET['ubi']]); ?></p>
+    <p class="h1"><?php echo $_GET['ubi']; ?></p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat illo quae pariatur nemo fugit voluptates ipsa est iure nulla sapiente magnam consequatur reiciendis ipsam iste eaque harum, distinctio saepe? Dolore!
         Sint laborum minima quod eligendi culpa nemo sunt facere dolore optio dolorem excepturi cupiditate saepe quia beatae, praesentium reprehenderit ab autem delectus illum cumque, impedit fuga officiis. Non, laborum deleniti!
         Accusamus praesentium incidunt voluptatum enim expedita natus maiores? Ipsum illo ea, magnam tempora, porro dolorem iure temporibus enim est reiciendis expedita itaque mollitia accusamus? Repellendus, quis culpa. Amet, neque laborum!
@@ -56,5 +53,14 @@ $ubicaciones = ["Buenos Aires", "Bariloche", "Calafate", "Salta",];
     </div>
     <!-------------------------------------------------------------------->
     <p class="h3 m-3 border-bottom">Video</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Si8kDwCGQ24?si=3q5HaBd0jRH8FC1G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="video_con">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Si8kDwCGQ24?si=3q5HaBd0jRH8FC1G" frameborder="0" class="video"></iframe>
+    </div>
+    <!-------------------------------------------------------------------->
+    <p class="h3 m-3 border-bottom">Ubicacion</p>
+    <div class="video_con">
+        <iframe class="video" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.8135822167621!2d-58.40583319994833!3d-34.613605375079786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb87409a19cb%3A0xca5521b461138618!2sEscuela%20T%C3%A9cnica%20N%C2%BA26%20D.E.6%20%22Confederaci%C3%B3n%20Suiza%22!5e0!3m2!1ses-419!2sar!4v1693585879304!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-------------------------------------------------------------------->
+
 </div>
