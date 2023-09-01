@@ -64,26 +64,8 @@
                         </ul>
                     </div>
 
-<<<<<<< HEAD
-                <ul class="nav col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=0" id="navbarDropdown" role="button">
-                        BUENOS AIRES
-                    </a>
-                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=1" id="navbarDropdown" role="button">
-                        BARILOCHE
-                    </a>
-                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=2" id="navbarDropdown" role="button">
-                        CALAFATE
-                    </a>
-                    <a class="nav-link text-dark" href="?sec=hoteles&ubi=3" id="navbarDropdown" role="button">
-                        SALTA
-                    </a>
-                    <li class="nav-item"><a href="?sec=contacto" class="nav-link text-dark">CONTACTO</a></li>
-                </ul>
-=======
                     <li class="nav-item"><a href="#" class="nav-link text-dark">CONTACTO</a></li>
                 </div>
->>>>>>> 79119047369a2498d8a6f509ff3eca3c7bba74bc
             </header>
         </div>
     </nav>

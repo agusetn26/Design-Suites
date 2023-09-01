@@ -164,4 +164,25 @@ a {
     transform: scale(1.05); 
 }
 
-/*------------------  ----------------------*/
+/*------------------ CONTACTOS ----------------------*/
+
+
+.form-group{
+    margin: 20px;
+}
+
+.form-group1{
+    position: relative;
+    right: 15px;
+    width: auto;
+}
+
+.send-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
