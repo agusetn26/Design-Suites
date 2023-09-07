@@ -31,8 +31,6 @@ namespace sistemaPrincipal.DAL
                 conn.Open();
                 adapter.Fill(data);
                 conn.Close();
-                Console.WriteLine("success");
-
                 return data;
             } 
             catch {
@@ -52,11 +50,12 @@ namespace sistemaPrincipal.DAL
                 conn.Open();
                 sqlCom.ExecuteNonQuery();
                 conn.Close();
-                Console.WriteLine("success");
+                Console.WriteLine("success CONSULTA");
 
             }
-            catch
+            catch (SqlException e)
             {
+                Console.WriteLine(e);
                 MessageBox.Show("Hubo un error con la confirmación del formulario, comuniquese con soporte para más i");
             }
         }

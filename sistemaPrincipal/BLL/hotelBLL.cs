@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using sistemaPrincipal.DAL;
 
 namespace sistemaPrincipal.BLL
 {
@@ -14,8 +16,39 @@ namespace sistemaPrincipal.BLL
         public string attrUbicacion;
         public string attrDireccion;
         public string attrTelefono;
-        public string attrGerente;
-        public string attrCategoria;
-        public string attrImg;
+        public string attrHabitaciones;
+        public string attrSuministros;
+        public string[] attrImg;
+
+       public hotelBLL(string nom, string des, string ub, string di, string tel, string cat, string[] img)
+       {
+            attrNombre = nom;
+            attrDescripcion = des;
+            attrUbicacion = ub;
+            attrDireccion = di;
+            attrTelefono = tel;
+            attrHabitaciones = hotelHabitaciones(cat);
+            attrSuministros = hotelSuministros(cat);
+            attrImg = img;
+       }
+
+       private string hotelHabitaciones(string cate)
+       {
+            string fileLocation = "C:\\xampp\\htdocs\\Design-Suites\\sistemaPrincipal\\recursos\\habitaciones\\" + cate + ".txt";
+            return File.ReadAllText(fileLocation);
+       }
+
+        private string hotelSuministros(string cate)
+        {
+            string fileLocation = "C:\\xampp\\htdocs\\Design-Suites\\sistemaPrincipal\\recursos\\habitaciones\\" + cate + ".txt";
+            return File.ReadAllText(fileLocation);
+        }
+
+        public void createNewHotel()
+        {
+            hotelDAL hotelModelo = new hotelDAL();
+            hotelModelo.insert(this);
+        }
     }
+    
 }

@@ -8,7 +8,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/customStyles.css">
-    <link rel="shortcut icon" href="../img/logo-dark.png" type="image/x-icon">
+    <link rel="shortcut icon"  type="image/x-icon" style="font-size: 130px;" href="../img/logo-dark.png">
     <title>
         <?php echo (ucfirst($_GET['sec'])); ?> - Design Suites
     </title>
@@ -86,11 +86,7 @@
 
 
     <!-- Reservas -->
-
-
-    <?php
-    if ($_GET['sec'] != 'contacto') { ?>
-
+    
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <ul class="navbar-nav flex-wrap justify-content-center align-items-center mx-auto">
                 <li class="nav-item mx-3">
@@ -164,7 +160,6 @@
             </ul>
             
         </nav> -->
-    <?php } ?>
 
     <!-- Apartados -->
 
