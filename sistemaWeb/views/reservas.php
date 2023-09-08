@@ -26,7 +26,7 @@
 
         <div class="col-sm-7 my-1">
             <div class="col-sm bg-dark h4 p-3 text-light rounded">
-                Reservas
+                Habitaciones
             </div>
             <div class="col bg-gris text-light p-3 mb-2 rounded">
                 <div class="row">
@@ -35,10 +35,10 @@
                     </div>
                     <div class="col contenedor">
                         <div>
-                            <p>Classic Room </p>
-                            <div><span class="material-symbols-outlined cant-per">person</span><span class="material-symbols-outlined cant-per2">person</span></div>
+                            <a href="#" style="color: white;">Classic Room</a>
+                            <!--<div><span class="material-symbols-outlined cant-per">person</span><span class="material-symbols-outlined cant-per2">person</span></div>-->
                         </div>
-                        <div class="linea-in"></div>
+                        <div class="linea-in my-1"></div>
                         <div class="my-2 ">
                             <span class="material-symbols-outlined icono-personalizado">contact_phone</span>
                             <span class="material-symbols-outlined icono-personalizado">tv</span>
@@ -51,8 +51,19 @@
 
                         </div>
                     </div>
-                    <div class="col">
-                        Classic Room
+                    <div class="col-4">
+                        <div class="d-flex">
+                            <h6>Cantidad de personas</h6>
+                            <select name="cantHabitaciones">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <p class="my-2 d-flex">Precio por la habitacion<abbr title="Este precio va cambiando segun la cantidad de personas que esten en la habitacion"><span class="material-symbols-outlined cant-per">info</span></abbr></p>
+                        <br>
+                        <h2>$50000</h2>
                     </div>
                 </div>
             </div>
@@ -69,7 +80,9 @@
 
         <div class="col-sm my-1">
             <div class="col-sm bg-dark h4 p-3 text-light rounded">
-                Buscar
+                <H4>PRECIO TOTAL</H4>
+                <div class="linea-in my-1"></div>
+                <H4 class="my-4">$50000</H4>
             </div>
         </div>
     </div>
