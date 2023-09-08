@@ -200,3 +200,28 @@ a {
 
 
 
+/*------------------ RESERVAS ----------------------*/
+
+.linea-in {
+    width: 100%;
+    border-bottom: 1px solid #ffffff; 
+    margin-top: -15px;
+}
+
+.contenedor {
+    position: relative;
+}
+
+.icono-personalizado {
+    background-color: #2b2b2b; 
+    padding: 7px; 
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+}
+
+.cant-per{
+    user-select: none;
+    cursor: pointer;
+}
+
