@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -35,13 +35,27 @@ namespace sistemaPrincipal.DAL
                 sqlCom1.Parameters.AddWithValue("@dir", hotelData.attrDireccion);
                 sqlCom1.Parameters.AddWithValue("@img", src);
 
-                string sqlStrHabitaciones = hotelData.attrHabitaciones;
+                db.consultasSinR(sqlCom1);
+
+                int idHotel = (int)db.consultasConR("SELECT MAX(id_hotel) as last FROM hoteles").Tables[0].Rows[0]["last"];
+
+                string sqlStrHabitaciones = hotelData.attrHabitaciones; 
                 SqlCommand sqlCom2 = new SqlCommand(sqlStrHabitaciones);
-                int idHotel = (int) db.consultasConR("SELECT MAX(id_hotel) as last FROM habitaciones").Tables[0].Rows[0]["last"];
                 sqlCom2.Parameters.AddWithValue("@idH", idHotel);
 
-                db.consultasSinR(sqlCom1);
                 db.consultasSinR(sqlCom2);
+
+                string sqlStrSuministros = hotelData.attrSuministros;
+                SqlCommand sqlCom3 = new SqlCommand(sqlStrSuministros);
+                sqlCom3.Parameters.AddWithValue("@idH", idHotel);
+
+                db.consultasSinR(sqlCom3);
+
+                string sqlStrEventos = hotelData.attrEventos;
+                SqlCommand sqlCom4 = new SqlCommand(sqlStrEventos);
+                sqlCom4.Parameters.AddWithValue("@idH", idHotel);
+
+                db.consultasSinR(sqlCom4);
             }
         }
 

@@ -1,0 +1,3 @@
+INSERT INTO eventos (nombre, descripcion, servicios, imagen, precio, fecha_alta, fecha_baja, id_hotel)
+VALUES 
+('Salón Encanto Íntimo', 'Descubre el rincón perfecto para eventos íntimos y especiales en nuestro Salón Encanto Íntimo. Este espacio exclusivo te ofrece un ambiente acogedor y elegante, ideal para reuniones familiares, celebraciones privadas o reuniones de negocios en un entorno distinguido.', 'Decoración personalizada;Catering de alta calidad;Servicio de sonido y música en vivo', 'imagen_salondeeventos.jpg', 500.00, GETDATE(), NULL, @idH);

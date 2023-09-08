@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -18,6 +18,7 @@ namespace sistemaPrincipal.BLL
         public string attrTelefono;
         public string attrHabitaciones;
         public string attrSuministros;
+        public string attrEventos;
         public string[] attrImg;
 
        public hotelBLL(string nom, string des, string ub, string di, string tel, string cat, string[] img)
@@ -29,18 +30,26 @@ namespace sistemaPrincipal.BLL
             attrTelefono = tel;
             attrHabitaciones = hotelHabitaciones(cat);
             attrSuministros = hotelSuministros(cat);
+            attrEventos = hotelEventos(cat);
             attrImg = img;
        }
 
+       public string currentProyetLoc = Directory.GetCurrentDirectory();
        private string hotelHabitaciones(string cate)
        {
-            string fileLocation = "C:\\xampp\\htdocs\\Design-Suites\\sistemaPrincipal\\recursos\\habitaciones\\" + cate + ".txt";
+          
+            string fileLocation = currentProyetLoc + "\\recursos\\habitaciones\\" + cate + ".txt";
             return File.ReadAllText(fileLocation);
        }
 
         private string hotelSuministros(string cate)
         {
-            string fileLocation = "C:\\xampp\\htdocs\\Design-Suites\\sistemaPrincipal\\recursos\\habitaciones\\" + cate + ".txt";
+            string fileLocation = currentProyetLoc + "\\recursos\\suministros\\" + cate + ".txt";
+            return File.ReadAllText(fileLocation);
+        }
+        private string hotelEventos(string cate)
+        {
+            string fileLocation = currentProyetLoc + "\\recursos\\eventos\\" + cate + ".txt";
             return File.ReadAllText(fileLocation);
         }
 
