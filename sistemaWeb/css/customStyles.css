@@ -225,3 +225,7 @@ a {
     cursor: pointer;
 }
 
+
+label.form-label {
+    font-family: Arial, sans-serif;
+}
