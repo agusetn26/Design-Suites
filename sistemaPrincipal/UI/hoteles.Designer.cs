@@ -38,8 +38,12 @@ namespace sistemaPrincipal
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.contenedorHoteles = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelEstructura.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contenedorHoteles)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEstructura
@@ -53,6 +57,7 @@ namespace sistemaPrincipal
             this.panelEstructura.Controls.Add(this.button1, 2, 0);
             this.panelEstructura.Controls.Add(this.label1, 1, 0);
             this.panelEstructura.Controls.Add(this.contenedorHoteles, 1, 1);
+            this.panelEstructura.Controls.Add(this.tableLayoutPanel1, 2, 1);
             this.panelEstructura.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEstructura.Location = new System.Drawing.Point(0, 0);
             this.panelEstructura.Name = "panelEstructura";
@@ -132,6 +137,7 @@ namespace sistemaPrincipal
             this.contenedorHoteles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.contenedorHoteles.ColumnHeadersHeight = 50;
             this.contenedorHoteles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.contenedorHoteles.Cursor = System.Windows.Forms.Cursors.Hand;
             this.contenedorHoteles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedorHoteles.EnableHeadersVisualStyles = false;
             this.contenedorHoteles.GridColor = System.Drawing.Color.CornflowerBlue;
@@ -145,6 +151,7 @@ namespace sistemaPrincipal
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.contenedorHoteles.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.contenedorHoteles.RowHeadersVisible = false;
             this.contenedorHoteles.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.CornflowerBlue;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,6 +163,35 @@ namespace sistemaPrincipal
             this.contenedorHoteles.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.contenedorHoteles.Size = new System.Drawing.Size(474, 298);
             this.contenedorHoteles.TabIndex = 4;
+            this.contenedorHoteles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.contenedorHoteles_CellContentClick);
+            this.contenedorHoteles.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.contenedorHoteles_CellEndEdit);
+            this.contenedorHoteles.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.contenedorHoteles_CellValidated);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(643, 79);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(154, 298);
+            this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 226);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(148, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // hoteles
             // 
@@ -171,6 +207,8 @@ namespace sistemaPrincipal
             this.panelEstructura.ResumeLayout(false);
             this.panelEstructura.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contenedorHoteles)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,5 +221,7 @@ namespace sistemaPrincipal
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView contenedorHoteles;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

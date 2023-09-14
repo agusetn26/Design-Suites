@@ -28,7 +28,8 @@ namespace sistemaPrincipal
             {
                 picTimer.Stop();
                 displayImage.Image.Dispose();
-                hotelBll.createNewHotel();
+                pictureBox1.Enabled = false;
+                hotelBll.crearHotel();
             }
         }
 
@@ -44,7 +45,8 @@ namespace sistemaPrincipal
                 return null;
             }
             hotelBLL hotel = new hotelBLL
-                                (nombre.Text,
+                                (
+                                 nombre.Text,
                                  descripcion.Text,
                                  ubicacion.Text,
                                  direccion.Text,
@@ -62,7 +64,7 @@ namespace sistemaPrincipal
 
             OpenFileDialog images = new OpenFileDialog();
             images.Multiselect = true;
-            images.Filter = "Images (*.PNG;*.JPG;)|*.PNG;*.JPG;|" + "All files (*.*)|*.*";
+            images.Filter = "Images (*.JPG;*.PNG;)|*.JPG;*.PNG;|" + "All files (*.*)|*.*";
             images.Title = "Selecciona imagenes representativas del hotel";
             
 

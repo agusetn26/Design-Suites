@@ -1,22 +1,3 @@
 INSERT INTO suministros (id_producto, cantidad, id_hotel)
-VALUES
-    (31, 100, @idH),  -- Ejemplo: 100 toallas de baño
-    (32, 50, @idH),   -- Ejemplo: 50 sábanas de cama
-    (33, 200, @idH),  -- Ejemplo: 200 artículos de aseo personal
-    (34, 30, @idH),   -- Ejemplo: 30 sillas plegables
-    (35, 500, @idH),  -- Ejemplo: 500 cubiertos de acero inoxidable
-    (36, 50, @idH),   -- Ejemplo: 50 secadores de pelo
-    (37, 20, @idH),   -- Ejemplo: 20 TVs de pantalla plana
-    (38, 10, @idH),   -- Ejemplo: 10 cafeteras para habitación
-    (39, 40, @idH),   -- Ejemplo: 40 cortinas opacas
-    (40, 300, @idH),  -- Ejemplo: 300 jabones líquidos
-    (41, 60, @idH),   -- Ejemplo: 60 almohadas de plumas
-    (42, 25, @idH),   -- Ejemplo: 25 lámparas de mesa
-    (43, 90, @idH),   -- Ejemplo: 90 batas de baño
-    (44, 5, @idH),    -- Ejemplo: 5 minibares
-    (45, 100, @idH),  -- Ejemplo: 100 utensilios de cocina
-    (46, 10, @idH),   -- Ejemplo: 10 cajas de seguridad
-    (47, 70, @idH),   -- Ejemplo: 70 mantas extras
-    (48, 8, @idH),    -- Ejemplo: 8 cafeteras industriales
-    (49, 15, @idH),   -- Ejemplo: 15 escritorios de trabajo
-    (50, 200, @idH);  -- Ejemplo: 200 cestos de basura
+SELECT id_producto, CAST(FLOOR(RAND() * (100 - 1 + 1) + 1) AS INT) AS cantidad, @idH
+FROM productos;

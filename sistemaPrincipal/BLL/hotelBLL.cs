@@ -11,6 +11,7 @@ namespace sistemaPrincipal.BLL
 {
     internal class hotelBLL
     {
+        public int attrId;
         public string attrNombre;
         public string attrDescripcion;
         public string attrUbicacion;
@@ -20,7 +21,8 @@ namespace sistemaPrincipal.BLL
         public string attrSuministros;
         public string attrEventos;
         public string[] attrImg;
-
+        public string attrBaja;
+        
        public hotelBLL(string nom, string des, string ub, string di, string tel, string cat, string[] img)
        {
             attrNombre = nom;
@@ -33,11 +35,22 @@ namespace sistemaPrincipal.BLL
             attrEventos = hotelEventos(cat);
             attrImg = img;
        }
+       
+       public hotelBLL(int id, string nom, string des, string ub, string di, string tel, string img, string fBaja)
+       {
+            attrId = id;
+            attrNombre = nom;
+            attrDescripcion = des;
+            attrUbicacion = ub;
+            attrDireccion = di;
+            attrTelefono = tel;
+            attrImg = img.Split(';');
+            attrBaja = fBaja;
+        }
 
        public string currentProyetLoc = Directory.GetCurrentDirectory();
        private string hotelHabitaciones(string cate)
        {
-          
             string fileLocation = currentProyetLoc + "\\recursos\\habitaciones\\" + cate + ".txt";
             return File.ReadAllText(fileLocation);
        }
@@ -53,10 +66,16 @@ namespace sistemaPrincipal.BLL
             return File.ReadAllText(fileLocation);
         }
 
-        public void createNewHotel()
+        public void crearHotel()
         {
             hotelDAL hotelModelo = new hotelDAL();
-            hotelModelo.insert(this);
+            hotelModelo.insertarHotel(this);
+        }
+        
+        public bool modificarHotel()
+        {
+            hotelDAL hotelModelo = new hotelDAL();
+            return hotelModelo.actualizarListado(this);
         }
     }
     

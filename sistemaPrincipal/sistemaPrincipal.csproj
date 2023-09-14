@@ -46,8 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\proveedorBLL.cs" />
+    <Compile Include="BLL\productoBLL.cs" />
     <Compile Include="BLL\hotelBLL.cs" />
     <Compile Include="DAL\baseDeDatos.cs" />
+    <Compile Include="DAL\proveedoresDAL.cs" />
+    <Compile Include="DAL\productosDAL.cs" />
+    <Compile Include="DAL\transaccionesDAL.cs" />
     <Compile Include="DAL\hotelDAL.cs" />
     <Compile Include="UI\baseForm.cs">
       <SubType>Form</SubType>

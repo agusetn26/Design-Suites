@@ -11,7 +11,9 @@ namespace sistemaPrincipal.DAL
 {
     class baseDeDatos 
     {
-        private string connStr = "Data Source=DESKTOP-QB22C4J\\SQLEXPRESS; Initial Catalog=design_suites; User ID = sa; Password = 123";
+        //"Data Source=DESKTOP-QB22C4J\\SQLEXPRESS; Initial Catalog=design_suites; User ID = sa; Password = 123"
+        //Data Source=DESKTOP-L8KEE59\\Rodrigo Acosta; Initial Catalog=design_suites; Integrated Security=True;
+        private string connStr = "Data Source=DESKTOP-L8KEE59; Initial Catalog=design_suites; Integrated Security=True;";
         SqlConnection conn;
 
         public baseDeDatos()
@@ -33,16 +35,16 @@ namespace sistemaPrincipal.DAL
                 conn.Close();
                 return data;
             } 
-            catch {
-
+            catch (Exception e) {
+                Console.WriteLine(e);
                 MessageBox.Show("Hubo un error al tratar de comunicarse con la base de datos, comuniquese con soporte.");
                 data.Tables.Add(new DataTable());
 
                 return data;
             }
         }
-
-        public void consultasSinR(SqlCommand sqlCom)
+        
+        public bool consultasSinR(SqlCommand sqlCom)
         {
             try
             {
@@ -50,13 +52,14 @@ namespace sistemaPrincipal.DAL
                 conn.Open();
                 sqlCom.ExecuteNonQuery();
                 conn.Close();
-                Console.WriteLine("success CONSULTA");
 
+                return true;
             }
             catch (SqlException e)
             {
                 Console.WriteLine(e);
-                MessageBox.Show("Hubo un error con la confirmación del formulario, comuniquese con soporte para más i");
+
+                return false;
             }
         }
     }
