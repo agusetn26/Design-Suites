@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -80,7 +80,7 @@
                 </div>
             </li>
             <li class="nav-item mx-2 my-1">
-                <a href="#" class="btn btn-dark" role="button">MEMBRESIAS</a>
+                <a href="?sec=membresias" class="btn btn-dark" role="button">MEMBRESIAS</a>
             </li>
             <li class="nav-item mx-2 my-1">
                 <a href="?sec=contacto" class="btn btn-dark" role="button">CONTACTO</a>
@@ -102,7 +102,7 @@
                     style="font-weight: 700; line-height: 29px">HABITACIONES</button>
             </li>
             <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
-                <button type="button" onclick="selectedRooms()" class="btn px-3 py-0 bg-light" style="font-weight: 700; line-height: 29px">SALA DE
+                <button type="button" onclick="selectedEvents()" class="btn px-3 py-0 bg-light" style="font-weight: 700; line-height: 29px">SALA DE
                     EVENTOS</button>
             </li>
         </ul>
@@ -166,11 +166,11 @@
                     style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
             </li>
             <li class="nav-item px-2 my-1">
-                <input type="date" name="data" class="border-0 px-2"
+                <input type="time" name="data" class="border-0 px-2"
                     style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
             </li>
             <li class="nav-item px-2 my-1">
-                <input type="date" name="data" class="border-0 px-2"
+                <input type="time" name="data" class="border-0 px-2"
                     style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
             </li>
             <li class="nav-item px-2 my-1">
@@ -243,5 +243,6 @@
     </footer>
 </body>
 <script src="js/bootstrap.bundle.js"></script>
+<script src="js/app.js"></script>
 
 </html>
