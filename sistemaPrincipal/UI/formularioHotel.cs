@@ -44,18 +44,25 @@ namespace sistemaPrincipal
                 MessageBox.Show("Por favor, complete todos los campos.");
                 return null;
             }
-            hotelBLL hotel = new hotelBLL
-                                (
-                                 nombre.Text,
-                                 descripcion.Text,
-                                 ubicacion.Text,
-                                 direccion.Text,
-                                 telefono.Text,
-                                 categoria.Text,
-                                 (string[])displayImage.Tag
-                                );
-            return hotel;
-
+            try
+            {
+                hotelBLL hotel = new hotelBLL
+                               (
+                                nombre.Text,
+                                descripcion.Text,
+                                ubicacion.Text,
+                                direccion.Text,
+                                telefono.Text,
+                                categoria.Text,
+                                (string[])displayImage.Tag
+                               );
+                return hotel;
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)

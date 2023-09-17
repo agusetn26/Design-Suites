@@ -44,6 +44,7 @@ namespace sistemaPrincipal
             productoBLL productosBLL = datosForm();
             if(productosBLL != null)
             {
+                Console.WriteLine(proveedores.SelectedValue);
                 if (!productosBLL.crearProducto()){
                     MessageBox.Show("Hubo un error con la confirmación del formulario. De persistir contactar con soporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -62,15 +63,22 @@ namespace sistemaPrincipal
                 MessageBox.Show("Por favor, complete todos los campos.");
                 return null;
             }
-            productoBLL producto = new productoBLL
-                                (
-                                 productoNombre.Text,
-                                 categoria.Text,
-                                 proveedores.Text,
-                                 coste.Text,
-                               (string)displayImage.Tag
-                                );
-            return producto;
+            try
+            {
+                Console.WriteLine(proveedores.SelectedValue);
+                productoBLL producto = new productoBLL
+                           (
+                            productoNombre.Text,
+                            categoria.Text,
+                            (int)proveedores.SelectedValue,
+                            coste.Text,
+                          (string)displayImage.Tag
+                           );
+                return producto;
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
 
         }
 

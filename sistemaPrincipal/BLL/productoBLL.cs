@@ -11,36 +11,75 @@ namespace sistemaPrincipal.BLL
 {
     class productoBLL
     {
-        public int attrId;
-        public string attrNombre;
-        public string attrCategoria;
-        public float attrCoste;
-        public string attrImg;
-        public string idProveedor;
-        public string attrAlta;
-        public string attrBaja;
+        public int attrId { get; set; }
 
-        public productoBLL(int id, string nom, string cate, string cos, string img, string prov, string fAlta, string fBaja)
+        private string nombre;
+        public string attrNombre { 
+            get
+            {
+                return nombre;
+            }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new FormatException("Nombre de producto invalido");
+                nombre = value;
+            }
+        }
+
+        private string categoria;
+        public string attrCategoria
+        {
+            get
+            {
+                return categoria;
+            }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new FormatException("Categoria de producto invalido");
+                categoria = value;
+            }
+        }
+        public float attrCoste { get; set; }
+        public string attrImg { get; set; }
+        public int idProveedor { get; set; }
+        public string attrAlta { get; set; }
+        public string attrBaja { get; set; }
+
+
+        public productoBLL(int id, string nom, string cate, string cos, string img, int prov, string fAlta, string fBaja)
         {
             attrId = id;
             attrNombre = nom;
             attrCategoria = cate;
-            float.TryParse(cos, NumberStyles.Float, new CultureInfo("es-ES"), out attrCoste);
+            SetAttrCoste(cos);
             attrImg = img;
             idProveedor = prov;
             attrAlta = fAlta;
             attrBaja = fBaja;
         }
 
-        public productoBLL(string nom, string cate, string prov, string cos, string img)
+        public productoBLL(string nom, string cate, int prov, string cos, string img)
         {
             attrNombre = nom;
-            attrCategoria = cate;
+            attrCategoria = cate;Console.WriteLine(prov);
             idProveedor = prov;
-            float.TryParse(cos, NumberStyles.Float, new CultureInfo("es-ES"), out attrCoste);
+            SetAttrCoste(cos);
             attrImg = img;
         }
 
+        private void SetAttrCoste(string cos)
+        {
+            if (float.TryParse(cos, out float costo))
+            {
+                attrCoste = costo;
+            }
+            else
+            {
+                throw new Exception($"El valor \"{cos}\" no es válido para el coste unitario");
+            }
+        }
         public bool crearProducto()
         {
             productosDAL modelo = new productosDAL();

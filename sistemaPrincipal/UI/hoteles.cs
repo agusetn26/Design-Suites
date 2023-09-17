@@ -36,6 +36,7 @@ namespace sistemaPrincipal
             contenedorHoteles.DataSource = rows.Tables[0];
             contenedorHoteles.Columns["id_hotel"].ReadOnly = true;
             contenedorHoteles.Columns["apertura"].ReadOnly = true;
+            contenedorHoteles.Columns["cerrar"].ReadOnly = true;
         }
 
         private void addRow(DataGridViewCellEventArgs e)
@@ -119,14 +120,23 @@ namespace sistemaPrincipal
 
             foreach (var hot in filasModificadas)
             {
-                hotelBLL hotel = new hotelBLL(hot.Key,
-                                              hot.Value.Cells["nombre"].Value.ToString(),
-                                              hot.Value.Cells["descripcion"].Value.ToString(),
-                                              hot.Value.Cells["ubicacion"].Value.ToString(),
-                                              hot.Value.Cells["direccion"].Value.ToString(),
-                                              hot.Value.Cells["telefono"].Value.ToString(),
-                                              hot.Value.Cells["imagen"].Value.ToString(),
-                                              hot.Value.Cells["cerrar"].Value.ToString());
+                hotelBLL hotel;
+                try
+                {
+                    hotel = new hotelBLL(hot.Key,
+                                            hot.Value.Cells["nombre"].Value.ToString(),
+                                            hot.Value.Cells["descripcion"].Value.ToString(),
+                                            hot.Value.Cells["ubicacion"].Value.ToString(),
+                                            hot.Value.Cells["direccion"].Value.ToString(),
+                                            hot.Value.Cells["telefono"].Value.ToString(),
+                                            hot.Value.Cells["imagen"].Value.ToString(),
+                                            hot.Value.Cells["cerrar"].Value.ToString());
+                } catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+              
                 if (!hotel.modificarHotel())
                 {
                     string msg = $"Error al actualizar el hotel con el id {hotel.attrId}, cambie los archivos de imagen. De persistir contacte con soporte";
@@ -139,9 +149,5 @@ namespace sistemaPrincipal
             this.tableContent();
         }
 
-        private void contenedorHoteles_CellValidated(object sender, DataGridViewCellEventArgs e)
-        {
-            addRow(e);
-        }
     }
 }

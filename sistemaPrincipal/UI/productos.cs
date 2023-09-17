@@ -33,10 +33,18 @@ namespace sistemaPrincipal
         private void tableFill()
         {
             contenedorProductos.DataSource = dal.select().Tables[0];
+            contenedorProductos.DataError += DataGridView_DataError;
             contenedorProductos.Columns["id_producto"].ReadOnly = true;
+            contenedorProductos.Columns["id_proveedor"].ReadOnly = true;
             contenedorProductos.Columns["fecha_alta"].ReadOnly = true;
+            contenedorProductos.Columns["imagen"].ReadOnly = true;
+            contenedorProductos.Columns["eliminar"].ReadOnly = true;
         }
-
+        private void DataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+            MessageBox.Show("Valor inválido para la celda, ingrese uno válido para no ver el mensaje", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+        }
 
         private void addProduct(object sender, EventArgs e)
         {
@@ -117,14 +125,24 @@ namespace sistemaPrincipal
 
             foreach (var producto in filasModificadas)
             {
-                productoBLL productoBll = new productoBLL(producto.Key,
+                productoBLL productoBll;
+                try
+                {
+                    Console.WriteLine(producto.Value.Cells["categoria"].Value.ToString());
+                    productoBll = new productoBLL(producto.Key,
                                               producto.Value.Cells["nombre"].Value.ToString(),
                                               producto.Value.Cells["categoria"].Value.ToString(),
                                               producto.Value.Cells["costeU"].Value.ToString(),
                                               producto.Value.Cells["imagen"].Value.ToString(),
-                                              producto.Value.Cells["id_proveedor"].Value.ToString(),
+                                              (int) producto.Value.Cells["id_proveedor"].Value,
                                               producto.Value.Cells["fecha_alta"].Value.ToString(),
                                               producto.Value.Cells["eliminar"].Value.ToString());
+                } catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                 
                 if (!productoBll.modificarProducto())
                 {
                     string msg = $"Error al actualizar el producto con el id {productoBll.attrId}, cambie los archivos de imagen. De persistir contacte con soporte";
@@ -143,7 +161,7 @@ namespace sistemaPrincipal
 
         }
 
-        private void contenedorProductos_CellValidated(object sender, DataGridViewCellEventArgs e)
+        private void contenedorProductos_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             addRow(e);
         }

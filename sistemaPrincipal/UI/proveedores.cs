@@ -37,6 +37,7 @@ namespace sistemaPrincipal
             contenedorProveedores.DataSource = rows.Tables[0];
             contenedorProveedores.Columns["id_proveedor"].ReadOnly = true;
             contenedorProveedores.Columns["fecha_alta"].ReadOnly = true;
+            contenedorProveedores.Columns["rescindir"].ReadOnly = true;
         }
 
         private void addProvider(object sender, EventArgs e)
@@ -74,7 +75,7 @@ namespace sistemaPrincipal
                         }
                         else
                         {
-                            contenedorProveedores.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = "Establecer fecha de cierre";
+                            contenedorProveedores.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = "Rescindir contrato";
                             addRow(e);
                         }
 
@@ -96,6 +97,14 @@ namespace sistemaPrincipal
 
             foreach (var row in filasModificadas)
             {
+                if (string.IsNullOrWhiteSpace(row.Value.Cells["nombre"].Value.ToString())   || string.IsNullOrWhiteSpace(row.Value.Cells["direccion"].Value.ToString()) ||
+                    string.IsNullOrWhiteSpace(row.Value.Cells["contacto"].Value.ToString()) || string.IsNullOrWhiteSpace(row.Value.Cells["productos"].Value.ToString()) ||
+                    string.IsNullOrWhiteSpace(row.Value.Cells["envio"].Value.ToString())   || string.IsNullOrWhiteSpace(row.Value.Cells["rescindir"].Value.ToString())
+                   )
+                {
+                    MessageBox.Show("Se han detectado celdas vacías, cancelando actualización de listado...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 proveedorBLL proveedor = new proveedorBLL(
                                                         row.Key.ToString(),
                                                         row.Value.Cells["nombre"].Value.ToString(),

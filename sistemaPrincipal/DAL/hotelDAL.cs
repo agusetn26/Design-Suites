@@ -50,17 +50,11 @@ namespace sistemaPrincipal.DAL
 
                 db.consultasSinR(sqlCom2);
 
-                string sqlStrSuministros = hotelData.attrSuministros;
-                SqlCommand sqlCom3 = new SqlCommand(sqlStrSuministros);
+                string sqlStrEventos = hotelData.attrEventos;
+                SqlCommand sqlCom3 = new SqlCommand(sqlStrEventos);
                 sqlCom3.Parameters.AddWithValue("@idH", idHotel);
 
-                db.consultasSinR(sqlCom3);
-
-                string sqlStrEventos = hotelData.attrEventos;
-                SqlCommand sqlCom4 = new SqlCommand(sqlStrEventos);
-                sqlCom4.Parameters.AddWithValue("@idH", idHotel);
-
-                if (db.consultasSinR(sqlCom4))
+                if (db.consultasSinR(sqlCom3))
                 {
                     MessageBox.Show("Hotel añadido con éxito, vaya al apartado anterior para visualizar", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }

@@ -111,7 +111,7 @@ namespace sistemaPrincipal
             this.contenedorProductos.Size = new System.Drawing.Size(474, 298);
             this.contenedorProductos.TabIndex = 6;
             this.contenedorProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.contenedorProductos_CellContentClick);
-            this.contenedorProductos.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.contenedorProductos_CellValidated);
+            this.contenedorProductos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.contenedorProductos_CellEndEdit);
             // 
             // backBoton
             // 

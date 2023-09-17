@@ -74,11 +74,11 @@ namespace sistemaPrincipal.DAL
 
                 SqlCommand sqlCom = new SqlCommand(sql);
                 sqlCom.Parameters.AddWithValue("@nom", producto.attrNombre);
-                sqlCom.Parameters.AddWithValue("@cate",producto.attrCoste);
+                sqlCom.Parameters.AddWithValue("@cate",producto.attrCategoria);
                 sqlCom.Parameters.AddWithValue("@cos", producto.attrCoste);
                 sqlCom.Parameters.AddWithValue("@src", src);
                 sqlCom.Parameters.AddWithValue("@pr", producto.idProveedor);
-                sqlCom.Parameters.AddWithValue("@fa", producto.attrAlta);
+                sqlCom.Parameters.AddWithValue("@fa", DateTime.Parse(producto.attrAlta));
 
                 if (producto.attrBaja != "Dar de baja")
                 {

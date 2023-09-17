@@ -165,7 +165,6 @@ namespace sistemaPrincipal
             this.contenedorHoteles.TabIndex = 4;
             this.contenedorHoteles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.contenedorHoteles_CellContentClick);
             this.contenedorHoteles.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.contenedorHoteles_CellEndEdit);
-            this.contenedorHoteles.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.contenedorHoteles_CellValidated);
             // 
             // tableLayoutPanel1
             // 
