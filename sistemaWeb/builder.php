@@ -15,6 +15,10 @@
 </head>
 
 <body>
+    <?php
+        require_once "includes/config.php";
+        require_once "modelos/builder.php";
+    ?>
     <!-- Top -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Twelfth navbar example">
@@ -67,16 +71,17 @@
                         aria-expanded="false">
                         HOTELES
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="?sec=hoteles&ubi=Buenos Aires" id="navbarDropdown"
-                                role="button">BUENOS AIRES</a></li>
-                        <li><a class="dropdown-item" href="?sec=hoteles&ubi=Bariloche" id="navbarDropdown"
-                                role="button">BARILOCHE</a></li>
-                        <li><a class="dropdown-item" href="?sec=hoteles&ubi=Calafate" id="navbarDropdown"
-                                role="button">CALAFATE</a></li>
-                        <li><a class="dropdown-item" href="?sec=hoteles&ubi=Salta" id="navbarDropdown"
-                                role="button">SALTA</a></li>
-                    </ul>
+
+                    <form action="?sec=hoteles" method="POST">
+                        <ul class="dropdown-menu">
+                            <?php   
+                                foreach($filas as $index => $fila){
+                                    echo '<button class="dropdown-item" type="submit" name="hotel" value="'.$index.'">'.$fila['nombre'].'</button>';
+                                }
+                            ?>
+                        </ul>
+                    </form>
+
                 </div>
             </li>
             <li class="nav-item mx-2 my-1">
@@ -186,7 +191,7 @@
 
     <div id="contenedorPrincipal">
         <?php
-        require_once 'views/' . $_GET['sec'] . ".php";
+            require_once 'views/' . $_GET['sec'] . ".php";
         ?>
     </div>
 

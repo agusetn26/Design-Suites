@@ -91,49 +91,28 @@
     <div class="container">
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-5">
-            <div class="col hentai">
-                <div class="card shadow-sm">
-                    <a href="#">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/home_bariloche.jpg" alt="Design Suites Bariloche">
-                    </a>
-                    <div class="card-body py-3 px-5" style="background-color: #20233f; ">
-                        <p class="card-text" style="color: white; font-size:20px; font-weight:bold;">BARILOCHE</p>
-                    </div>
-                </div>
-            </div>
+            <?php foreach($filas as $index => $fila){
 
-            <div class="col hentai">
-                <div class="card shadow-sm">
-                    <a href="#">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/home_buenos_aires.jpg" alt="Design Suites Bariloche">
-                    </a>
-                    <div class="card-body py-3 px-5" style="background-color: #20233f; ">
-                        <p class="card-text" style="color: white; font-size:20px; font-weight:bold;">BUENSO AIRES</p>
-                    </div>
-                </div>
-            </div>
+                $hotel = $fila['nombre'];   //nombre del hotel
+                $idTag = "hotelCard - " . $index;   //id del formulario
 
-            <div class="col hentai">
-                <div class="card shadow-sm">
-                    <a href="#">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/home_calafate.jpg" alt="Design Suites Bariloche">
-                    </a>
-                    <div class="card-body py-3 px-5" style="background-color: #20233f; ">
-                        <p class="card-text" style="color: white; font-size:20px; font-weight:bold;">CALAFATE</p>
-                    </div>
-                </div>
-            </div>
+                $archivo = "/" . basename(explode(";", $fila['imagen'])[0]);    //obtengo nombre del archivo de imagen
+                $carpeta = basename(dirname(explode(";", $fila['imagen'])[0])); //obtengo la carpeta que contiene la imagen
 
-            <div class="col hentai">
-                <div class="card shadow-sm">
-                    <a href="#">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/home_salta.jpg" alt="Design Suites Bariloche">
-                    </a>
-                    <div class="card-body py-3 px-5" style="background-color: #20233f; ">
-                        <p class="card-text" style="color: white; font-size:20px; font-weight:bold;">SALTA</p>
-                    </div>
+                $ruta =  "../img/hoteles/" . $carpeta . $archivo;   //establezco ruta definitiva
+            ?>
+                <div class="col hentai">
+                    <form action="?sec=hoteles" method="POST" id="<?php echo $idTag?>">
+                        <div class="card shadow-sm" onclick="document.getElementById('<?php echo $idTag?>').submit();">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="<?php echo $ruta?>" alt="Design Suites Bariloche"> 
+                            <div class="card-body py-3 px-5" style="background-color: #20233f; ">
+                                <p class="card-text" style="color: white; font-size:20px; font-weight:bold;"><?php echo $hotel?></p>
+                            </div>
+                        </div>
+                        <input type="hidden" name="hotel" value="<?php echo $index?>">
+                    </form>
                 </div>
-            </div>
+            <?php }?>
         </div>
     </div>
 </div>
