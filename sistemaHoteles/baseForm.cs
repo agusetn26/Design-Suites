@@ -32,12 +32,17 @@ namespace sistemaHoteles
 
         private void btnHoteles_Click(object sender, EventArgs e)
         {
-            openForm(new hoteles());
+            openForm(new hotel());
         }
 
         private void reservas_Click(object sender, EventArgs e)
         {
             openForm(new reservas());
+        }
+
+        private void habitaciones_Click(object sender, EventArgs e)
+        {
+            openForm(new habitaciones());
         }
     }
 }
