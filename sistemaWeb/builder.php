@@ -103,15 +103,80 @@
                 <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">RESERVAS ONLINE</a>
             </li>
             <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
-                <button type="button" onclick="selectedRooms()" class="btn px-3 py-0 bg-light"
+                <button type="button" onclick="document.getElementById('nav-res').innerHTML = document.getElementById('hotEl').innerHTML" class="btn px-3 py-0 bg-light"
                     style="font-weight: 700; line-height: 29px">HABITACIONES</button>
             </li>
             <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
-                <button type="button" onclick="selectedEvents()" class="btn px-3 py-0 bg-light" style="font-weight: 700; line-height: 29px">SALA DE
+                <button type="button" onclick="document.getElementById('nav-res').innerHTML = document.getElementById('hotEvento').innerHTML" class="btn px-3 py-0 bg-light" style="font-weight: 700; line-height: 29px">SALA DE
                     EVENTOS</button>
             </li>
         </ul>
     </nav>
+    
+    <div id="hotEvento" style="display: none;">
+    <li class="nav-item px-5 my-1">
+        <div class="d-flex gap-2 align-items-center">
+            <span class="material-symbols-outlined" onclick="back()" style="color: white; cursor: pointer;">reply</span>
+            <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">SALA DE EVENTOS</a>
+        </div>
+    </li>
+    <li class="nav-item px-2 my-1">
+        <select class="form-select" style="width: 260px; height: 30px; line-height: 14px;">
+            <?php   
+                    foreach($filas as $index => $fila){
+                        echo '<option value="'.$index.'">'.$fila['nombre'].'</option>';
+                    }
+            ?>
+            </select>
+        </select>
+    </li>
+    <li class="nav-item px-2 my-1">
+        <input type="date" name="data" class="border-0 px-2"
+            style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
+    </li>
+    <li class="nav-item px-2 my-1">
+        <input type="time" name="data" class="border-0 px-2"
+            style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
+    </li>
+    <li class="nav-item px-2 my-1">
+        <input type="time" name="data" class="border-0 px-2"
+            style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
+    </li>
+    <li class="nav-item px-2 my-1">
+        <a class="nav-link active bg-light text-dark rounded text-center"
+            style="width: 130px; line-height: 14px; font-weight: 700;" href="#" aria-current="page">RESERVAR</a>
+    </li>
+    </div>
+    <div id="hotEl" style="display: none;">
+        <li class="nav-item px-5 my-1">
+            <div class="d-flex gap-2 align-items-center">
+                <span class="material-symbols-outlined" onclick="back()" style="color: white; cursor: pointer;">reply</span>
+                <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">HABITACIONES</a>
+            </div>
+        </li>
+        <li class="nav-item px-2 my-1">
+            <select class="form-select" style="width: 260px; height: 30px; line-height: 14px;">
+                <option selected>Seleccione el hotel</option>
+                <?php   
+                    foreach($filas as $index => $fila){
+                        echo '<option value="'.$index.'">'.$fila['nombre'].'</option>';
+                    }
+                ?>
+            </select>';
+        </li>
+        <li class="nav-item px-2 my-1">
+            <input type="date" name="data" class="border-0 px-2"
+            style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
+        </li>
+        <li class="nav-item px-2 my-1">
+            <input type="date" name="data" class="border-0 px-2"
+            style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
+        </li>
+        <li class="nav-item px-2 my-1">
+            <a class="nav-link active bg-light text-dark rounded text-center"
+            style="width: 130px; line-height: 14px; font-weight: 700;" href="#" aria-current="page">RESERVAR</a>
+        </li>
+    </div>
 <!--
     <br>
 
