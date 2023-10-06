@@ -1,0 +1,12 @@
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\bin\Debug\sistemaHoteles.exe.config
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\bin\Debug\sistemaHoteles.exe
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\bin\Debug\sistemaHoteles.pdb
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.Properties.Resources.resources
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.csproj.GenerateResource.cache
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.exe
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.pdb
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.baseForm.resources
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.hoteles.resources
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.reservas.resources
