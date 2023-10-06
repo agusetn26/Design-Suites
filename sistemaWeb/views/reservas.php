@@ -65,7 +65,7 @@
                         </div>
                         <p class="my-2 d-flex justify-content-between">Precio por la habitacion<abbr title="Este precio va cambiando segun la cantidad de personas que esten en la habitacion"><span class="material-symbols-outlined cant-per">info</span></abbr></p>
                         <br>
-                        <div >
+                        <div>
                             <h2 id="resultado">$0</h2>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                         </div>
                         <p class="my-2 d-flex justify-content-between">Precio por la habitacion<abbr title="Este precio va cambiando segun la cantidad de personas que esten en la habitacion"><span class="material-symbols-outlined cant-per">info</span></abbr></p>
                         <br>
-                        <div >
+                        <div>
                             <h2 id="resultado2">$0</h2>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
             </div>
 
 
-        </div>  
+        </div>
 
         <!-- der -->
 
@@ -126,11 +126,17 @@
             <div class="col-sm bg-dark h4 p-3 text-light rounded">
                 <H4>PRECIO TOTAL</H4>
                 <div class="linea-in my-1"></div>
-                <div >
+                <div>
                     <H4 id="resultado_final" class="my-4">$0</H4>
                 </div>
             </div>
+            <button class="btn btn-dark " type="button" aria-expanded="false">
+                RESERVA AHORA
+            </button>
         </div>
+
+
+
     </div>
 </div>
 
@@ -139,16 +145,16 @@
     var divResultado = document.getElementById('resultado');
     var select2 = document.getElementById('opciones2');
     var divResultado2 = document.getElementById('resultado2');
-    var divResultado_final= document.getElementById('resultado_final');
+    var divResultado_final = document.getElementById('resultado_final');
 
-    select.addEventListener('click', function(){
+    select.addEventListener('click', function() {
 
         var selectValue = select.value;
         divResultado.textContent = '$' + (selectValue * 10000);
         suma();
     });
 
-    select2.addEventListener('click', function(){
+    select2.addEventListener('click', function() {
         var select2Value = select2.value;
         divResultado2.textContent = '$' + (select2Value * 10000);
         suma();
@@ -156,9 +162,9 @@
 
 
 
-    function suma(){
+    function suma() {
         var suma = parseInt((divResultado.textContent).replace("$", "")) + parseInt((divResultado2.textContent).replace("$", ""));
-        
+
         resultado_final.textContent = "$" + suma;
     }
 
@@ -166,16 +172,16 @@
 
 
 
-/*
-    function calcularSuma() {
-            
-            const select1 = document.getElementById('opciones');
-            const select2 = document.getElementById('opciones2');
-            const valor1 = parseInt(opciones.value);
-            const valor2 = parseInt(opciones2.value);
-            const suma = valor1 + valor2;
-            const Resultado_finalElement = document.getElementById('resultado_final');
-            resuldato_final.textContent = suma;
-        }
-        */
+    /*
+        function calcularSuma() {
+                
+                const select1 = document.getElementById('opciones');
+                const select2 = document.getElementById('opciones2');
+                const valor1 = parseInt(opciones.value);
+                const valor2 = parseInt(opciones2.value);
+                const suma = valor1 + valor2;
+                const Resultado_finalElement = document.getElementById('resultado_final');
+                resuldato_final.textContent = suma;
+            }
+            */
 </script>

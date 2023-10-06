@@ -43,7 +43,7 @@
                             </a>
                             <div class="card-body py-3 px-5" style="background-color: #20233f; ">
                                 <p class="card-text" style="color: white; font-size:20px; font-weight:bold;">CALAFATE <br>
-                                <p style="color: white;"> Calle 598 Nº190, Playa Lago Argentino </p>
+                                <p style="color: white;"> Calle 598, Playa Lago Arg</p>
                                 </p>
                             </div>
                         </div>
@@ -63,8 +63,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="contact-form-area fix mtb-30">
+            <div class="col-md-6 ">
+                <div class="d-none d-md-block contact-form-area fix mtb-30">
                     <h3 class="uppercase mb-25 text-center">CONTACTO</h3>
                     <p></p>
                     <form action="#" class="contact-form" id="contact-form" method="post" onsubmit="return validar(this)">
@@ -97,9 +97,45 @@
                             <input type="submit" class="send-btn" value="ENVIAR">
                         </div>
                     </form>
-
-
                 </div>
+
+                <!-- para iafon -->
+                <br>
+                <div class="d-block d-md-none contact-form-area fix mtb-30">
+                    <h3 class="uppercase mb-25 text-center">CONTACTO</h3>
+                    <p></p>
+                    <form action="#" class="contact-form" id="contact-form" method="post" onsubmit="return validar(this)">
+                        <div class="form-group">
+                            <input type="text" name="nombre" class="form-control" value="" placeholder="Nombre" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="tel" class="form-control" value="" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" value="" placeholder="Mail" required="">
+                        </div>
+                        <div class="form-group1">
+                            <ul>
+                                <li class="nav-item list-unstyled mx-1">
+                                    <select class="form-select">
+                                        <option selected>Seleccione el hotel</option>
+                                        <option value="1">Buenos Aires</option>
+                                        <option value="2">Bariloche</option>
+                                        <option value="3">Calafate</option>
+                                        <option value="4">Salta</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="consulta" class="form-control" rows="5" placeholder="Mensaje"></textarea>
+                        </div>
+                        <div class="send-area">
+                            <input type="submit" class="send-btn" value="ENVIAR">
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>
