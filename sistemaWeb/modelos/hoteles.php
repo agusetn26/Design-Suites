@@ -20,9 +20,11 @@
     }
 
     $habitacionesCategoria = [];
+    $cantidadHabitaciones = 0;
 
-    while($room = sqlsrv_fetch_array( $qryHabicaciones, SQLSRV_FETCH_ASSOC)){
-        $habitacionesCategoria[] = $room; 
+    while($room = sqlsrv_fetch_array($qryHabicaciones, SQLSRV_FETCH_ASSOC)){
+        $habitacionesCategoria[] = $room;
+        $cantidadHabitaciones += $room['cantidad'];
     }
 
     //Añadir columna servicios en tabla hoteles, solucion provicional

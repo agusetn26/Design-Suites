@@ -145,8 +145,8 @@ namespace sistemaPrincipal
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.categoria, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.descripcion, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.nombre, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.descripcion, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 78);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -305,7 +305,7 @@ namespace sistemaPrincipal
             this.descripcion.Margin = new System.Windows.Forms.Padding(0);
             this.descripcion.MaxLength = 200;
             this.descripcion.Name = "descripcion";
-            this.descripcion.Size = new System.Drawing.Size(171, 31);
+            this.descripcion.Size = new System.Drawing.Size(170, 31);
             this.descripcion.TabIndex = 8;
             this.descripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

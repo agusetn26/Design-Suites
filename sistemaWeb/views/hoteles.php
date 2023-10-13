@@ -5,7 +5,8 @@
 <div class="container my-4">
 
     <p class="h1"><?php echo $filas[$index]['nombre'];?></p>
-    <p><?php echo $filas[$index]['descripcion'];?></p>
+    <p class="text-secondary fs-5"><?php echo $filas[$index]['descripcion']?></p>
+    <p class="fw-bold lead"><?php echo $cantidadHabitaciones;?>&nbsp;habitaciones</p>
 
     <!-------------------------------------------------------------------->
     <p class="h3 m-3 border-bottom">Galeria de fotos</p>

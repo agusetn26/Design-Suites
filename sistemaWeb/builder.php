@@ -18,6 +18,13 @@
     <?php
         require_once "includes/config.php";
         require_once "modelos/builder.php";
+
+        $hotelesButtons = "";
+        $hotelesOp = "";
+        foreach($filas as $index => $fila){
+            $hotelesButtons .= '<button class="dropdown-item" type="submit" name="hotel" value="'.$index.'">'.$fila['nombre'].'</button>';
+            $hotelesOp .= '<option value="'.$index.'">'.$fila['nombre'].'</option>';
+        }
     ?>
     <!-- Top -->
 
@@ -75,13 +82,10 @@
                     <form action="?sec=hoteles" method="POST">
                         <ul class="dropdown-menu">
                             <?php   
-                                foreach($filas as $index => $fila){
-                                    echo '<button class="dropdown-item" type="submit" name="hotel" value="'.$index.'">'.$fila['nombre'].'</button>';
-                                }
+                                echo $hotelesButtons;
                             ?>
                         </ul>
                     </form>
-
                 </div>
             </li>
             <li class="nav-item mx-2 my-1">
@@ -103,158 +107,51 @@
                 <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">RESERVAS ONLINE</a>
             </li>
             <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
-                <button type="button" onclick="document.getElementById('nav-res').innerHTML = document.getElementById('hotEl').innerHTML" class="btn px-3 py-0 bg-light"
+                <button type="button" onclick="selectedRooms()" class="btn px-3 py-0 bg-light"
                     style="font-weight: 700; line-height: 29px">HABITACIONES</button>
             </li>
             <li class="nav-item px-3 py-md-2 py-sm-2 py-2 py-xl-0">
-                <button type="button" onclick="document.getElementById('nav-res').innerHTML = document.getElementById('hotEvento').innerHTML" class="btn px-3 py-0 bg-light" style="font-weight: 700; line-height: 29px">SALA DE
+                <button type="button" onclick="selectedEvents()" class="btn px-3 py-0 bg-light" style="font-weight: 700; line-height: 29px">SALA DE
                     EVENTOS</button>
             </li>
         </ul>
     </nav>
     
-    <div id="hotEvento" style="display: none;">
-    <li class="nav-item px-5 my-1">
-        <div class="d-flex gap-2 align-items-center">
-            <span class="material-symbols-outlined" onclick="back()" style="color: white; cursor: pointer;">reply</span>
-            <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">SALA DE EVENTOS</a>
-        </div>
-    </li>
-    <li class="nav-item px-2 my-1">
-        <select class="form-select" style="width: 260px; height: 30px; line-height: 14px;">
-            <?php   
-                    foreach($filas as $index => $fila){
-                        echo '<option value="'.$index.'">'.$fila['nombre'].'</option>';
-                    }
-            ?>
-            </select>
-        </select>
-    </li>
-    <li class="nav-item px-2 my-1">
-        <input type="date" name="data" class="border-0 px-2"
-            style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-    </li>
-    <li class="nav-item px-2 my-1">
-        <input type="time" name="data" class="border-0 px-2"
-            style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-    </li>
-    <li class="nav-item px-2 my-1">
-        <input type="time" name="data" class="border-0 px-2"
-            style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-    </li>
-    <li class="nav-item px-2 my-1">
-        <a class="nav-link active bg-light text-dark rounded text-center"
-            style="width: 130px; line-height: 14px; font-weight: 700;" href="#" aria-current="page">RESERVAR</a>
-    </li>
-    </div>
-    <div id="hotEl" style="display: none;">
-        <li class="nav-item px-5 my-1">
-            <div class="d-flex gap-2 align-items-center">
-                <span class="material-symbols-outlined" onclick="back()" style="color: white; cursor: pointer;">reply</span>
-                <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">HABITACIONES</a>
-            </div>
-        </li>
-        <li class="nav-item px-2 my-1">
-            <select class="form-select" style="width: 260px; height: 30px; line-height: 14px;">
-                <option selected>Seleccione el hotel</option>
-                <?php   
-                    foreach($filas as $index => $fila){
-                        echo '<option value="'.$index.'">'.$fila['nombre'].'</option>';
-                    }
-                ?>
-            </select>';
-        </li>
-        <li class="nav-item px-2 my-1">
-            <input type="date" name="data" class="border-0 px-2"
-            style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-        </li>
-        <li class="nav-item px-2 my-1">
-            <input type="date" name="data" class="border-0 px-2"
-            style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-        </li>
-        <li class="nav-item px-2 my-1">
-            <a class="nav-link active bg-light text-dark rounded text-center"
-            style="width: 130px; line-height: 14px; font-weight: 700;" href="#" aria-current="page">RESERVAR</a>
-        </li>
-    </div>
-<!--
-    <br>
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="min-height: 64px;">
-        <ul class="navbar-nav flex-wrap justify-content-center align-items-center mx-auto">
+    <div id="reservasOp" style="display: none;">
+        <form action="?sec=reservas" method="POST" class="d-flex flex-wrap justify-content-center align-items-center" onsubmit="return verifData(this);">
             <li class="nav-item px-5 my-1">
                 <div class="d-flex gap-2 align-items-center">
-                    <span class="material-symbols-outlined" onclick="" style="color: white; cursor: pointer;">reply</span>
-                    <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">HABITACIONES</a>
+                    <span class="material-symbols-outlined" onclick="back()" style="color: white; cursor: pointer;">reply</span>
+                    <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page" id="reservaType">SALA DE EVENTOS</a>
                 </div>
             </li>
+
             <li class="nav-item px-2 my-1">
-                <select class="form-select" style="width: 260px; height: 30px; line-height: 14px;">
-                    <option selected>Seleccione el hotel</option>
-                    <option value="1">Buenos Aires</option>
-                    <option value="2">Bariloche</option>
-                    <option value="3">Calafate</option>
-                    <option value="4">Salta</option>
+                <select class="form-select" style="width: 260px; height: 30px; line-height: 14px;" name="hotel">
+                    <?php   
+                        echo $hotelesOp;
+                    ?>
                 </select>
             </li>
-            <li class="nav-item px-2 my-1">
-                <input type="date" name="data" class="border-0 px-2"
-                    style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-            </li>
-            <li class="nav-item px-2 my-1">
-                <input type="date" name="data" class="border-0 px-2"
-                    style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-            </li>
-            <li class="nav-item px-2 my-1">
-                <a class="nav-link active bg-light text-dark rounded text-center"
-                    style="width: 130px; line-height: 14px; font-weight: 700;" href="#" aria-current="page">RESERVAR</a>
-            </li>
-        </ul>
-    </nav>
 
-    <br>
+            <div id="dateInputs" class="d-flex flex-wrap justify-content-center"></div>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="min-height: 64px;">
-        <ul class="navbar-nav flex-wrap justify-content-center align-items-center mx-auto">
-            <li class="nav-item px-5 my-1">
-                <div class="d-flex gap-2 align-items-center">
-                    <span class="material-symbols-outlined" onclick="" style="color: white; cursor: pointer;">reply</span>
-                    <a class="nav-link active text-center" style="font-weight: 700;" aria-current="page">SALA DE EVENTOS</a>
-                </div>
-            </li>
             <li class="nav-item px-2 my-1">
-                <select class="form-select" style="width: 260px; height: 30px; line-height: 14px;">
-                    <option selected>Seleccione el hotel</option>
-                    <option value="1">Buenos Aires</option>
-                    <option value="2">Bariloche</option>
-                    <option value="3">Calafate</option>
-                    <option value="4">Salta</option>
-                </select>
+                <input type="submit" value="RESERVAR" class="form-control btn btn-light"
+                    style="width: 130px; line-height: 14px; font-weight: 700;"  aria-current="page">
             </li>
-            <li class="nav-item px-2 my-1">
-                <input type="date" name="data" class="border-0 px-2"
-                    style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-            </li>
-            <li class="nav-item px-2 my-1">
-                <input type="time" name="data" class="border-0 px-2"
-                    style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-            </li>
-            <li class="nav-item px-2 my-1">
-                <input type="time" name="data" class="border-0 px-2"
-                    style="width: 260px; height: 35px; line-height: 14px; border-radius: 8px;">
-            </li>
-            <li class="nav-item px-2 my-1">
-                <a class="nav-link active bg-light text-dark rounded text-center"
-                    style="width: 130px; line-height: 14px; font-weight: 700;" href="#" aria-current="page">RESERVAR</a>
-            </li>
-        </ul>
-    </nav>
-
-     -->
+        </form>
+    </div>
 
     <!-- Apartados -->
 
-    <div id="contenedorPrincipal">
+    <div id="contenedorPrincipal" class="position-relative">
+        <div class="customLoading position-absolute align-items-center w-100 h-100 bg-dark" style="display: none;" id="loadingScreen">
+            <div class="spinner-border m-auto text-secondary" role="status">
+                <span class="sr-only"></span>
+            </div>
+        </div>
+
         <?php
             require_once 'views/' . $_GET['sec'] . ".php";
         ?>
