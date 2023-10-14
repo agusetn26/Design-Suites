@@ -46,53 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="baseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="baseForm.Designer.cs">
-      <DependentUpon>baseForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="habitaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="habitaciones.Designer.cs">
-      <DependentUpon>habitaciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="reservas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="reservas.Designer.cs">
-      <DependentUpon>reservas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="hotel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="hotel.Designer.cs">
-      <DependentUpon>hotel.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="baseForm.resx">
-      <DependentUpon>baseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="habitaciones.resx">
-      <DependentUpon>habitaciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="reservas.resx">
-      <DependentUpon>reservas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="hotel.resx">
-      <DependentUpon>hotel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
