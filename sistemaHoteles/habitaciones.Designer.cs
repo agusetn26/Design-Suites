@@ -90,13 +90,13 @@
             this.cateInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.cateInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.cateInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cateInfo.Location = new System.Drawing.Point(264, 0);
-            this.cateInfo.Margin = new System.Windows.Forms.Padding(0);
+            this.cateInfo.Location = new System.Drawing.Point(269, 5);
+            this.cateInfo.Margin = new System.Windows.Forms.Padding(5);
             this.cateInfo.Name = "cateInfo";
             this.cateInfo.RowCount = 2;
             this.cateInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.cateInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.cateInfo.Size = new System.Drawing.Size(530, 376);
+            this.cateInfo.Size = new System.Drawing.Size(520, 366);
             this.cateInfo.TabIndex = 1;
             // 
             // tableLayoutPanel3

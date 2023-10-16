@@ -52,6 +52,8 @@
     <Compile Include="baseForm.Designer.cs">
       <DependentUpon>baseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\hotelBLL.cs" />
+    <Compile Include="DAL\hotelDAL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +78,7 @@
     <Compile Include="hotel.Designer.cs">
       <DependentUpon>hotel.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAL\config.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="baseForm.resx">
@@ -115,5 +118,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
