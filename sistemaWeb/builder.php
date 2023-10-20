@@ -159,56 +159,44 @@
     </div>
 
     <!-- Footer -->
+    <div class="footer bg-dark">
+        <div class="container">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-3">
+                <div class="col d-flex flex-column align-items-center">
+                    <a href="?sec=home" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                        <img src="../img/logo.png" alt="Logo" class="" style="filter: invert(100%);">
+                    </a>
+                    <p class="text-muted">© 2023 Design Suites, Inc.</p>
+                </div>
 
-    <footer class="footer">
-        <div class="container text-start">
-            <div class="row mb-4">
-                <div class="col-md-12 text-center">
-                    <a href="#"><img src="../img/facebook-logo.png" alt="Facebook" class="mx-3" width="20"></a>
-                    <a href="#"><img src="../img/instagram-logo.png" alt="Instagram" class="mx-3" width="20"></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="../img/logo.png" alt="Logo" class="footer-logo" style="filter: invert(100%);">
-                    <p class="text-start">
-                        Design Suites son modernos hoteles ubicados en distintas ciudades de Argentina.
-                        <br>
-                        <br>
-                        Design Suites<br>
-                        Hotel 4 estrellas<br>
-                        Disposición Turística 181-A-2017
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <p class="fs-2 fw-light text-uppercase">Design Suites</p>
-                    <ul class="footer-list list-unstyled">
-                        <li><a class="text-light" href="">Home</a></li>
-                        <br>
-                        <li><a class="text-light" href="">Buenos Aires</a></li>
-                        <br>
-                        <li><a class="text-light" href="">Bariloche</a></li>
-                        <br>
-                        <li><a class="text-light" href="">Calatafè</a></li>
-                        <br>
-                        <li><a class="text-light" href="">Salta</a></li>
-                        <br>
-                        <li><a class="text-light" href="">Contacto</a></li>
+                <div class="col mb-3 d-none d-md-block"></div>
+                <div class="col mb-3 d-none d-md-block"></div>
+                <div class="col mb-3 d-none d-md-block"></div>
+
+                <div class="col d-flex flex-column align-items-center align-items-md-start mt-5 mt-md-0">
+                    <h5>Design Suites</h5>
+                    <ul class="nav flex-column align-items-center align-items-md-start">
+                        <li class="nav-item mb-2"><a href="?sec=home" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="?sec=membresias" class="nav-link p-0 text-muted">Membresias</a></li>
+                        <li class="nav-item mb-2"><a href="?sec=contacto" class="nav-link p-0 text-muted">Contacto</a></li>
+                        <li class="nav-item mb-2"><a href="?sec=cancelar-reserva" class="nav-link p-2 bg-danger rounded text-white">Boton de Arrepentimiento</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <p class="fs-2 fw-light text-uppercase">Contactenos</p>
-                    <p></p>
-                    <p>123 Calle Principal, Ciudad</p>
-                    <p></p>
-                    <p>Teléfono: 123-456-7890</p>
-                    <p></p>
-                    <p>Email: info@example.com</p>
-                </div>
-            </div>
 
+                <!--
+                <div class="col mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div> -->
+            </footer>
         </div>
-    </footer>
+    </div>
 </body>
 <script src="js/bootstrap.bundle.js"></script>
 <script src="js/app.js"></script>

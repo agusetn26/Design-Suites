@@ -98,3 +98,42 @@ function verifData(form){
     form.submit();
 }
 
+function cancelar_reserva(){
+    let xhr = new XMLHttpRequest();
+    let codigo = document.getElementById('input-codigo').value;
+
+    if(codigo == ""){
+        alert("Rellene el campo correctamente");
+        return;
+    }
+
+    xhr.open("GET", "modelos/cancelar-reserva.php?input-codigo=" + codigo, true);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4){
+            if(xhr.status === 200) {
+                let respuesta = xhr.response;
+                
+                console.log(respuesta);
+
+                switch(respuesta){
+                    case 0:
+                        console.log("Codigo no valido");
+                        break;
+
+                    case 1:
+                        console.log("Reserva cancelada");
+                        break;
+                    
+                    default:
+                        console.log("Hubo un error js");
+                }
+                
+            } else{
+                alert("Error de conexión, intentelo más tarde. Estado: " + xhr.status);
+            }
+        }
+    };
+
+    xhr.send();
+}
