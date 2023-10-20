@@ -30,10 +30,10 @@ namespace sistemaHoteles
                 hotelBLL hotel = new hotelBLL();
                 hotel.getFields(idHotel);
                 txtHotel.Text = hotel.nombre;
-                rtxtHotelDesc.Text = hotel.descripcion.Replace("\\n", "\n");
-                txtUbi.Text = hotel.ubicacion.Replace("\\n", "\n");
-                txtDir.Text = hotel.direccion.Replace("\\n", "\n");
-                txtCon.Text = hotel.telefono.Replace("\\n", "\n");
+                rtxtHotelDesc.Text = hotel.descripcion.Replace("\\n", "\r\n");
+                txtUbi.Text = hotel.ubicacion.Replace("\\n", "\r\n");
+                txtDir.Text = hotel.direccion.Replace("\\n", "\r\n");
+                txtCon.Text = hotel.telefono.Replace("\\n", "\r\n");
                 imgs = hotel.imagenes;
                 imgHotel.Image = new Bitmap(imgs[0]);
 
