@@ -97,4 +97,6 @@ function verifData(form){
 
     form.submit();
 }
-
+$('.carruselHabitaciones').carousel({
+    interval: 2000
+})
