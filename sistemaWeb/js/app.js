@@ -46,7 +46,6 @@ function back(){
 }
 
 function verifData(form){
-console.log(form);
     if(form.elements.type.value == "habitaciones"){
         let checkIn = new Date(form.elements.in.value.replace("-", "/"));
         let checkOut = new Date(form.elements.out.value.replace("-", "/"));
@@ -66,9 +65,36 @@ console.log(form);
             alert("La fecha de entrada no puede ser mayor o igual a la fecha de salida");
             return false;
         }
-        console.log(checkIn, checkOut, form.elements.in.value, form.elements.out.value);
-
-        form.submit();
     }
+    else{
+        let inDate = new Date(form.elements.inDate.value.replace("-", "/"));
+        let checkIn = form.elements.inHour.value;
+        let checkOut = form.elements.outHour.value;
+        let currentDate = new Date();
+            
+        if (inDate == "Invalid Date" || !checkIn || !checkOut) {
+            alert("Ingrese las fechas y horas");
+            return false;
+        }
+        
+        inDate.setHours(checkIn.split(":")[0]);
+        inDate.setMinutes(checkIn.split(":")[1]);
+
+        if (inDate < currentDate) {
+            alert("La fecha y hora de entrada deben ser mayores o iguales a la fecha y hora actuales");
+            return false;
+        }
+        
+        let outDate = new Date(inDate);
+        outDate.setHours(checkOut.split(":")[0]);
+        outDate.setMinutes(checkOut.split(":")[1]);
+
+        if (inDate >= outDate) {
+            alert("La hora de entrada no puede ser mayor o igual a la hora de salida");
+            return false;
+        }
+    }
+
+    form.submit();
 }
 

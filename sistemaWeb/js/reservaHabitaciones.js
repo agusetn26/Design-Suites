@@ -6,6 +6,7 @@
 
         let index = seleccionadas.indexOf(id);
         if(index != -1){
+            //  Se borra el id de habitacion del arreglo si no existe
             seleccionadas.splice(index, 1);
         } else{
             seleccionadas.push(id);

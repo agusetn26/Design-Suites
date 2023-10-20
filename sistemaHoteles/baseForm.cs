@@ -37,6 +37,13 @@ namespace sistemaHoteles
         }
         public void openForm(Form form)
         {
+            if(form.Name == currentForm.Name)
+            {
+                form.Close();
+                form.Dispose();
+                return;
+            }
+
             basePanel.Controls.Clear();
             currentForm.Close();
 
@@ -74,6 +81,8 @@ namespace sistemaHoteles
                 return;
             }
 
+            basePanel.Controls.Clear();
+            currentForm = new Form();
             selectedHotel = (int)lstHotel.SelectedValue;
         }
     }

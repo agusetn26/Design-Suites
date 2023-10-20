@@ -225,7 +225,7 @@
         APXFzKLGiLL8AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="select2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAL0AAADNCAYAAADt9XHxAAAABGdBTUEAALGPC/xhBQAACNRJREFUeF7t
         nI2R1TgQBgmFUAiFTC4UQiGUC4XrYa0Dlrd+P5atGam7ynUF62ePZrpc3/rE+7THjx8/vnO851+Of7ZT
@@ -311,7 +311,7 @@
         RB6ll/5B5D3yK72MATK/mveVXsYCqZ/lfaWXMUHuR5GnIP2XL/8BYI/Cq22uLBsAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="imgHotel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABcUAAAQ4CAYAAADILLRmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAA/7JJREFUeF7s/XefJMd552s/73nPWXFFggYkvCO8994Q3nsz8N6DAAECtJJInXP2

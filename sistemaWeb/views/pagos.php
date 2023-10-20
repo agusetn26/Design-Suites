@@ -44,6 +44,7 @@
                             <input type="text" id="cupon_membresia" name="cupon_membresia" class="form-control bg-light border">
                         </div>
                     </div>
+                    <input type="hidden" id="inDateValue" name="inDate">
                     <input type="hidden" id="checkInValue" name="checkIn">
                     <input type="hidden" id="checkOutValue" name="checkOut">
                     <input type="hidden" id="reservasStr" name="reservas">
@@ -68,12 +69,15 @@
                 <div class="h4 bg-dark p-3 text-light rounded">
                     Información de Reserva
                 </div>
-                <div class="d-flex flex-wrap w-100 my-2">
+                <div class="d-flex flex-column w-100 my-2">
+                    <div class="d-flex flex-column flex-fill text-center">
+                        <span class="bg-dark text-white fs-4">Hotel seleccionado</span>
+                        <span class="bg-secondary text-dark fs-4" id="hotelIn">Buenos Aires</span>
+                    </div>
                     <div class="d-flex flex-column flex-fill text-center">
                         <span class="bg-dark text-white fs-4">Fecha de Entrada</span>
                         <span class="bg-secondary text-dark fs-4" id="pagosCheckIn">11/10/2023</span>
                     </div>
-                    <hr class="vr">
                     <div class="d-flex flex-column flex-fill text-center">
                         <span class="bg-dark text-white fs-4">Fecha de Salida</span>
                         <span class="bg-secondary text-dark fs-4" id="pagosCheckOut">11/10/2023</span>

@@ -14,6 +14,7 @@ namespace sistemaHoteles
     public partial class hotel : Form
     {
         private int idHotel;
+        private string[] imgs;
         public hotel(int id)
         {
             idHotel = id;
@@ -29,9 +30,14 @@ namespace sistemaHoteles
                 hotelBLL hotel = new hotelBLL();
                 hotel.getFields(idHotel);
                 txtHotel.Text = hotel.nombre;
-                rtxtHotelDesc.Text = hotel.descripcion;
+                rtxtHotelDesc.Text = hotel.descripcion.Replace("\\n", "\n");
+                txtUbi.Text = hotel.ubicacion.Replace("\\n", "\n");
+                txtDir.Text = hotel.direccion.Replace("\\n", "\n");
+                txtCon.Text = hotel.telefono.Replace("\\n", "\n");
+                imgs = hotel.imagenes;
+                imgHotel.Image = new Bitmap(imgs[0]);
+
                 rtbHeight(rtxtHotelDesc);
-                
             } 
             catch(Exception ex)
             {
@@ -39,14 +45,9 @@ namespace sistemaHoteles
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void rtbHeight(RichTextBox rtb)
         {
-            int lineHeight = (int)(rtxtHotelDesc.Font.GetHeight() * 2); // Estimación del tamaño de una línea de texto
+            int lineHeight = (int)(rtxtHotelDesc.Font.GetHeight() * 1.8); // Estimación del tamaño de una línea de texto
             int lineCount = rtxtHotelDesc.GetLineFromCharIndex(rtxtHotelDesc.Text.Length) + 1;
 
             int newHeight = (lineHeight * lineCount) + rtxtHotelDesc.Margin.Vertical + 2; // Ajustes para el margen y el borde
@@ -54,6 +55,31 @@ namespace sistemaHoteles
             if (newHeight > rtxtHotelDesc.Height)
             {
                 rtxtHotelDesc.Height = newHeight;
+            }
+        }
+
+        private int currentImg;
+        private void select1_Click(object sender, EventArgs e)
+        {
+            int index = currentImg - 1;
+
+            if (index > 0)
+            {
+                imgHotel.Image.Dispose();
+                imgHotel.Image = new Bitmap(imgs[index]);
+                currentImg = index;
+            }
+        }
+
+        private void select2_Click(object sender, EventArgs e)
+        {
+            int index = currentImg + 1;
+
+            if (index < (imgs.Length - 1))
+            {
+                imgHotel.Image.Dispose();
+                imgHotel.Image = new Bitmap(imgs[index]);
+                currentImg = index;
             }
         }
     }

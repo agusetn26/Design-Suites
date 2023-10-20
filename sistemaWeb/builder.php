@@ -155,6 +155,7 @@
         <?php
             require_once 'views/' . $_GET['sec'] . ".php";
         ?>
+        <br>
     </div>
 
     <!-- Footer -->
