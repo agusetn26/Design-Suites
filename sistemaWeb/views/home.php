@@ -1,53 +1,27 @@
 <!-- carrusel prestado -->
-
+<?php
+require_once "modelos/home.php";
+?>
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <?php for ($i = 0; $i < $cantidadHoteles; $i++) { ?>
+            <button type="button" data-bs-target="#myCarousl" data-bs-slide-to="<?php echo $i ?>" <?php if ($i == 0) { ?>class="active" aria-current="true" <?php } ?>aria-label="Slide <?php echo $i + 1 ?>""></button>
+        <?php } ?>
     </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="content"> <a href="#">
-                    <div class="content-overlay"></div> <img class="content-image img-carrusel" src="../img/salta.jpg" style="width: 1903; height: auto;" alt="">
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title" style="font-size: 50px;">Salta</h3>
-                        <p class="content-text" style="font-size: 35px;"><i class="fa fa-map-marker"></i> Design Suites Hoteles</p>
+    <div class=" carousel-inner">
+                <?php foreach ($hotelesCarrusel as $i => $hotel) { ?>
+                    <div class="carousel-item <?php if ($i == 0) { ?>active<?php } ?>">
+                        <div class="content">
+                            <div class="content-overlay"></div> <img class="content-image img-carrusel" src="../img/hoteles/<?php echo(explode('\\', $hotel["img"])[6] .'/'. explode(';',explode('\\', $hotel["img"])[7])[0])?>" style="width: 1903; height: auto;" alt="">
+                            <div class="content-details fadeIn-bottom">
+                                <h3 class="content-title" style="font-size: 50px;"><?php echo $hotel["nombre"]?></h3>
+                                <p class="content-text" style="font-size: 35px;"><i class="fa fa-map-marker"></i> Design Suites Hoteles</p>
+                            </div>
+
+                        </div>
                     </div>
-                </a>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="content"> <a href="#">
-                    <div class="content-overlay"></div> <img class="content-image img-carrusel" src="../img/bariloche.jpg" style="width: 1903; height: auto;" alt="">
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title" style="font-size: 50px;">Bariloche</h3>
-                        <p class="content-text" style="font-size: 35px;"><i class="fa fa-map-marker"></i> Design Suites Hoteles</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="content"> <a href="#">
-                    <div class="content-overlay"></div> <img class="content-image img-carrusel" src="../img/calafate.jpg" style="width: 1903; height: auto;" alt="">
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title" style="font-size: 50px;">Calafate</h3>
-                        <p class="content-text" style="font-size: 35px;"><i class="fa fa-map-marker"></i> Design Suites Hoteles</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="content"> <a href="#">
-                    <div class="content-overlay"></div> <img class="content-image img-carrusel" src="../img/BsAs.png" style="width: 1903; height: auto;" alt="">
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title" style="font-size: 50px;">Buenos Aires</h3>
-                        <p class="content-text" style="font-size: 35px;"><i class="fa fa-map-marker"></i>Design Suites Hoteles </p>
-                    </div>
-                </a>
-            </div>
-        </div>
+                <?php } ?>
+                
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -91,7 +65,7 @@
     <div class="container">
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-5">
-            <?php foreach($filas as $index => $fila){
+            <?php foreach ($filas as $index => $fila) {
 
                 $hotel = $fila['nombre'];   //nombre del hotel
                 $idTag = "hotelCard - " . $index;   //id del formulario
@@ -102,17 +76,17 @@
                 $ruta =  "../img/hoteles/" . $carpeta . $archivo;   //establezco ruta definitiva
             ?>
                 <div class="col hentai">
-                    <form action="?sec=hoteles" method="POST" id="<?php echo $idTag?>">
-                        <div class="card shadow-sm" onclick="document.getElementById('<?php echo $idTag?>').submit();">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="<?php echo $ruta?>" alt="Design Suites Bariloche"> 
+                    <form action="?sec=hoteles" method="POST" id="<?php echo $idTag ?>">
+                        <div class="card shadow-sm" onclick="document.getElementById('<?php echo $idTag ?>').submit();">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="<?php echo $ruta ?>" alt="Design Suites Bariloche">
                             <div class="card-body py-3 px-5" style="background-color: #20233f; ">
-                                <p class="card-text" style="color: white; font-size:20px; font-weight:bold;"><?php echo $hotel?></p>
+                                <p class="card-text" style="color: white; font-size:20px; font-weight:bold;"><?php echo $hotel ?></p>
                             </div>
                         </div>
-                        <input type="hidden" name="hotel" value="<?php echo $index?>">
+                        <input type="hidden" name="hotel" value="<?php echo $index ?>">
                     </form>
                 </div>
-            <?php }?>
+            <?php } ?>
         </div>
     </div>
 </div>

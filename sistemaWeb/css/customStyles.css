@@ -46,7 +46,9 @@ a {
 }
 
 /*!!!!!!!!NO TOCAR, EL QUE LO TOCA ES GAY¡¡¡¡¡¡¡¡¡: https://bbbootstrap.com/snippets/simple-image-overlay-hover-effect-38877551 */
-
+.bg-gray {
+    background: #F5F5F5;
+}
 
 
 
@@ -208,6 +210,13 @@ a {
     margin-top: -15px;
 }
 
+.linea-in2{
+    width: 100%;
+    border-bottom: 1px solid #ffffff; 
+    margin-top: 0px;
+}
+
+
 .contenedor {
     position: relative;
 }
@@ -219,6 +228,21 @@ a {
     user-select: none;
     cursor: pointer;
 }
+
+.icono-personalizado2{
+    background-color: #2b2b2b; 
+    padding: 7px; 
+    border-radius: 50%;
+    user-select: none;
+    cursor: pointer;
+    display: block;
+    margin-right: 10px;
+}
+
+.precio-chamba{
+    margin-left: 10px;
+}
+
 
 .cant-per{
     user-select: none;
