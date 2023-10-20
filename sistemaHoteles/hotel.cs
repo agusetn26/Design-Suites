@@ -19,7 +19,7 @@ namespace sistemaHoteles
         {
             idHotel = id;
             InitializeComponent();
-   
+
             fillData();
         }
 
@@ -38,8 +38,8 @@ namespace sistemaHoteles
                 imgHotel.Image = new Bitmap(imgs[0]);
 
                 rtbHeight(rtxtHotelDesc);
-            } 
-            catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -80,6 +80,42 @@ namespace sistemaHoteles
                 imgHotel.Image.Dispose();
                 imgHotel.Image = new Bitmap(imgs[index]);
                 currentImg = index;
+            }
+        }
+
+        private void openFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "Seleccionar imagen";
+            dialog.Filter = "Image Files(*.PNG;*.JPG)|*.PNG;*.JPG|All files (*.*)|*.*";
+            dialog.Multiselect = true;
+            
+            if(dialog.ShowDialog() == DialogResult.OK)
+            {
+                imgs = dialog.FileNames;
+                imgHotel.Image = new Bitmap(imgs[0]);
+            }
+
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                hotelBLL hotel = new hotelBLL();
+                hotel.id = idHotel;
+                hotel.nombre = txtHotel.Text;
+                hotel.descripcion = rtxtHotelDesc.Text;
+                hotel.ubicacion = txtUbi.Text;
+                hotel.direccion = txtDir.Text;
+                hotel.telefono = txtCon.Text;
+                hotel.imagenes = imgs;
+
+                hotel.modifyFields();
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

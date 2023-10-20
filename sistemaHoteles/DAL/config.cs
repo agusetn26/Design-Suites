@@ -18,7 +18,7 @@ namespace sistemaHoteles.DAL
 
         public config()
         {
-            connStr = "Data Source=DESKTOP-L8KEE59; Initial Catalog=design_suites; Integrated Security=True;";
+            connStr = "Data Source=DESKTOP-QB22C4J\\SQLEXPRESS; Initial Catalog=design_suites; User ID = sa; Password = 123";
             conn = new SqlConnection(connStr);
         }
 
@@ -36,7 +36,6 @@ namespace sistemaHoteles.DAL
 
             try
             {
-
                 conn.Open();
                 adapter.Fill(data);
                 this.closeConn();
@@ -44,6 +43,22 @@ namespace sistemaHoteles.DAL
                 return data;
             }
             catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw e;
+            }
+        }
+
+        public void nonReturnData(SqlCommand command)
+        {
+            command.Connection = conn;
+            try
+            {
+                conn.Open();
+                command.ExecuteNonQuery();
+                this.closeConn();
+            }
+            catch (Exception e) 
             {
                 Console.WriteLine(e);
                 throw e;

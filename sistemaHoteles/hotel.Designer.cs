@@ -44,9 +44,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtHotel = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.openFile = new System.Windows.Forms.Button();
             this.select2 = new System.Windows.Forms.Button();
             this.select1 = new System.Windows.Forms.Button();
             this.imgHotel = new System.Windows.Forms.PictureBox();
@@ -196,7 +196,7 @@
             this.txtUbi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUbi.ForeColor = System.Drawing.Color.Silver;
             this.txtUbi.Location = new System.Drawing.Point(5, 47);
-            this.txtUbi.Margin = new System.Windows.Forms.Padding(0);
+            this.txtUbi.Margin = new System.Windows.Forms.Padding(10);
             this.txtUbi.Multiline = true;
             this.txtUbi.Name = "txtUbi";
             this.txtUbi.Size = new System.Drawing.Size(447, 48);
@@ -220,6 +220,7 @@
             // 
             this.rtxtHotelDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
             this.rtxtHotelDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtHotelDesc.BulletIndent = 1;
             this.rtxtHotelDesc.Dock = System.Windows.Forms.DockStyle.Top;
             this.rtxtHotelDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.rtxtHotelDesc.ForeColor = System.Drawing.Color.Silver;
@@ -259,7 +260,7 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnSubmit, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
@@ -271,20 +272,21 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(314, 444);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // button1
+            // btnSubmit
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(8, 380);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(303, 61);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSubmit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSubmit.BackgroundImage")));
+            this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Location = new System.Drawing.Point(8, 380);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(303, 61);
+            this.btnSubmit.TabIndex = 1;
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -294,7 +296,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.Controls.Add(this.button3, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.openFile, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.select2, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.select1, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.imgHotel, 0, 0);
@@ -309,22 +311,34 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(309, 377);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // button3
+            // openFile
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(49, 323);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(210, 51);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.openFile.BackColor = System.Drawing.Color.Black;
+            this.openFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openFile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.openFile.FlatAppearance.BorderSize = 0;
+            this.openFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.openFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.openFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openFile.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openFile.ForeColor = System.Drawing.Color.Gainsboro;
+            this.openFile.Location = new System.Drawing.Point(49, 323);
+            this.openFile.Name = "openFile";
+            this.openFile.Size = new System.Drawing.Size(210, 51);
+            this.openFile.TabIndex = 4;
+            this.openFile.Text = "Archivo";
+            this.openFile.UseVisualStyleBackColor = false;
+            this.openFile.Click += new System.EventHandler(this.openFile_Click);
             // 
             // select2
             // 
             this.select2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("select2.BackgroundImage")));
             this.select2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.select2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.select2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.select2.FlatAppearance.BorderSize = 0;
+            this.select2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.select2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.select2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.select2.Location = new System.Drawing.Point(265, 323);
             this.select2.Name = "select2";
@@ -337,8 +351,11 @@
             // 
             this.select1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("select1.BackgroundImage")));
             this.select1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.select1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.select1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.select1.FlatAppearance.BorderSize = 0;
+            this.select1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.select1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.select1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.select1.Location = new System.Drawing.Point(3, 323);
             this.select1.Name = "select1";
@@ -391,12 +408,12 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.PictureBox imgHotel;
         private System.Windows.Forms.Button select1;
         private System.Windows.Forms.Button select2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button openFile;
         private System.Windows.Forms.Panel contenedorHotel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblContacto;

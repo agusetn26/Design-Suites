@@ -10,6 +10,7 @@ namespace sistemaHoteles.BLL
 {
     class hotelBLL
     {
+        public int id;
         public string nombre;
         public string descripcion;
         public string ubicacion;
@@ -27,6 +28,12 @@ namespace sistemaHoteles.BLL
             this.direccion = hotelData.Rows[0].Field<string>("direccion");
             this.telefono = hotelData.Rows[0].Field<string>("telefono");
             this.imagenes = hotelData.Rows[0].Field<string>("imagen").Split(';');
+        }
+
+        public void modifyFields()
+        {
+            hotelDAL hotelModelo = new hotelDAL();
+            hotelModelo.modifyHotel(this);
         }
     }
 }

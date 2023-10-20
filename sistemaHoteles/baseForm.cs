@@ -23,7 +23,7 @@ namespace sistemaHoteles
         private void baseForm_Load(object sender, EventArgs e)
         {
             currentForm = new Form();
-            /*
+    
             config conn = new config();
             DataSet hotelesData = conn.returnData("SELECT * FROM hoteles");
 
@@ -34,7 +34,7 @@ namespace sistemaHoteles
 
             selectedHotel = (int) lstHotel.SelectedValue;
             Console.WriteLine(conn.GetState());
-            */
+        
         }
         public void openForm(Form form)
         {
