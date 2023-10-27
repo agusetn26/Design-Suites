@@ -5,6 +5,7 @@
     function roomPersons(id){
 
         let index = seleccionadas.indexOf(id);
+        
         if(index != -1){
             //  Se borra el id de habitacion del arreglo si no existe
             seleccionadas.splice(index, 1);
@@ -19,7 +20,22 @@
 
         room.querySelector("#currentValue").innerHTML = valorActual;
         costeTotal();
+        
+        caca(id);
+        
     }
+
+    function caca(id, ){
+        
+        let rectangulo = document.querySelector('#room-'+id);
+        rectangulo.classList.add("border-warning");
+    }
+    
+    //const select = document.getElementById('opciones');
+    //const rectangulo = document.querySelector('.rectangulo')
+
+    
+
 
     function costeTotal(){
         let finalR = document.getElementById("resultado_final");
@@ -88,6 +104,8 @@
     let currentCheckIn = document.getElementById("checkIn").value;
     let currentCheckOut = document.getElementById("checkOut").value;
     
+
+    //$(document.createElement("div")).addClass("row bg-dark").append($(document.createElement("img")))
     function addReservas(){
         let reserva = "";
         for(let i=0; i<roomsData.length; i++){

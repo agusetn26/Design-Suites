@@ -204,6 +204,12 @@ a {
 
 /*------------------ RESERVAS ----------------------*/
 
+
+.rectangulo{
+    border-width: 5px;
+    transition: border-color 0.3s;
+}
+
 .linea-in {
     width: 100%;
     border-bottom: 1px solid #ffffff; 

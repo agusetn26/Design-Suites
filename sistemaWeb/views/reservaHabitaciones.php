@@ -36,7 +36,7 @@
         } else {
             while ($room = sqlsrv_fetch_array($qryRooms, SQLSRV_FETCH_ASSOC)) {
         ?>
-                <div class="col bg-gris text-light p-3 mb-2 rounded" id="room-<?php echo $room['id_habitacion'] ?>">
+                <div class="col bg-gris text-light p-3 mb-2 rounded rectangulo border border-2" id="room-<?php echo $room['id_habitacion'] ?>">
                     <div class="row">
                         <div class="col-lg-6">
                             <a href="?sec=habitaciones&idHab=1&idH=1">
@@ -119,7 +119,8 @@
                             <div class="d-flex align-items-center">
                                 <p class="my-2 justify-content-between">Precio por la habitacion</p>
                                 <div class="precio-chamba">
-                                    <h2 id="costoRoom">$<?php echo $room['costo'] ?></h2>
+                                    <h2 id="costoRoom">$<?php echo rtrim($room['costo'], '0'); ?></h2>
+                                    
                                     <p id="currentValue" class="d-none">0</p>
                                 </div>
                             </div>
