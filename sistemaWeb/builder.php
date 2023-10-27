@@ -42,7 +42,7 @@
                     <span class="material-symbols-outlined">
                         verified_user
                     </span>
-                    <a class="nav-link active" style="font-size: 13px;" href="views/protocolo.php"
+                    <a class="nav-link active" style="font-size: 13px;" href="?sec=protocolo"
                         aria-current="page">PROTOCOLO DE SEGURIDAD</a>
                 </li>
                 <br>
