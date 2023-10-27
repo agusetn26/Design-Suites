@@ -4,6 +4,8 @@
         exit;
     }
 
+    /* HABITACIONES */
+
     $index = $_POST['hotel'];
     $rutas = explode(";", $filas[$index]['imagen']);
 
@@ -29,4 +31,18 @@
 
     //Añadir columna servicios en tabla hoteles, solucion provicional
     $serviciosHotel = explode(";", $habitacionesCategoria[0]['servicios']);
+
+    /* EVENTOS */
+
+    $sqlEventos = 'SELECT id_evento AS "idEvento", eventos.id_hotel AS "idHotel", precio, eventos.imagen AS img, eventos.nombre  FROM eventos JOIN hoteles ON eventos.id_hotel = hoteles.id_hotel WHERE eventos.fecha_baja IS NULL AND hoteles.id_hotel = ' . $filas[$index]['id_hotel'];
+    $qryEventos = sqlsrv_query($conn, $sqlEventos);
+    $eventos = [];
+
+    while($evento = sqlsrv_fetch_array($qryEventos, SQLSRV_FETCH_ASSOC)){
+        $eventos[] = $evento;
+    }
+    
+    if(!$qryEventos){
+        die("Hubo un error de consulta, contactar con soporte en caso de que perdure el problema");
+    }
 ?>

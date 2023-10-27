@@ -16,5 +16,4 @@
     }
 
     $hab = sqlsrv_fetch_array($qryHabicaciones, SQLSRV_FETCH_ASSOC);
-    $nombreHotel = $filas[$_GET["idH"]]["nombre"];
 ?>

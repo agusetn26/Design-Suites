@@ -14,21 +14,17 @@ require_once "modelos/hoteles.php";
     <div id="hotelesCarrusel" class="carousel slide mb-6" data-bs-ride="carousel">
 
         <div class="carousel-indicators">
-            <?php $i = 0;
-            foreach ($rutas as $ruta) { ?>
+            <?php foreach ($rutas as $i => $ruta) { ?>
                 <button type="button" data-bs-target="#hotelesCarrusel" aria-label="Slide <?php echo ($i + 1); ?>" data-bs-slide-to="<?php echo $i; ?>" <?php echo (($i == 0) ? 'class="active" aria-current="true"' : ""); ?>></button>
-            <?php $i++;
-            } ?>
+            <?php } ?>
         </div>
 
         <div class="carousel-inner">
-            <?php $i = 0;
-            foreach ($rutas as $ruta) { ?>
+            <?php foreach ($rutas as $i => $ruta) { ?>
                 <div class="carousel-item <?php echo (($i == 0) ? "active" : "") ?>">
                     <img src="../img/hoteles/<?php echo basename(dirname($ruta)) . "/" . basename($ruta) ?>" style="width: 100%; height: auto;">
                 </div>
-            <?php $i++;
-            } ?>
+            <?php } ?>
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#hotelesCarrusel" data-bs-slide="prev">
@@ -44,19 +40,37 @@ require_once "modelos/hoteles.php";
     <p class="h3 m-3 border-bottom">Habitaciones</p>
     <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
         <?php foreach ($habitacionesCategoria as $tipo) { ?>
-            <a href="?sec=habitaciones&idHab=<?php echo($tipo['id_tipoHabitacion'] . "&idH=" . $index)?>">
+            <a href="?sec=habitaciones&idHab=<?php echo ($tipo['id_tipoHabitacion'] . "&idH=" . $index) ?>">
                 <div class="col imgCard">
                     <div class="card h-100">
                         <img src="../img/habitaciones/<?php echo basename(dirname(explode(";", $tipo['imagenes'])[0])) . "/" . basename(explode(";", $tipo['imagenes'])[0]); ?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $tipo['nombre'] ?></h5>
-                            <p class="card-text"><?php echo $tipo['ocupacion'] ?>&nbsp;huespedes | <?php echo $tipo['dimensiones'] ?>&nbsp;m²</p>
+                            <h5 class="card-title text-dark h4"><?php echo $tipo['nombre'] ?></h5>
+                            <p class="card-text text-dark h5"><?php echo $tipo['ocupacion'] ?>&nbsp;huespedes | <?php echo $tipo['dimensiones'] ?>&nbsp;m²</p>
                         </div>
                     </div>
                 </div>
             </a>
         <?php } ?>
-    </div>
+    </div><?php if (!empty($eventos)) { ?>
+        <!-------------------------------------------------------------------->
+        <p class="h3 m-3 border-bottom">Eventos</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+            <?php foreach ($eventos as $evento) { ?>
+                <a href="?sec=eventos&idEvento=<?php echo ($evento['idEvento'] . "&idH=" . $index) ?>">
+                    <div class="col imgCard">
+                        <div class="card h-100">
+                            <img src="../img/eventos/<?php echo basename(dirname(explode(";", $evento['img'])[0])) . "/" . basename(explode(";", $evento['img'])[0]); ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-dark h4"><?php echo($evento['nombre'])?></h5>
+                                <p class="card-text text-dark h5">$<?php echo(floatval($evento['precio']))?></p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            <?php } ?>
+        </div>
+    <?php } ?>
     <!-------------------------------------------------------------------->
     <p class="h3 m-3 border-bottom">Amenities & Servicios</p>
     <div class="container">
@@ -76,7 +90,7 @@ require_once "modelos/hoteles.php";
     <p><?php echo $filas[$index]['ubicacion'] . "&nbsp;(" . $filas[$index]['direccion'] . ")" ?></p>
 
     <div class="video_con">
-        <iframe class="video" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.8135822167621!2d-58.40583319994833!3d-34.613605375079786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb87409a19cb%3A0xca5521b461138618!2sEscuela%20T%C3%A9cnica%20N%C2%BA26%20D.E.6%20%22Confederaci%C3%B3n%20Suiza%22!5e0!3m2!1ses-419!2sar!4v1693585879304!5m2!1ses-419!2sar"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="video" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.8135822167621!2d-58.40583319994833!3d-34.613605375079786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb87409a19cb%3A0xca5521b461138618!2sEscuela%20T%C3%A9cnica%20N%C2%BA26%20D.E.6%20%22Confederaci%C3%B3n%20Suiza%22!5e0!3m2!1ses-419!2sar!4v1693585879304!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <!-------------------------------------------------------------------->
 

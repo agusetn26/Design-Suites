@@ -1,40 +1,38 @@
-<div class="container my-4">
-    <div class="row">
-        <div class="col-sm my-1">
-            <div class="h4 col-sm bg-dark p-3 text-light rounded">
-                Buscar
-            </div>
-            <div class="col bg-gris text-light px-4 py-3 rounded    ">
-                <div class="row mb-3">
-                    Fecha:
-                    <input class="w-100 p-1" type="date">
+<?php
+require_once "modelos/eventos.php";
+?>
+<div class="container py-4">
+    <div class="fs-3 fw-bold"><?php echo ($filas[$_GET["idH"]]["nombre"]) ?></div>
+    <div class="fs-4"><?php echo ($evento["nombre"]); ?></div>
+    <!-------------------------------casurrel-->
+    <div id="myCarousel" class="carousel slide my-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <?php foreach ($imgEventos as $i => $img) { ?>
+                <button type="button" data-bs-target="#myCarousel" aria-label="Slide <?php echo ($i + 1); ?>" data-bs-slide-to="<?php echo $i; ?>" <?php echo (($i == 0) ? 'class="active" aria-current="true"' : ""); ?>></button>
+            <?php } ?>
+        </div>
+        <div class="carousel-inner">
+            <?php foreach ($imgEventos as $i => $img) { ?>
+                <div class="carousel-item <?php echo (($i == 0) ? "active" : "") ?>">
+                    <img src="../img/eventos/<?php echo basename(dirname($img)) . "/" . basename($img) ?>" style="width: 100%; height: auto;">
                 </div>
-                <div class="row">
-                    <div class="col">
-                        Desde
-                        <input class="row w-100 p-1" type="time">
-                    </div>
-                    <div class="col">
-                        Hasta
-                        <input class="row p-1 w-100" type="ti   me">
-                    </div>
-                    <button type="button" class="btn btn-outline-light my-3">Buscar</button>
-                    <a class="text-light" href="#">» Modificar / Cancelar una reserva</a>
-                </div>
-            </div>
+            <?php } ?>
         </div>
-        <div class="col-sm-7 my-1">
-            <div class="col-sm bg-dark h4 p-3 text-light rounded">
-                Salas de Eventos
-            </div>
-            <div class="col bg-gris text-light p-3 mb-2 rounded">
-                <img src="../img/goku-ssj-3.jpg" class="img-fluid w-40 rounded imgReserva" alt="Responsive image">
-            </div>
-        </div>
-        <div class="col-sm my-1">
-            <div class="col-sm bg-dark h4 p-3 text-light rounded">
-                Buscar
-            </div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!--------------------------------descripcion vasada sigma-->
+    <p class="h3 m-3 border-bottom">Descripcion</p>
+    <p class="text-justify fs-5"><?php echo $evento["descripcion"] ?></p>
+    <!---------------------------------------------------------->
+    <p class="h3 m-3 border-bottom">Ubicacion</p>
+    <div class="video_con">
+        <iframe class="video" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.8135822167621!2d-58.40583319994833!3d-34.613605375079786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb87409a19cb%3A0xca5521b461138618!2sEscuela%20T%C3%A9cnica%20N%C2%BA26%20D.E.6%20%22Confederaci%C3%B3n%20Suiza%22!5e0!3m2!1ses-419!2sar!4v1693585879304!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
