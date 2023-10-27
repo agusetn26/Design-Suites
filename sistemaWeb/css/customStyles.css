@@ -235,7 +235,6 @@ a {
     border-radius: 50%;
     user-select: none;
     cursor: pointer;
-    display: block;
     margin-right: 10px;
 }
 
@@ -262,4 +261,14 @@ label.form-label {
 
 .eventRow{
     transition: all 0.1s ease-in;
+}
+
+#opciones{
+    width: 50px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color: #212529;
+    background-color: #212529;
+    color: #ffffff;
 }
