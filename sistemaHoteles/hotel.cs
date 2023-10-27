@@ -30,7 +30,7 @@ namespace sistemaHoteles
             {
                 hotelBLL hotel = new hotelBLL();
                 hotel.getFields(idHotel);
-                txtHotel.Text = hotel.nombre;
+                //txtHotel.Text = hotel.nombre;
                 rtxtHotelDesc.Text = hotel.descripcion;
                 txtUbi.Text = hotel.ubicacion;
                 txtDir.Text = hotel.direccion;
@@ -97,7 +97,7 @@ namespace sistemaHoteles
             {
                 hotelBLL hotel = new hotelBLL();
                 hotel.id = idHotel;
-                hotel.nombre = txtHotel.Text;
+               // hotel.nombre = txtHotel.Text;
                 hotel.descripcion = rtxtHotelDesc.Text;
                 hotel.ubicacion = txtUbi.Text;
                 hotel.direccion = txtDir.Text;

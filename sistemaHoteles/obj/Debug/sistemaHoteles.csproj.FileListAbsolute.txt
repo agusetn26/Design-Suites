@@ -12,3 +12,4 @@ C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.reservas.r
 C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.habitaciones.resources
 C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.hotel.resources
 C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.eventos.resources
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.csproj.SuggestedBindingRedirects.cache
