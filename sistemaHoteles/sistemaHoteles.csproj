@@ -52,13 +52,17 @@
     <Compile Include="baseForm.Designer.cs">
       <DependentUpon>baseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\eventosBLL.cs" />
+    <Compile Include="BLL\habitacionesBLL.cs" />
     <Compile Include="BLL\hotelBLL.cs" />
+    <Compile Include="DAL\eventosDAL.cs" />
+    <Compile Include="DAL\habitacionesDAL.cs" />
     <Compile Include="DAL\hotelDAL.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="eventos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="eventos.Designer.cs">
+      <DependentUpon>eventos.cs</DependentUpon>
     </Compile>
     <Compile Include="habitaciones.cs">
       <SubType>Form</SubType>
@@ -84,8 +88,8 @@
     <EmbeddedResource Include="baseForm.resx">
       <DependentUpon>baseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="eventos.resx">
+      <DependentUpon>eventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="habitaciones.resx">
       <DependentUpon>habitaciones.cs</DependentUpon>

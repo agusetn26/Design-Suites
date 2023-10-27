@@ -49,7 +49,10 @@ namespace sistemaPrincipal.DAL
             try
             {
                 sqlCom.Connection = conn;
-                conn.Open();
+                if (conn.State != ConnectionState.Open) //Parche salvador
+                {
+                    conn.Open();
+                }
                 sqlCom.ExecuteNonQuery();
                 conn.Close();
 

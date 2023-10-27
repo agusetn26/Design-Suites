@@ -86,6 +86,7 @@
             this.eventos.TabIndex = 6;
             this.eventos.Text = "Eventos";
             this.eventos.UseVisualStyleBackColor = true;
+            this.eventos.Click += new System.EventHandler(this.eventos_Click);
             // 
             // membresias
             // 

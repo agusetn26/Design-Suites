@@ -5,7 +5,7 @@ require_once "modelos/hoteles.php";
 <div class="container my-4">
 
     <p class="h1"><?php echo $filas[$index]['nombre']; ?></p>
-    <p class="text-secondary fs-5"><?php echo str_replace("\\n", "<br>", $filas[$index]['descripcion']) ?></p>
+    <p class="text-secondary fs-5"><?php echo nl2br($filas[$index]['descripcion']) ?></p>
     <p class="fw-bold lead"><?php echo $cantidadHabitaciones; ?>&nbsp;habitaciones</p>
 
     <!-------------------------------------------------------------------->

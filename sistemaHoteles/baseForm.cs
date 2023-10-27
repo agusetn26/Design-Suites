@@ -23,20 +23,30 @@ namespace sistemaHoteles
         private void baseForm_Load(object sender, EventArgs e)
         {
             currentForm = new Form();
-    
-            config conn = new config();
-            DataSet hotelesData = conn.returnData("SELECT * FROM hoteles");
-
-            DataTable hotelesTable = hotelesData.Tables[0];
-            lstHotel.DataSource = hotelesTable;
-            lstHotel.DisplayMember = "nombre";
-            lstHotel.ValueMember = "id_hotel";
-
-            selectedHotel = (int) lstHotel.SelectedValue;
-            Console.WriteLine(conn.GetState());
-        
+            loadList();
         }
-        public void openForm(Form form)
+
+        private void loadList()
+        {
+            try
+            {
+                config conn = new config();
+                DataSet hotelesData = conn.returnData("SELECT * FROM hoteles WHERE fecha_baja IS NULL");
+
+                DataTable hotelesTable = hotelesData.Tables[0];
+                lstHotel.DataSource = hotelesTable;
+                lstHotel.DisplayMember = "nombre";
+                lstHotel.ValueMember = "id_hotel";
+
+                selectedHotel = (int)lstHotel.SelectedValue;
+                Console.WriteLine(conn.GetState());
+            } catch
+            {
+                MessageBox.Show("Hubo un problema de conexión con la base de datos, verifique su conexión o contactar con soporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        private void openForm(Form form)
         {
             if(form.Name == currentForm.Name)
             {
@@ -68,12 +78,17 @@ namespace sistemaHoteles
 
         private void habitaciones_Click(object sender, EventArgs e)
         {
-            openForm(new habitaciones());
+            openForm(new habitaciones(selectedHotel));
+        }
+
+        private void eventos_Click(object sender, EventArgs e)
+        {
+            openForm(new eventos(selectedHotel));
         }
 
         private void lstHotel_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string msg = "¿Está seguro de cambiar de hotel?\n Se borrán cambios no guardados sobre la información del hotel";
+            string msg = "¿Está seguro de cambiar de hotel?\r\nSe borrán cambios no guardados sobre la información del hotel";
             DialogResult option = MessageBox.Show(msg, "Cambiar de cadena", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
            
             if(option == DialogResult.No)

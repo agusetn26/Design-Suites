@@ -13,7 +13,7 @@
         }
 
         let room = document.querySelector("#room-"+id);
-        let costo = parseInt(room.querySelector("#costoRoom").innerHTML.split("$")[1]);
+        let costo = parseFloat(room.querySelector("#costoRoom").innerHTML.split("$")[1]);
         let cantPersonas = room.querySelector("#opciones").value;
         let valorActual = costo * cantPersonas;
 
@@ -26,7 +26,7 @@
         let total = 0;
         let rooms = document.querySelectorAll("#currentValue");
         Array.from(rooms).forEach(function(room){
-            total = total + parseInt(room.innerHTML);
+            total = total + parseFloat(room.innerHTML);
         })
 
         finalR.innerHTML = "$"+total;
@@ -45,6 +45,7 @@
 
             return;
         }
+        showLoadingScreen();
 
         for(let i=0; i<seleccionadas.length; i++){
             let nombre = document.querySelector("#room-"+seleccionadas[i]+" #roomType").innerHTML;
@@ -62,9 +63,7 @@
             // xhr.responseType = 'text'; Default text
 
             xhr.onreadystatechange = function () {
-                if(xhr.readyState === 3){
-                    showLoadingScreen();
-                }
+              
                 if (xhr.readyState === 4 ){
 
                     hideLoadingScreen();
@@ -116,10 +115,10 @@
     }
 
     function submitPago(form){
+        showLoadingScreen();
 
         let checkInValue = document.getElementById("pagosCheckIn").textContent;
         let checkOutValue = document.getElementById("pagosCheckOut").textContent;
-
 
         document.getElementById("checkInValue").value = checkInValue;
         document.getElementById("checkOutValue").value = checkOutValue;
@@ -132,9 +131,6 @@
         xhr.open("POST", "modelos/pagos.php", true);
 
         xhr.onreadystatechange = function () {
-            if(xhr.readyState === 3){
-                showLoadingScreen();
-            }
             if (xhr.readyState === 4){
 
                 hideLoadingScreen();  

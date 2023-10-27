@@ -10,6 +10,5 @@ C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.pdb
 C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.baseForm.resources
 C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.reservas.resources
 C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.habitaciones.resources
-C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.Form1.resources
 C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.hotel.resources
-C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\Design-Suites\sistemaHoteles\obj\Debug\sistemaHoteles.eventos.resources

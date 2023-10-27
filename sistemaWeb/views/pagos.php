@@ -8,21 +8,21 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="email" class="form-label">Correo Electrónico:</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
+                            <input type="email" id="email" name="email" class="form-control" required maxlength="40">
                         </div>
                         <div class="col-md-6">
                             <label for="apellido" class="form-label">Apellido:</label>
-                            <input type="text" id="apellido" name="apellido" class="form-control" maxlength="50" required>
+                            <input type="text" id="apellido" name="apellido" class="form-control" maxlength="40" required>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="telefono" class="form-label">Teléfono:</label>
-                            <input type="tel" id="telefono" name="telefono" class="form-control" maxlength="50" required>
+                            <input type="tel" id="telefono" name="telefono" class="form-control" maxlength="40" required>
                         </div>
                         <div class="col-md-6">
                             <label for="numero_documento" class="form-label">Número de Documento:</label>
-                            <input type="text" id="numero_documento" name="numero_documento" class="form-control"  maxlength="50" required>
+                            <input type="text" id="numero_documento" name="numero_documento" class="form-control"  maxlength="40" required>
                         </div>
                     </div>
                     <div class=" mb-3">
@@ -34,7 +34,7 @@
                     <div class="row mb-3">
                         <div class="col-md-12">
                             <label for="comentarios" class="form-label">Comentarios: (opcional)</label>
-                            <textarea id="comentarios" name="comentarios" class="form-control" rows="4" cols="50"></textarea>
+                            <textarea id="comentarios" name="comentarios" class="form-control" rows="4" cols="40" maxlength="499"></textarea>
                         </div>
                     </div>
                     <!-- Otros campos del formulario aquí -->

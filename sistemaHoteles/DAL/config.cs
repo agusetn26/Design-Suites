@@ -12,13 +12,13 @@ namespace sistemaHoteles.DAL
     class config
     {
         //"Data Source=DESKTOP-QB22C4J\\SQLEXPRESS; Initial Catalog=design_suites; User ID = sa; Password = 123"
-        //Data Source=DESKTOP-L8KEE59\\Rodrigo Acosta; Initial Catalog=design_suites; Integrated Security=True;
+        //Data Source=DESKTOP-L8KEE59; Initial Catalog=design_suites; Integrated Security=True;
         private string connStr;
         SqlConnection conn;
 
         public config()
         {
-            connStr = "Data Source=DESKTOP-QB22C4J\\SQLEXPRESS; Initial Catalog=design_suites; User ID = sa; Password = 123";
+            connStr = "Data Source=DESKTOP-L8KEE59; Initial Catalog=design_suites; Integrated Security=True;";
             conn = new SqlConnection(connStr);
         }
 
@@ -44,8 +44,8 @@ namespace sistemaHoteles.DAL
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw e;
+                Console.WriteLine(e.Message);
+                throw new Exception("Hubo un problema de conexión con la base de datos, verifique su conexión o contactar con soporte");
             }
         }
 
@@ -61,7 +61,7 @@ namespace sistemaHoteles.DAL
             catch (Exception e) 
             {
                 Console.WriteLine(e);
-                throw e;
+                throw new Exception("Hubo un problema de conexión con la base de datos, verifique su conexión o contactar con soporte");
             }
         }
 

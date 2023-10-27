@@ -23,7 +23,6 @@ namespace sistemaPrincipal
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(descripcion.Text);
             hotelBLL hotelBll = datosForm();
             if(hotelBll != null)
             {

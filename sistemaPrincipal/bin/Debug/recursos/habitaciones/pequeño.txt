@@ -1,17 +1,17 @@
-INSERT INTO habitaciones
+INSERT INTO habitaciones (id_tipoHabitacion, id_hotel)
 VALUES
-('p1;n1', 500, 1, @idH),
-('p1;n2', 500, 1, @idH),
-('p1;n3', 500, 1, @idH),
-('p1;n4', 500, 1, @idH),
-('p1;n5', 500, 1, @idH),
-('p1;n6', 500, 1, @idH),
-('p1;n7', 500, 1, @idH),
-('p2;n8', 500, 1, @idH),
-('p2;n9', 500, 1, @idH),
-('p2;n10', 500, 1, @idH),
-('p2;n11', 500, 1, @idH),
-('p2;n12', 500, 1, @idH),
-('p2;n13', 500, 1, @idH),
-('p2;n14', 500, 1, @idH),
-('p2;n15', 500, 1, @idH);
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH),
+(1, @idH);

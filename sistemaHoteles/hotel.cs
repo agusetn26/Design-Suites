@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using sistemaHoteles.BLL;
 
 namespace sistemaHoteles
@@ -30,14 +31,13 @@ namespace sistemaHoteles
                 hotelBLL hotel = new hotelBLL();
                 hotel.getFields(idHotel);
                 txtHotel.Text = hotel.nombre;
-                rtxtHotelDesc.Text = hotel.descripcion.Replace("\\n", "\r\n");
-                txtUbi.Text = hotel.ubicacion.Replace("\\n", "\r\n");
-                txtDir.Text = hotel.direccion.Replace("\\n", "\r\n");
-                txtCon.Text = hotel.telefono.Replace("\\n", "\r\n");
+                rtxtHotelDesc.Text = hotel.descripcion;
+                txtUbi.Text = hotel.ubicacion;
+                txtDir.Text = hotel.direccion;
+                txtCon.Text = hotel.telefono;
                 imgs = hotel.imagenes;
+                Console.WriteLine(string.Join(";", imgs));
                 imgHotel.Image = new Bitmap(imgs[0]);
-
-                rtbHeight(rtxtHotelDesc);
             }
             catch (Exception ex)
             {
@@ -45,25 +45,14 @@ namespace sistemaHoteles
             }
         }
 
-        private void rtbHeight(RichTextBox rtb)
-        {
-            int lineHeight = (int)(rtxtHotelDesc.Font.GetHeight() * 1.8); // Estimación del tamaño de una línea de texto
-            int lineCount = rtxtHotelDesc.GetLineFromCharIndex(rtxtHotelDesc.Text.Length) + 1;
-
-            int newHeight = (lineHeight * lineCount) + rtxtHotelDesc.Margin.Vertical + 2; // Ajustes para el margen y el borde
-
-            if (newHeight > rtxtHotelDesc.Height)
-            {
-                rtxtHotelDesc.Height = newHeight;
-            }
-        }
-
         private int currentImg;
         private void select1_Click(object sender, EventArgs e)
         {
             int index = currentImg - 1;
+            Console.WriteLine(index);
+            Console.WriteLine($"Actual: {currentImg}");
 
-            if (index > 0)
+            if (index >= 0)
             {
                 imgHotel.Image.Dispose();
                 imgHotel.Image = new Bitmap(imgs[index]);
@@ -74,8 +63,10 @@ namespace sistemaHoteles
         private void select2_Click(object sender, EventArgs e)
         {
             int index = currentImg + 1;
+            Console.WriteLine(index);
+            Console.WriteLine($"Actual: {currentImg}");
 
-            if (index < (imgs.Length - 1))
+            if (index < imgs.Length)
             {
                 imgHotel.Image.Dispose();
                 imgHotel.Image = new Bitmap(imgs[index]);
@@ -89,11 +80,13 @@ namespace sistemaHoteles
             dialog.Title = "Seleccionar imagen";
             dialog.Filter = "Image Files(*.PNG;*.JPG)|*.PNG;*.JPG|All files (*.*)|*.*";
             dialog.Multiselect = true;
-            
+
             if(dialog.ShowDialog() == DialogResult.OK)
-            {
+            {   
                 imgs = dialog.FileNames;
+                imgHotel.Image.Dispose();
                 imgHotel.Image = new Bitmap(imgs[0]);
+                currentImg = 0;
             }
 
         }
@@ -111,11 +104,41 @@ namespace sistemaHoteles
                 hotel.telefono = txtCon.Text;
                 hotel.imagenes = imgs;
 
+                imgHotel.Image.Dispose();
                 hotel.modifyFields();
-
-            } catch (Exception ex)
+                MessageBox.Show("Se ha modificado el hotel exitosamente, para visualizar los cambios vuelva a cargar el apartado", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void rtxtHotelDesc_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            if (files != null && files.Length != 0)
+            {
+                rtxtHotelDesc.Text = files[0];
+            }
+        }
+
+        private void openTxt_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog txtFile = new OpenFileDialog();
+            txtFile.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            txtFile.Title = "Arrastre un archivo de texto a la caja de texto que contiene la descripción";
+            
+            if (txtFile.ShowDialog() == DialogResult.OK)
+            {
+                string txt = File.ReadAllText(txtFile.FileName);
+                if(txt.Length > 1500 || txt.Length < 10)
+                {
+                    MessageBox.Show("La longitud del contenido del archivo es inaceptable, porfavor modifique el archivo o seleccione otro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                
+                rtxtHotelDesc.Text = txt;
             }
         }
     }

@@ -5,14 +5,14 @@ require_once "modelos/home.php";
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <?php for ($i = 0; $i < $cantidadHoteles; $i++) { ?>
-            <button type="button" data-bs-target="#myCarousl" data-bs-slide-to="<?php echo $i ?>" <?php if ($i == 0) { ?>class="active" aria-current="true" <?php } ?>aria-label="Slide <?php echo $i + 1 ?>""></button>
+            <button type="button" data-bs-target="#myCarousl" data-bs-slide-to="<?php echo $i ?>" <?php if ($i == 0) { ?>class="active" aria-current="true" <?php } ?>aria-label="Slide <?php echo $i + 1 ?>"></button>
         <?php } ?>
     </div>
     <div class=" carousel-inner">
                 <?php foreach ($hotelesCarrusel as $i => $hotel) { ?>
                     <div class="carousel-item <?php if ($i == 0) { ?>active<?php } ?>">
                         <div class="content">
-                            <div class="content-overlay"></div> <img class="content-image img-carrusel" src="../img/hoteles/<?php echo(explode('\\', $hotel["img"])[6] .'/'. explode(';',explode('\\', $hotel["img"])[7])[0])?>" style="width: 1903; height: auto;" alt="">
+                            <div class="content-overlay"></div> <img class="content-image img-carrusel" src="../img/hoteles/<?php echo basename(dirname($hotel['imagen'])) . "/" . basename($hotel['imagen'])?>" style="width: 1903; height: auto;" alt="">
                             <div class="content-details fadeIn-bottom">
                                 <h3 class="content-title" style="font-size: 50px;"><?php echo $hotel["nombre"]?></h3>
                                 <p class="content-text" style="font-size: 35px;"><i class="fa fa-map-marker"></i> Design Suites Hoteles</p>
