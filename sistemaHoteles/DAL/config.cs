@@ -18,7 +18,7 @@ namespace sistemaHoteles.DAL
 
         public config()
         {
-            connStr = "Data Source=DESKTOP-L8KEE59; Initial Catalog=design_suites; Integrated Security=True;";
+            connStr = "Data Source=DESKTOP-QB22C4J\\SQLEXPRESS; Initial Catalog=design_suites; User ID = sa; Password = 123";
             conn = new SqlConnection(connStr);
         }
 

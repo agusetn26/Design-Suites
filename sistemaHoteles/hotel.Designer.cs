@@ -38,7 +38,6 @@
             this.select1 = new System.Windows.Forms.Button();
             this.imgHotel = new System.Windows.Forms.PictureBox();
             this.contenedorHotel = new System.Windows.Forms.Panel();
-            this.txtHotel = new System.Windows.Forms.TextBox();
             this.txtCon = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDir = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.rtxtHotelDesc = new System.Windows.Forms.TextBox();
             this.openTxt = new System.Windows.Forms.Button();
+            this.txtHotel = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -196,6 +196,7 @@
             // contenedorHotel
             // 
             this.contenedorHotel.AutoScroll = true;
+            this.contenedorHotel.AutoSize = true;
             this.contenedorHotel.BackColor = System.Drawing.Color.Transparent;
             this.contenedorHotel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("contenedorHotel.BackgroundImage")));
             this.contenedorHotel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -210,23 +211,9 @@
             this.contenedorHotel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedorHotel.Location = new System.Drawing.Point(323, 3);
             this.contenedorHotel.Name = "contenedorHotel";
+            this.contenedorHotel.Padding = new System.Windows.Forms.Padding(3);
             this.contenedorHotel.Size = new System.Drawing.Size(474, 444);
             this.contenedorHotel.TabIndex = 1;
-            // 
-            // txtHotel
-            // 
-            this.txtHotel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
-            this.txtHotel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHotel.ForeColor = System.Drawing.Color.White;
-            this.txtHotel.Location = new System.Drawing.Point(1, 13);
-            this.txtHotel.Margin = new System.Windows.Forms.Padding(0);
-            this.txtHotel.Name = "txtHotel";
-            this.txtHotel.Size = new System.Drawing.Size(457, 42);
-            this.txtHotel.TabIndex = 18;
-            this.txtHotel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtCon
             // 
@@ -236,9 +223,9 @@
             this.txtCon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCon.ForeColor = System.Drawing.Color.White;
-            this.txtCon.Location = new System.Drawing.Point(5, 434);
+            this.txtCon.Location = new System.Drawing.Point(8, 437);
             this.txtCon.Name = "txtCon";
-            this.txtCon.Size = new System.Drawing.Size(452, 28);
+            this.txtCon.Size = new System.Drawing.Size(447, 28);
             this.txtCon.TabIndex = 17;
             this.txtCon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -248,7 +235,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(157, 388);
+            this.label3.Location = new System.Drawing.Point(158, 391);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 37);
             this.label3.TabIndex = 16;
@@ -262,9 +249,9 @@
             this.txtDir.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDir.ForeColor = System.Drawing.Color.White;
-            this.txtDir.Location = new System.Drawing.Point(5, 336);
+            this.txtDir.Location = new System.Drawing.Point(8, 339);
             this.txtDir.Name = "txtDir";
-            this.txtDir.Size = new System.Drawing.Size(452, 28);
+            this.txtDir.Size = new System.Drawing.Size(447, 28);
             this.txtDir.TabIndex = 15;
             this.txtDir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -274,7 +261,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(155, 289);
+            this.label2.Location = new System.Drawing.Point(156, 292);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 37);
             this.label2.TabIndex = 14;
@@ -282,8 +269,6 @@
             // 
             // txtUbi
             // 
-            this.txtUbi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUbi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
             this.txtUbi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUbi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -300,7 +285,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(154, 177);
+            this.label1.Location = new System.Drawing.Point(155, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 37);
             this.label1.TabIndex = 12;
@@ -312,20 +297,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.rtxtHotelDesc);
             this.panel2.Controls.Add(this.openTxt);
-            this.panel2.Location = new System.Drawing.Point(10, 58);
+            this.panel2.Location = new System.Drawing.Point(55, 55);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(3);
-            this.panel2.Size = new System.Drawing.Size(454, 100);
+            this.panel2.Size = new System.Drawing.Size(350, 100);
             this.panel2.TabIndex = 11;
             // 
             // rtxtHotelDesc
             // 
             this.rtxtHotelDesc.AllowDrop = true;
             this.rtxtHotelDesc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxtHotelDesc.Location = new System.Drawing.Point(45, 3);
+            this.rtxtHotelDesc.Location = new System.Drawing.Point(42, 0);
             this.rtxtHotelDesc.Multiline = true;
             this.rtxtHotelDesc.Name = "rtxtHotelDesc";
-            this.rtxtHotelDesc.Size = new System.Drawing.Size(406, 94);
+            this.rtxtHotelDesc.Size = new System.Drawing.Size(308, 100);
             this.rtxtHotelDesc.TabIndex = 6;
             this.rtxtHotelDesc.DragDrop += new System.Windows.Forms.DragEventHandler(this.rtxtHotelDesc_DragDrop);
             // 
@@ -339,13 +323,28 @@
             this.openTxt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.openTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openTxt.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openTxt.Location = new System.Drawing.Point(3, 3);
+            this.openTxt.Location = new System.Drawing.Point(0, 0);
             this.openTxt.Name = "openTxt";
-            this.openTxt.Size = new System.Drawing.Size(42, 94);
+            this.openTxt.Size = new System.Drawing.Size(42, 100);
             this.openTxt.TabIndex = 5;
             this.openTxt.Text = "+";
             this.openTxt.UseVisualStyleBackColor = false;
             this.openTxt.Click += new System.EventHandler(this.openTxt_Click);
+            // 
+            // txtHotel
+            // 
+            this.txtHotel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
+            this.txtHotel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHotel.ForeColor = System.Drawing.Color.White;
+            this.txtHotel.Location = new System.Drawing.Point(1, 6);
+            this.txtHotel.Margin = new System.Windows.Forms.Padding(0);
+            this.txtHotel.Name = "txtHotel";
+            this.txtHotel.Size = new System.Drawing.Size(454, 42);
+            this.txtHotel.TabIndex = 19;
+            this.txtHotel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // hotel
             // 
@@ -359,6 +358,7 @@
             this.Text = "Form1";
             this.TransparencyKey = System.Drawing.Color.White;
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgHotel)).EndInit();
@@ -389,7 +389,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCon;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtHotel;
         private System.Windows.Forms.TextBox rtxtHotelDesc;
+        private System.Windows.Forms.TextBox txtHotel;
     }
 }

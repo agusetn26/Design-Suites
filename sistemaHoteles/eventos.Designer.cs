@@ -189,15 +189,15 @@
             // 
             // openFile
             // 
-            this.openFile.BackColor = System.Drawing.Color.Black;
+            this.openFile.BackColor = System.Drawing.Color.DarkGray;
             this.openFile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openFile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.openFile.FlatAppearance.BorderSize = 0;
-            this.openFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.openFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.openFile.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.openFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.openFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.openFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openFile.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openFile.ForeColor = System.Drawing.Color.Gainsboro;
+            this.openFile.ForeColor = System.Drawing.Color.Black;
             this.openFile.Location = new System.Drawing.Point(48, 340);
             this.openFile.Margin = new System.Windows.Forms.Padding(0);
             this.openFile.Name = "openFile";
@@ -209,36 +209,40 @@
             // 
             // select2
             // 
+            this.select2.BackColor = System.Drawing.Color.DarkGray;
             this.select2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("select2.BackgroundImage")));
             this.select2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.select2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.select2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.select2.FlatAppearance.BorderSize = 0;
-            this.select2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.select2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.select2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.select2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.select2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.select2.Location = new System.Drawing.Point(278, 343);
+            this.select2.Location = new System.Drawing.Point(275, 340);
+            this.select2.Margin = new System.Windows.Forms.Padding(0);
             this.select2.Name = "select2";
-            this.select2.Size = new System.Drawing.Size(44, 54);
+            this.select2.Size = new System.Drawing.Size(50, 60);
             this.select2.TabIndex = 3;
-            this.select2.UseVisualStyleBackColor = true;
+            this.select2.UseVisualStyleBackColor = false;
             this.select2.Click += new System.EventHandler(this.select2_Click);
             // 
             // select1
             // 
+            this.select1.BackColor = System.Drawing.Color.DarkGray;
             this.select1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("select1.BackgroundImage")));
             this.select1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.select1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.select1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.select1.FlatAppearance.BorderSize = 0;
-            this.select1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.select1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.select1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.select1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.select1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.select1.Location = new System.Drawing.Point(3, 343);
+            this.select1.Location = new System.Drawing.Point(0, 340);
+            this.select1.Margin = new System.Windows.Forms.Padding(0);
             this.select1.Name = "select1";
-            this.select1.Size = new System.Drawing.Size(42, 54);
+            this.select1.Size = new System.Drawing.Size(48, 60);
             this.select1.TabIndex = 2;
-            this.select1.UseVisualStyleBackColor = true;
+            this.select1.UseVisualStyleBackColor = false;
             this.select1.Click += new System.EventHandler(this.select1_Click);
             // 
             // imgEvento
@@ -271,7 +275,6 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(328, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(3);
             this.panel5.Size = new System.Drawing.Size(319, 394);
             this.panel5.TabIndex = 4;
             // 
@@ -283,10 +286,10 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(18, 54);
+            this.txtNombre.Location = new System.Drawing.Point(15, 51);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(273, 28);
+            this.txtNombre.Size = new System.Drawing.Size(279, 28);
             this.txtNombre.TabIndex = 18;
             this.txtNombre.Text = "...";
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -298,7 +301,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(106, 8);
+            this.label2.Location = new System.Drawing.Point(106, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 34);
             this.label2.TabIndex = 17;
@@ -312,10 +315,10 @@
             this.txtBaja.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBaja.ForeColor = System.Drawing.Color.White;
-            this.txtBaja.Location = new System.Drawing.Point(14, 490);
+            this.txtBaja.Location = new System.Drawing.Point(11, 487);
             this.txtBaja.Name = "txtBaja";
             this.txtBaja.ReadOnly = true;
-            this.txtBaja.Size = new System.Drawing.Size(273, 28);
+            this.txtBaja.Size = new System.Drawing.Size(279, 28);
             this.txtBaja.TabIndex = 16;
             this.txtBaja.Text = "...";
             this.txtBaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -327,7 +330,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(118, 444);
+            this.label1.Location = new System.Drawing.Point(118, 441);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 34);
             this.label1.TabIndex = 15;
@@ -341,10 +344,10 @@
             this.txtAlta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlta.ForeColor = System.Drawing.Color.White;
-            this.txtAlta.Location = new System.Drawing.Point(14, 406);
+            this.txtAlta.Location = new System.Drawing.Point(11, 403);
             this.txtAlta.Name = "txtAlta";
             this.txtAlta.ReadOnly = true;
-            this.txtAlta.Size = new System.Drawing.Size(273, 28);
+            this.txtAlta.Size = new System.Drawing.Size(279, 28);
             this.txtAlta.TabIndex = 14;
             this.txtAlta.Text = "...";
             this.txtAlta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -356,7 +359,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(120, 360);
+            this.label6.Location = new System.Drawing.Point(120, 357);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 34);
             this.label6.TabIndex = 11;
@@ -368,9 +371,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.Controls.Add(this.rtxtDesc);
             this.panel6.Controls.Add(this.openFileButton);
-            this.panel6.Location = new System.Drawing.Point(30, 141);
+            this.panel6.Location = new System.Drawing.Point(27, 138);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(254, 100);
+            this.panel6.Size = new System.Drawing.Size(260, 100);
             this.panel6.TabIndex = 10;
             // 
             // rtxtDesc
@@ -379,7 +382,7 @@
             this.rtxtDesc.Location = new System.Drawing.Point(42, 0);
             this.rtxtDesc.Multiline = true;
             this.rtxtDesc.Name = "rtxtDesc";
-            this.rtxtDesc.Size = new System.Drawing.Size(212, 100);
+            this.rtxtDesc.Size = new System.Drawing.Size(218, 100);
             this.rtxtDesc.TabIndex = 6;
             // 
             // openFileButton
@@ -407,7 +410,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(107, 258);
+            this.label7.Location = new System.Drawing.Point(107, 255);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 34);
             this.label7.TabIndex = 6;
@@ -420,7 +423,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(77, 95);
+            this.label8.Location = new System.Drawing.Point(77, 92);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(165, 34);
             this.label8.TabIndex = 0;
@@ -431,7 +434,7 @@
             this.numPrecio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.numPrecio.DecimalPlaces = 3;
             this.numPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPrecio.Location = new System.Drawing.Point(111, 307);
+            this.numPrecio.Location = new System.Drawing.Point(111, 304);
             this.numPrecio.Maximum = new decimal(new int[] {
             -727379969,
             232,
@@ -446,8 +449,8 @@
             this.submitEvento.BackColor = System.Drawing.Color.Black;
             this.submitEvento.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.submitEvento.FlatAppearance.BorderSize = 0;
-            this.submitEvento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.submitEvento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.submitEvento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.submitEvento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.submitEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitEvento.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitEvento.ForeColor = System.Drawing.Color.White;

@@ -71,6 +71,7 @@ namespace sistemaHoteles
             txtBaja.Text = evento.fBaja;
             imgs = evento.imagenes;
             imgEvento.Image = new Bitmap(imgs[0]);
+            currentImg = 0;
         }
 
         private void lstEventos_Click(object sender, EventArgs e)
@@ -104,6 +105,7 @@ namespace sistemaHoteles
 
                     imgEvento.Image = null;
                     imgs = null;
+                    currentImg = 0;
                     txtNombre.Text = txtEvento.Text;
                     txtEvento.Text = "";
                     rtxtDesc.Text = "";
@@ -118,7 +120,7 @@ namespace sistemaHoteles
         private void select2_Click(object sender, EventArgs e)
         {
             int i = currentImg + 1;
-            if(i < imgs.Length)
+            if (imgs != null && i < imgs.Length)
             {
                 currentImg = i;
                 imgEvento.Image = new Bitmap(imgs[i]);
@@ -128,7 +130,7 @@ namespace sistemaHoteles
         private void select1_Click(object sender, EventArgs e)
         {
             int i = currentImg - 1;
-            if (i > 0)
+            if (imgs != null && i > 0 )
             {
                 currentImg = i;
                 imgEvento.Image = new Bitmap(imgs[i]);
