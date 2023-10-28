@@ -119,7 +119,7 @@
                             <div class="d-flex align-items-center">
                                 <p class="my-2 justify-content-between">Precio por la habitacion</p>
                                 <div class="precio-chamba">
-                                    <h2 id="costoRoom">$<?php echo rtrim($room['costo'], '0'); ?></h2>
+                                    <h2 id="costoRoom">$<?php echo number_format($room['costo'], 2)?></h2>
                                     
                                     <p id="currentValue" class="d-none">0</p>
                                 </div>

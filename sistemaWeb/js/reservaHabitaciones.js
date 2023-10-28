@@ -5,32 +5,45 @@
     function roomPersons(id){
 
         let index = seleccionadas.indexOf(id);
+        let room = document.querySelector("#room-"+id);
+        let cantPersonas = room.querySelector("#opciones").value;
+
         
         if(index != -1){
             //  Se borra el id de habitacion del arreglo si no existe
             seleccionadas.splice(index, 1);
+            if(cantPersonas != 0) {   //De no haberse ingresado 0, se reestablece la cantidad de personas para la reserva
+                seleccionadas.push(id);
+                roomFocus(id, true);
+                return;
+            } 
+            roomUnFocus(id, true);  
         } else{
             seleccionadas.push(id);
+            roomFocus(id, true);  
         }
+        
+       
 
-        let room = document.querySelector("#room-"+id);
         let costo = parseFloat(room.querySelector("#costoRoom").innerHTML.split("$")[1]);
-        let cantPersonas = room.querySelector("#opciones").value;
         let valorActual = costo * cantPersonas;
 
         room.querySelector("#currentValue").innerHTML = valorActual;
-        costeTotal();
-        
-        caca(id);
-        
+        costeTotal();    
     }
 
-    function caca(id, ){
-        
-        let rectangulo = document.querySelector('#room-'+id);
-        rectangulo.classList.add("border-warning");
+    function roomFocus(id) {
+        updateRoomBorder(id, true);
+    }
+      
+    function roomUnFocus(id) {
+      updateRoomBorder(id, false);
     }
     
+    function updateRoomBorder(id, isFocused) {
+      const rectangulo = document.querySelector('#room-' + id);
+      rectangulo.classList.toggle("border-warning", isFocused);
+    }
     //const select = document.getElementById('opciones');
     //const rectangulo = document.querySelector('.rectangulo')
 

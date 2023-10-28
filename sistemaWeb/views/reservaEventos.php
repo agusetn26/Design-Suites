@@ -65,7 +65,7 @@
                                     <div class="col-lg-6 flex-grow" id="contPrecio">
                                         <div class="border text-center fs-5 my-2 px-2">
                                             Precio:
-                                            <span class="fs-3" id="costoEvento">$<?php echo $event['precio']?></span>
+                                            <span class="fs-3" id="costoEvento">$<?php echo number_format($event['precio'], 2); //money_format, floatval(no recomendado)?></span>
                                         </div>
                                         
                                         <button class="d-flex justify-content-center align-items-center text-center btn btn-light w-100 py-1" onclick="selectEvent(<?php echo $event['id_evento']?>, this);" title="Seleccione u omita la seleccion de un evento haciendo clic">

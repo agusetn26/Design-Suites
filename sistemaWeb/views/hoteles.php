@@ -63,7 +63,7 @@ require_once "modelos/hoteles.php";
                             <img src="../img/eventos/<?php echo basename(dirname(explode(";", $evento['img'])[0])) . "/" . basename(explode(";", $evento['img'])[0]); ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title text-dark h4"><?php echo($evento['nombre'])?></h5>
-                                <p class="card-text text-dark h5">$<?php echo(floatval($evento['precio']))?></p>
+                                <p class="card-text text-dark h5">$<?php echo(number_format($evento['precio'], 2)) // floatval() recordar?></p>
                             </div>
                         </div>
                     </div>

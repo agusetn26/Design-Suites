@@ -32,10 +32,10 @@
 
     // Querys
     $idHotel = $filas[$_POST['hotel']]['id_hotel'];
-    $sql = "SELECT * FROM eventos WHERE id_hotel = '".$idHotel."' AND id_evento NOT IN " .
+    $sql = "SELECT * FROM eventos WHERE eventos.fecha_baja IS NULL AND id_hotel = '".$idHotel."' AND id_evento NOT IN " .
             "(SELECT id_evento FROM reservaEventos WHERE checkIn <= '".$checkIn."' AND checkOut >= '".$checkOut."' AND fecha_alta = '".$inDate."')";
 
     $qryEvents = sqlsrv_query($conn, $sql);
 
-    // while($evento[] = sqlsrv_fetch_array($qry, SQLSRV_FETCH_ASSOC)); hacks
+    // while($evento[] = sqlsrv_fetch_array($qryEvents, SQLSRV_FETCH_ASSOC)); hacks
 ?>
