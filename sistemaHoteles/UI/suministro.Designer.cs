@@ -34,6 +34,8 @@ namespace sistemaHoteles.UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numStock = new System.Windows.Forms.NumericUpDown();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -41,14 +43,12 @@ namespace sistemaHoteles.UI
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numStock = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -63,7 +63,7 @@ namespace sistemaHoteles.UI
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(852, 484);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -76,10 +76,31 @@ namespace sistemaHoteles.UI
             this.panel2.Controls.Add(this.btnSubmit);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(403, 3);
+            this.panel2.Location = new System.Drawing.Point(429, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(394, 444);
+            this.panel2.Size = new System.Drawing.Size(420, 478);
             this.panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(12, 230);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(143, 38);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Cantidad:";
+            // 
+            // numStock
+            // 
+            this.numStock.BackColor = System.Drawing.Color.White;
+            this.numStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numStock.Location = new System.Drawing.Point(160, 233);
+            this.numStock.Name = "numStock";
+            this.numStock.Size = new System.Drawing.Size(50, 32);
+            this.numStock.TabIndex = 8;
             // 
             // flowLayoutPanel1
             // 
@@ -92,7 +113,7 @@ namespace sistemaHoteles.UI
             this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 75);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(379, 44);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(405, 44);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // label2
@@ -130,7 +151,7 @@ namespace sistemaHoteles.UI
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(88, 330);
+            this.btnSubmit.Location = new System.Drawing.Point(101, 364);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(223, 47);
             this.btnSubmit.TabIndex = 5;
@@ -145,9 +166,9 @@ namespace sistemaHoteles.UI
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(134, 6);
+            this.label1.Location = new System.Drawing.Point(147, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 44);
+            this.label1.Size = new System.Drawing.Size(138, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pedidos";
             // 
@@ -159,7 +180,7 @@ namespace sistemaHoteles.UI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(394, 444);
+            this.panel1.Size = new System.Drawing.Size(420, 478);
             this.panel1.TabIndex = 0;
             // 
             // dgvProducts
@@ -197,51 +218,30 @@ namespace sistemaHoteles.UI
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.ReadOnly = true;
             this.dgvProducts.RowHeadersVisible = false;
-            this.dgvProducts.RowTemplate.Height = 100;
+            this.dgvProducts.RowTemplate.Height = 250;
             this.dgvProducts.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProducts.Size = new System.Drawing.Size(394, 444);
+            this.dgvProducts.Size = new System.Drawing.Size(420, 478);
             this.dgvProducts.TabIndex = 0;
             this.dgvProducts.SelectionChanged += new System.EventHandler(this.dgvProducts_SelectionChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 230);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 38);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Cantidad:";
-            // 
-            // numStock
-            // 
-            this.numStock.BackColor = System.Drawing.Color.White;
-            this.numStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numStock.Location = new System.Drawing.Point(160, 233);
-            this.numStock.Name = "numStock";
-            this.numStock.Size = new System.Drawing.Size(50, 32);
-            this.numStock.TabIndex = 8;
             // 
             // suministro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(852, 484);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "suministro";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
             this.ResumeLayout(false);
 
         }

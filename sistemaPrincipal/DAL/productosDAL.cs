@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -107,20 +107,21 @@ namespace sistemaPrincipal.DAL
         private string moveFile(string ruta, int id)
         {
             string destinoFinal = "C:\\xampp\\htdocs\\Design-Suites\\img\\productos";
-            string nombreArchivo = $"{id}" + Path.GetExtension(ruta);
+            string nombreArchivo = $"{id}";
+
             string nuevoDestino = Path.Combine(destinoFinal, nombreArchivo);
 
             try
             {
-                if (File.Exists(nuevoDestino))
-                {
-                    Console.WriteLine(ruta);
-                    return nuevoDestino;
-                }
-             
-                File.Copy(ruta, nuevoDestino);
-                return nuevoDestino;
-                
+                if (File.Exists(nuevoDestino + ".jpg"))
+                    File.Delete(nuevoDestino + ".jpg");
+
+                if (File.Exists(nuevoDestino + ".png"))
+                    File.Delete(nuevoDestino + ".png");
+
+                File.Copy(ruta, nuevoDestino + Path.GetExtension(ruta), true);
+                return nuevoDestino + Path.GetExtension(ruta);
+
             } catch(Exception e)
             {
                 Console.WriteLine(e);
