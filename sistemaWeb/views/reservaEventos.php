@@ -41,10 +41,10 @@
                     while($event = sqlsrv_fetch_array($qryEvents, SQLSRV_FETCH_ASSOC)) {
                 ?>
                     <div class="eventRow row bg-gris text-light p-3 mb-2 rounded" id="event-<?php echo $event['id_evento']?>">
-                            <div class="col-lg-5">
-                                <img src="../<?php echo $event['imagen']?>" class="img-fluid w-100 rounded imgReserva" alt="Responsive image">
+                            <div class="col-xl-5">
+                                <img src="../img/eventos/<?php echo basename(dirname($event['imagen'])) . "/" . basename($event['imagen'])?>" class="w-100 h-100 rounded imgReserva" alt="Responsive image">
                             </div>
-                            <div class="col-lg-7 contenedor">
+                            <div class="col-xl-7 contenedor">
                                 <div class="d-flex justify-content-between mt-1">
                                     <a href="#" class="text-white" id="eventType"><?php echo $event['nombre'] ?></a>
                                     <abbr title="Para seleccionar el evento presione la tarjeta"><span class="material-symbols-outlined cant-per">info</span></abbr>

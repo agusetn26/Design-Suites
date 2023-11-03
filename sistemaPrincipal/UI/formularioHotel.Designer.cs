@@ -46,8 +46,8 @@ namespace sistemaPrincipal
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.categoria = new System.Windows.Forms.ComboBox();
-            this.descripcion = new System.Windows.Forms.TextBox();
             this.nombre = new System.Windows.Forms.TextBox();
+            this.descripcion = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.displayImage = new System.Windows.Forms.PictureBox();
@@ -207,7 +207,7 @@ namespace sistemaPrincipal
             this.direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.direccion.Location = new System.Drawing.Point(203, 114);
             this.direccion.Margin = new System.Windows.Forms.Padding(0);
-            this.direccion.MaxLength = 200;
+            this.direccion.MaxLength = 50;
             this.direccion.Name = "direccion";
             this.direccion.Size = new System.Drawing.Size(171, 31);
             this.direccion.TabIndex = 12;
@@ -233,7 +233,7 @@ namespace sistemaPrincipal
             this.ubicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ubicacion.Location = new System.Drawing.Point(203, 77);
             this.ubicacion.Margin = new System.Windows.Forms.Padding(0);
-            this.ubicacion.MaxLength = 200;
+            this.ubicacion.MaxLength = 50;
             this.ubicacion.Name = "ubicacion";
             this.ubicacion.Size = new System.Drawing.Size(171, 31);
             this.ubicacion.TabIndex = 10;
@@ -297,6 +297,18 @@ namespace sistemaPrincipal
             this.categoria.Size = new System.Drawing.Size(171, 28);
             this.categoria.TabIndex = 18;
             // 
+            // nombre
+            // 
+            this.nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre.Location = new System.Drawing.Point(203, 3);
+            this.nombre.Margin = new System.Windows.Forms.Padding(0);
+            this.nombre.MaxLength = 50;
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(171, 31);
+            this.nombre.TabIndex = 7;
+            this.nombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // descripcion
             // 
             this.descripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -308,18 +320,6 @@ namespace sistemaPrincipal
             this.descripcion.Size = new System.Drawing.Size(170, 31);
             this.descripcion.TabIndex = 8;
             this.descripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // nombre
-            // 
-            this.nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre.Location = new System.Drawing.Point(203, 3);
-            this.nombre.Margin = new System.Windows.Forms.Padding(0);
-            this.nombre.MaxLength = 200;
-            this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(171, 31);
-            this.nombre.TabIndex = 7;
-            this.nombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanel2
             // 

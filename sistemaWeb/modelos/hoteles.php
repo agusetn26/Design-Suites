@@ -13,7 +13,7 @@
 
     $sqlHabicaciones = "SELECT t.id_tipoHabitacion, t.nombre, t.descripcion, t.ocupacion, t.servicios, t.dimensiones, t.imagenes, COUNT(habitaciones.id_tipoHabitacion) AS cantidad " . 
                     "FROM habitaciones JOIN tipoHabitacion AS t ON t.id_tipoHabitacion = habitaciones.id_tipoHabitacion " . 
-                    "WHERE id_hotel = '". $filas[$index]['id_hotel'] ."' GROUP BY t.id_tipoHabitacion, t.nombre, t.descripcion, t.ocupacion, t.servicios, t.dimensiones, t.imagenes;";
+                    "WHERE id_hotel = '". $filas[$index]['id_hotel'] ."' AND habitaciones.fecha_baja IS NULL GROUP BY t.id_tipoHabitacion, t.nombre, t.descripcion, t.ocupacion, t.servicios, t.dimensiones, t.imagenes";
  
     $qryHabicaciones = sqlsrv_query($conn, $sqlHabicaciones);
     

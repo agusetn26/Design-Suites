@@ -36,8 +36,7 @@
             INSERT INTO clientes (apellido, dni, correo, edad, telefono) VALUES (?, ?, ?, ?, ?);
             SET @id = SCOPE_IDENTITY();
         END
-        " . $sqlReservas .
-    "
+        " . $sqlReservas . "
     ELSE
     BEGIN
         SELECT 'Reserva no disponible' AS msg;

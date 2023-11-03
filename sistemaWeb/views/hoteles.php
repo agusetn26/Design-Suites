@@ -5,7 +5,7 @@ require_once "modelos/hoteles.php";
 <div class="container my-4">
 
     <p class="h1"><?php echo $filas[$index]['nombre']; ?></p>
-    <p class="text-secondary fs-5"><?php echo nl2br($filas[$index]['descripcion']) ?></p>
+    <p class="text-secondary text-break fs-5"><?php echo nl2br($filas[$index]['descripcion']) ?></p>
     <p class="fw-bold lead"><?php echo $cantidadHabitaciones; ?>&nbsp;habitaciones</p>
 
     <!-------------------------------------------------------------------->
@@ -87,7 +87,7 @@ require_once "modelos/hoteles.php";
     </div>
     <!-------------------------------------------------------------------->
     <p class="h3 m-3 border-bottom">Ubicacion</p>
-    <p><?php echo $filas[$index]['ubicacion'] . "&nbsp;(" . $filas[$index]['direccion'] . ")" ?></p>
+    <p class="text-break"><?php echo $filas[$index]['ubicacion'] . "&nbsp;(" . $filas[$index]['direccion'] . ")" ?></p>
 
     <div class="video_con">
         <iframe class="video" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.8135822167621!2d-58.40583319994833!3d-34.613605375079786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb87409a19cb%3A0xca5521b461138618!2sEscuela%20T%C3%A9cnica%20N%C2%BA26%20D.E.6%20%22Confederaci%C3%B3n%20Suiza%22!5e0!3m2!1ses-419!2sar!4v1693585879304!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

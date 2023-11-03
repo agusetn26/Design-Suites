@@ -7,14 +7,16 @@ require_once "modelos/habitaciones.php";
     <!-------------------------------casurrel-->
     <div id="myCarousel" class="carousel slide my-4" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <?php foreach ($imgRoom as $i => $img) { ?>
+                <button type="button" data-bs-target="#myCarousel" aria-label="Slide <?php echo ($i + 1); ?>" data-bs-slide-to="<?php echo $i; ?>" <?php echo (($i == 0) ? 'class="active" aria-current="true"' : ""); ?>></button>
+            <?php } ?>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="content">
-                    <img class="content-image img-carrusel" src="../<?php echo (explode('\\', $hab['imagenes'])[4]); ?>/<?php echo (explode('\\', $hab['imagenes'])[5]); ?>/<?php echo (explode('\\', $hab['imagenes'])[6]); ?>/<?php echo (explode('\\', $hab['imagenes'])[7]); ?>" style="width: 1903; height: auto;" alt="">
+            <?php foreach ($imgRoom as $i => $img) { ?>
+                <div class="carousel-item <?php echo (($i == 0) ? "active" : "") ?>">
+                    <img src="../img/habitaciones/<?php echo basename(dirname($img)) . "/" . basename($img) ?>" style="width: 100%; height: auto;">
                 </div>
-            </div>
+            <?php } ?>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

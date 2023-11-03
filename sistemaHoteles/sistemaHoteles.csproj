@@ -46,10 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="baseForm.cs">
+    <Compile Include="BLL\reservasBLL.cs" />
+    <Compile Include="BLL\suministroBLL.cs" />
+    <Compile Include="DAL\reservasDAL.cs" />
+    <Compile Include="DAL\suministroDAL.cs" />
+    <Compile Include="UI\baseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="baseForm.Designer.cs">
+    <Compile Include="UI\baseForm.Designer.cs">
       <DependentUpon>baseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BLL\eventosBLL.cs" />
@@ -58,46 +62,55 @@
     <Compile Include="DAL\eventosDAL.cs" />
     <Compile Include="DAL\habitacionesDAL.cs" />
     <Compile Include="DAL\hotelDAL.cs" />
-    <Compile Include="eventos.cs">
+    <Compile Include="UI\eventos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="eventos.Designer.cs">
+    <Compile Include="UI\eventos.Designer.cs">
       <DependentUpon>eventos.cs</DependentUpon>
     </Compile>
-    <Compile Include="habitaciones.cs">
+    <Compile Include="UI\suministro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="habitaciones.Designer.cs">
+    <Compile Include="UI\suministro.Designer.cs">
+      <DependentUpon>suministro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\habitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\habitaciones.Designer.cs">
       <DependentUpon>habitaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="reservas.cs">
+    <Compile Include="UI\reservas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reservas.Designer.cs">
+    <Compile Include="UI\reservas.Designer.cs">
       <DependentUpon>reservas.cs</DependentUpon>
     </Compile>
-    <Compile Include="hotel.cs">
+    <Compile Include="UI\hotel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="hotel.Designer.cs">
+    <Compile Include="UI\hotel.Designer.cs">
       <DependentUpon>hotel.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\config.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="baseForm.resx">
+    <EmbeddedResource Include="UI\baseForm.resx">
       <DependentUpon>baseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="eventos.resx">
+    <EmbeddedResource Include="UI\eventos.resx">
       <DependentUpon>eventos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="habitaciones.resx">
+    <EmbeddedResource Include="UI\suministro.resx">
+      <DependentUpon>suministro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\habitaciones.resx">
       <DependentUpon>habitaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reservas.resx">
+    <EmbeddedResource Include="UI\reservas.resx">
       <DependentUpon>reservas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="hotel.resx">
+    <EmbeddedResource Include="UI\hotel.resx">
       <DependentUpon>hotel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

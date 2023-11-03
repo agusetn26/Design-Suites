@@ -33,7 +33,7 @@ namespace sistemaPrincipal.DAL
 
         public bool actualizarListado(string idSuministro, string cantidadPedida, string idTrans)
         {
-            string consulta1 = $"UPDATE suministros SET cantidad = {cantidadPedida} WHERE id_suministro = {idSuministro};";
+            string consulta1 = $"UPDATE suministros SET cantidad += {cantidadPedida} WHERE id_suministro = {idSuministro};";
             string consulta2 = $"UPDATE transacciones SET estado = 'atendido' WHERE id_transaccion = {idTrans}";
             SqlCommand com = new SqlCommand();
             com.CommandText = consulta1 + consulta2;

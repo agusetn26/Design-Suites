@@ -81,10 +81,9 @@
     function addReservas(){
         let reserva = "";
         for(let i=0; i<eventos.length; i++){
-            
             reserva += '<div class="row bg-dark text-center w-100 m-auto my-2" id="reservaH">';
                 //reserva +=  '<img class="col-sm-6 p-0" src="'+eventos[i].img+'" alt="Card image cap">';
-                reserva +=  '<img class="col-sm-6 p-0" src="../img/salon2.jpg" alt="Card image cap">';
+                reserva +=  '<img class="col-sm-6 p-0" src="' +eventos[i].img + '" alt="Card image cap">';
                 reserva +=  '<div class="col-sm-6 d-flex flex-column text-white text-center p-5">';
                     reserva +=      '<h5 class="fs-4"> <b>'+eventos[i].tipo+'</b> <div class="linea-in my-1"></div> </h5> ';
                     reserva +=      '<div class="fs-3 text-center p-3">$';

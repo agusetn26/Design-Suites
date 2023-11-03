@@ -16,4 +16,5 @@
     }
 
     $hab = sqlsrv_fetch_array($qryHabicaciones, SQLSRV_FETCH_ASSOC);
+    $imgRoom = explode(";", $hab["imagenes"]);
 ?>

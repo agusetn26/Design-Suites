@@ -8,22 +8,16 @@
         let room = document.querySelector("#room-"+id);
         let cantPersonas = room.querySelector("#opciones").value;
 
-        
         if(index != -1){
-            //  Se borra el id de habitacion del arreglo si no existe
-            seleccionadas.splice(index, 1);
-            if(cantPersonas != 0) {   //De no haberse ingresado 0, se reestablece la cantidad de personas para la reserva
-                seleccionadas.push(id);
-                roomFocus(id, true);
-                return;
-            } 
-            roomUnFocus(id, true);  
-        } else{
-            seleccionadas.push(id);
-            roomFocus(id, true);  
+            //  Se borra el id de habitacion del arreglo si ya existe
+            seleccionadas.splice(index, 1);    
+            roomUnFocus(id);  
         }
-        
-       
+
+        if(cantPersonas != 0 ) {   
+            seleccionadas.push(id);
+            roomFocus(id);
+        } 
 
         let costo = parseFloat(room.querySelector("#costoRoom").innerHTML.split("$")[1]);
         let valorActual = costo * cantPersonas;
@@ -80,7 +74,8 @@
             let nombre = document.querySelector("#room-"+seleccionadas[i]+" #roomType").innerHTML;
             let personas = document.querySelector("#room-"+seleccionadas[i]+" #opciones").value;
             let coste = document.querySelector("#room-"+seleccionadas[i]+" #costoRoom").innerHTML;
-            let arrData = {'tipo': nombre, 'personas': personas, 'costo': coste, 'id': seleccionadas[i]};
+            let img = document.querySelector("#room-"+seleccionadas[i]+" img").src;
+            let arrData = {'tipo': nombre, 'personas': personas, 'costo': coste, 'id': seleccionadas[i], 'img': img};
             roomsData.push(arrData);
         }
 
@@ -123,7 +118,7 @@
         let reserva = "";
         for(let i=0; i<roomsData.length; i++){
             reserva += '<div class="row bg-dark text-center w-100 m-auto my-2" id="reservaH">';
-                reserva +=  '<img class="col-sm-6 p-0" src="../img/home_salta.jpg" alt="Card image cap">';
+                reserva +=  '<img class="col-sm-6 p-0" src="'+ roomsData[i]['img'] +'" alt="Card image cap">';
                 reserva +=  '<div class="col-sm-6 d-flex flex-column text-white text-center p-1">';
                     reserva +=      '<h5 class="card-title fs-2"> <b>'+roomsData[i]['tipo']+'</b> </h5>';
                     reserva +=      '<hr class="m-0">';
