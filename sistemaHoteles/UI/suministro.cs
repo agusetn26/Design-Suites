@@ -47,7 +47,7 @@ namespace sistemaHoteles.UI
                 }
 
                 dgvProducts.DataSource = newSrc;
-                dgvProducts.Columns["Producto"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvProducts.Columns["Producto"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
                 dgvProducts.Columns["id"].Visible = false;
                 dgvProducts.Columns["nombre"].Visible = false;
             }

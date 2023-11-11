@@ -5,14 +5,13 @@
     $reservas = json_decode($_POST['reservas']);
     $ids = [];
     $sqlReservas = "";
-    $code = "";
+    $code = uniqid($_POST['numero_documento']);
     $in = $_POST['checkIn'];
     $out = $_POST['checkOut'];
     $inDate = $_POST['inDate'];
 
     foreach($reservas as $reserva){
         $ids[] = $reserva->id;
-        $code = uniqid($_POST['numero_documento']);
 
         $sqlReservas .=  "
                         INSERT INTO reservaEventos (codigo, comentarios, checkIn, checkOut, fecha_alta, id_evento, id_cliente) 

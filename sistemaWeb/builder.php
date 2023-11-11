@@ -88,9 +88,11 @@
                     </form>
                 </div>
             </li>
+        <!-- shh
             <li class="nav-item mx-2 my-1">
                 <a href="?sec=membresias" class="btn btn-dark" role="button">MEMBRESIAS</a>
             </li>
+        -->
             <li class="nav-item mx-2 my-1">
                 <a href="?sec=contacto" class="btn btn-dark" role="button">CONTACTO</a>
             </li>
@@ -118,7 +120,7 @@
     </nav>
     
     <div id="reservasOp" style="display: none;">
-        <form action="?sec=reservas" method="POST" class="d-flex flex-wrap justify-content-center align-items-center" onsubmit="return verifData(this);">
+        <form action="?sec=reservas" method="POST" class="d-flex flex-wrap justify-content-center align-items-center" onsubmit="alert('Se ha enviado queja'); return false;">
             <li class="nav-item px-5 my-1">
                 <div class="d-flex gap-2 align-items-center">
                     <span class="material-symbols-outlined" onclick="back()" style="color: white; cursor: pointer;">reply</span>
@@ -177,8 +179,8 @@
                     <h5>Design Suites</h5>
                     <ul class="nav flex-column align-items-center align-items-md-start">
                         <li class="nav-item mb-2"><a href="?sec=home" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="?sec=membresias" class="nav-link p-0 text-muted">Membresias</a></li>
                         <li class="nav-item mb-2"><a href="?sec=contacto" class="nav-link p-0 text-muted">Contacto</a></li>
+                        <li class="nav-item mb-2"><a href="?sec=protocolo" class="nav-link p-0 text-muted">Protocolo</a></li>
                         <li class="nav-item mb-2"><a href="?sec=cancelar-reserva" class="nav-link p-2 bg-danger rounded text-white">Boton de Arrepentimiento</a></li>
                     </ul>
                 </div>

@@ -5,7 +5,7 @@
             </div>
             <div class="modal-body py-2">
                 <p class="m-0 text-center">Ingrese el codigo de reserva para poder cancelarla</p>
-                <input type="text" id="input-codigo" class="form-control mt-4" placeholder="Ej.: 123235436532c8e04e144">
+                <input type="text" id="input-codigo" class="form-control mt-4" placeholder="Ej: 123235436532c8e04e144">
             </div>
             <div class="d-flex justify-content-center align-items-stretch w-100 gap-2 mt-4 border-top-0">
                 <button type="submit" onclick="cancelar_reserva();" class="btn btn-lg btn-danger">Save changes</button>

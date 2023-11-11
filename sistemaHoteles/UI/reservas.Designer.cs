@@ -29,23 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reservas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbOptions = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnNextPage = new System.Windows.Forms.Button();
+            this.btnLastPage = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.numCurrentPage = new System.Windows.Forms.NumericUpDown();
+            this.lblTotalPages = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnlAcciones = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnReject = new System.Windows.Forms.Button();
+            this.btnAccept = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
@@ -54,6 +59,9 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCurrentPage)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
@@ -80,7 +88,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(325, 5);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
@@ -101,24 +109,25 @@
             this.txtSearch.Tag = "Código...";
             this.txtSearch.Text = "Código...";
             this.txtSearch.Enter += new System.EventHandler(this.placeHolder);
-            this.txtSearch.Leave += new System.EventHandler(this.place);
+            this.txtSearch.Validating += new System.ComponentModel.CancelEventHandler(this.place);
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkGray;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(385, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 45);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(385, 0);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(85, 45);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel2
             // 
@@ -152,7 +161,7 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 395);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -161,24 +170,100 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(800, 55);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // btnAdd
+            // panel4
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Gray;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAdd.Location = new System.Drawing.Point(3, 3);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(394, 49);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Traer Filas";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel4.Controls.Add(this.btnNextPage);
+            this.panel4.Controls.Add(this.btnLastPage);
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(400, 55);
+            this.panel4.TabIndex = 1;
+            // 
+            // btnNextPage
+            // 
+            this.btnNextPage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNextPage.BackgroundImage")));
+            this.btnNextPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNextPage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnNextPage.FlatAppearance.BorderSize = 0;
+            this.btnNextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNextPage.Location = new System.Drawing.Point(350, 0);
+            this.btnNextPage.Name = "btnNextPage";
+            this.btnNextPage.Size = new System.Drawing.Size(50, 55);
+            this.btnNextPage.TabIndex = 4;
+            this.btnNextPage.UseVisualStyleBackColor = true;
+            this.btnNextPage.Click += new System.EventHandler(this.btnNextPage_Click);
+            // 
+            // btnLastPage
+            // 
+            this.btnLastPage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLastPage.BackgroundImage")));
+            this.btnLastPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLastPage.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnLastPage.FlatAppearance.BorderSize = 0;
+            this.btnLastPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLastPage.Location = new System.Drawing.Point(0, 0);
+            this.btnLastPage.Name = "btnLastPage";
+            this.btnLastPage.Size = new System.Drawing.Size(50, 55);
+            this.btnLastPage.TabIndex = 3;
+            this.btnLastPage.UseVisualStyleBackColor = true;
+            this.btnLastPage.Click += new System.EventHandler(this.btnLastPage_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel7.AutoSize = true;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.numCurrentPage);
+            this.panel7.Controls.Add(this.lblTotalPages);
+            this.panel7.Location = new System.Drawing.Point(138, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(112, 55);
+            this.panel7.TabIndex = 8;
+            // 
+            // numCurrentPage
+            // 
+            this.numCurrentPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.numCurrentPage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numCurrentPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numCurrentPage.Font = new System.Drawing.Font("Microsoft Tai Le", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numCurrentPage.ForeColor = System.Drawing.Color.White;
+            this.numCurrentPage.Location = new System.Drawing.Point(0, 0);
+            this.numCurrentPage.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.numCurrentPage.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numCurrentPage.Name = "numCurrentPage";
+            this.numCurrentPage.Size = new System.Drawing.Size(58, 51);
+            this.numCurrentPage.TabIndex = 7;
+            this.numCurrentPage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numCurrentPage.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.numCurrentPage.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numCurrentPage.ValueChanged += new System.EventHandler(this.numCurrentPage_ValueChanged);
+            // 
+            // lblTotalPages
+            // 
+            this.lblTotalPages.AutoSize = true;
+            this.lblTotalPages.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblTotalPages.Font = new System.Drawing.Font("Microsoft Tai Le", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPages.ForeColor = System.Drawing.Color.White;
+            this.lblTotalPages.Location = new System.Drawing.Point(58, 0);
+            this.lblTotalPages.Name = "lblTotalPages";
+            this.lblTotalPages.Size = new System.Drawing.Size(50, 45);
+            this.lblTotalPages.TabIndex = 6;
+            this.lblTotalPages.Text = "/?";
             // 
             // tableLayoutPanel3
             // 
@@ -213,26 +298,28 @@
             this.dgvReservas.AllowUserToAddRows = false;
             this.dgvReservas.AllowUserToDeleteRows = false;
             this.dgvReservas.AllowUserToResizeRows = false;
+            this.dgvReservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReservas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvReservas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
             this.dgvReservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvReservas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReservas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReservas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReservas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReservas.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvReservas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvReservas.EnableHeadersVisualStyles = false;
             this.dgvReservas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
@@ -259,51 +346,53 @@
             // 
             // pnlAcciones
             // 
-            this.pnlAcciones.Controls.Add(this.button3);
-            this.pnlAcciones.Controls.Add(this.btnSubmit);
+            this.pnlAcciones.Controls.Add(this.btnReject);
+            this.pnlAcciones.Controls.Add(this.btnAccept);
             this.pnlAcciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAcciones.Location = new System.Drawing.Point(0, 45);
             this.pnlAcciones.Name = "pnlAcciones";
             this.pnlAcciones.Size = new System.Drawing.Size(400, 295);
             this.pnlAcciones.TabIndex = 2;
             // 
-            // button3
+            // btnReject
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(77, 175);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(247, 47);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Rechazar Reserva";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnReject.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReject.AutoSize = true;
+            this.btnReject.BackColor = System.Drawing.Color.Gray;
+            this.btnReject.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReject.FlatAppearance.BorderSize = 0;
+            this.btnReject.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnReject.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnReject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReject.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReject.ForeColor = System.Drawing.Color.White;
+            this.btnReject.Location = new System.Drawing.Point(77, 175);
+            this.btnReject.Name = "btnReject";
+            this.btnReject.Size = new System.Drawing.Size(247, 47);
+            this.btnReject.TabIndex = 7;
+            this.btnReject.Text = "Rechazar Reserva";
+            this.btnReject.UseVisualStyleBackColor = false;
+            this.btnReject.Click += new System.EventHandler(this.btnReject_Click);
             // 
-            // btnSubmit
+            // btnAccept
             // 
-            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSubmit.AutoSize = true;
-            this.btnSubmit.BackColor = System.Drawing.Color.Gray;
-            this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(85, 53);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(232, 47);
-            this.btnSubmit.TabIndex = 6;
-            this.btnSubmit.Text = "Aceptar Reserva";
-            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnAccept.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAccept.AutoSize = true;
+            this.btnAccept.BackColor = System.Drawing.Color.Gray;
+            this.btnAccept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccept.FlatAppearance.BorderSize = 0;
+            this.btnAccept.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnAccept.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccept.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.ForeColor = System.Drawing.Color.White;
+            this.btnAccept.Location = new System.Drawing.Point(85, 53);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(232, 47);
+            this.btnAccept.TabIndex = 6;
+            this.btnAccept.Text = "Aceptar Reserva";
+            this.btnAccept.UseVisualStyleBackColor = false;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // panel6
             // 
@@ -376,6 +465,11 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCurrentPage)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();
@@ -393,21 +487,26 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cbOptions;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label lblOption;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel pnlAcciones;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnReject;
+        private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.DataGridView dgvReservas;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblTotalPages;
+        private System.Windows.Forms.Button btnNextPage;
+        private System.Windows.Forms.Button btnLastPage;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.NumericUpDown numCurrentPage;
     }
 }

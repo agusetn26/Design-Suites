@@ -8,57 +8,47 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using sistemaHoteles.DAL;
 using sistemaHoteles.BLL;
 
 namespace sistemaHoteles
 {
     public partial class reservas : Form
     {
-        private int idHotel;
-        private DataTable src;
-        private Dictionary<string, int> startRecord;
-        public reservas(int id)
+        private reservaHabitacionesBLL bllRooms;
+        private reservaEventosBLL bllEvents;
+        private Reservas currentObj;
+        public reservas(int idHotel)
         {
-            idHotel = id;
-            startRecord = new Dictionary<string, int>();
-            startRecord["Habitaciones"] = 0;
-            startRecord["Eventos"] = 0;
+            bllRooms = new reservaHabitacionesBLL(idHotel, 2);
+            bllEvents = new reservaEventosBLL(idHotel, 2);
 
             InitializeComponent();
-            bringTableHeaders("Habitaciones");
             cbOptions.SelectedItem = "Habitaciones";
         }
-
-        private void bringTableHeaders(string op)
-        {
-            reservasBLL bll = new reservasBLL();
-            DataTable table = bll.bringHeaders(op);
-            src = table;
-            dgvReservas.DataSource = src;
-        }
         
-        private void bringTableRows()
+        private void setHeaders()
         {
-            string current = (string)cbOptions.SelectedItem;
-
-            reservasBLL bll = new reservasBLL();
-            DataTable table = bll.bringRows(idHotel, startRecord[current], current);
-            foreach (DataRow row in table.Rows)
-            {
-                src.Rows.Add(row.ItemArray);
-            }
-            startRecord[current] += 2;
-            Console.WriteLine(startRecord[current]);
+            currentObj.pagesAmount();
+            dgvReservas.DataSource = currentObj.bringHeaders();
+            numCurrentPage.Maximum = currentObj.totalPages;
+            numCurrentPage.Value = currentObj.page;
+            lblTotalPages.Text = "/" + currentObj.totalPages.ToString();
         }
+
         private void cbOptions_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbOptions.SelectedIndex == 0)
+            {
+                currentObj = bllRooms;
+                setHeaders();
+            }
+            else
+            {
+                currentObj = bllEvents;
+                setHeaders();
+            }
             dgvReservas.Refresh();
-            bringTableHeaders((string)cbOptions.SelectedItem);
-            bringTableRows();
-        }
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            bringTableRows();
         }
 
         private void placeHolder(object sender, EventArgs e)
@@ -67,11 +57,112 @@ namespace sistemaHoteles
             txtBox.Text = "";
         }
 
-        private void place(object sender, EventArgs e)
+        private void place(object sender, CancelEventArgs e)
         {
             TextBox txtBox = sender as TextBox;
-            string holder = txtBox.Tag.ToString();
-            txtBox.Text = holder;
+            Console.WriteLine(txtBox.Text);
+            if (txtBox.Text == "")
+            {
+                string holder = txtBox.Tag.ToString();
+                txtBox.Text = holder;
+            }
+        }
+
+        private void newSrc(DataTable tbl)
+        {
+            if (tbl != null)
+            {
+                dgvReservas.Refresh();
+
+                dgvReservas.DataSource = tbl;
+                numCurrentPage.Value = currentObj.page;
+                lblTotalPages.Text = "/" + currentObj.totalPages;
+            }
+        }
+
+        private void btnNextPage_Click(object sender, EventArgs e)
+        {
+            int to = currentObj.page + 1;
+            if (to <= currentObj.totalPages)
+            {
+                numCurrentPage.Value = currentObj.page + 1;
+            }
+        }
+
+        private void btnLastPage_Click(object sender, EventArgs e)
+        {
+            int to = currentObj.page - 1;
+            if (to > 0)
+            {
+                numCurrentPage.Value = to;
+            }
+        }
+
+        private void numCurrentPage_ValueChanged(object sender, EventArgs e)
+        {
+            int toPage = (int) numCurrentPage.Value;
+            DataTable table = currentObj.jumpTo(toPage);
+            newSrc(table);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string txt = txtSearch.Text;
+
+            if (txt != "Código...")
+            {
+                /*
+                Type objectType = currentObj.GetType();
+                currentObj = (Paginador)Activator.CreateInstance(objectType);
+                */
+                newSrc(currentObj.lookFor(txt));
+            }
+            else
+            {
+                setHeaders();
+            }
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var selectedRows = dgvReservas.SelectedRows
+                    .Cast<DataGridViewRow>() // Dada herencia y polimorfismo de clases, el compilador trata a la colección como instancias. No como la clase de colección
+                    .Select(row => "'" + row.Cells["Codigo"].Value + "'");  //  Debido a esto, es posible recorrer cada valor. Creando una nueva colección de elementos
+
+                string reservaCodes = string.Join(",", selectedRows);
+                currentObj.acceptState(reservaCodes);
+                DataTable table = currentObj.jumpTo((int)numCurrentPage.Value);
+                newSrc(table);
+
+                MessageBox.Show("Se ha cambiado el estado de las reservas exitosamente", "Success", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnReject_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var selectedRows = dgvReservas.SelectedRows
+                    .Cast<DataGridViewRow>() // Dada herencia y polimorfismo de clases, el compilador trata a la colección como instancias. No como la clase de colección
+                    .Select(row => "'" + row.Cells["Codigo"].Value + "'");  //  Debido a esto, es posible recorrer cada valor. Creando una nueva colección de elementos
+
+                string reservaCodes = string.Join(",", selectedRows);
+                currentObj.rejectState(reservaCodes);
+                DataTable table = currentObj.jumpTo((int)numCurrentPage.Value);
+                newSrc(table);
+
+                MessageBox.Show("Se ha cambiado el estado de las reservas exitosamente", "Success", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

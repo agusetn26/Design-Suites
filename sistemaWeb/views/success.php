@@ -1,6 +1,4 @@
-<?php
-    print_r($_POST);
-?>
+
 <div class="container my-5" style="max-width: 500px;">
     <div class="alert alert-success text-center p-4">
         <h4 class="alert-heading">¡Se ha realizado la reserva con éxito!</h4>

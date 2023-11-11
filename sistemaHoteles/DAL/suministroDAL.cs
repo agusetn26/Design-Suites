@@ -21,7 +21,7 @@ namespace sistemaHoteles.DAL
         {
             string sql = "SELECT suministros.id_suministro, productos.nombre, productos.imagen,'x'+CAST(suministros.cantidad AS varchar) AS stock FROM productos " +
                             "LEFT JOIN suministros ON suministros.id_producto = productos.id_producto " +
-                            $"WHERE id_hotel = {idH}";
+                            $"WHERE id_hotel = {idH} AND productos.fecha_baja IS NULL";
 
             return conn.returnData(sql);
         }

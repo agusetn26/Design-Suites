@@ -54,15 +54,15 @@ namespace sistemaHoteles.UI
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(852, 484);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -76,9 +76,9 @@ namespace sistemaHoteles.UI
             this.panel2.Controls.Add(this.btnSubmit);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(429, 3);
+            this.panel2.Location = new System.Drawing.Point(471, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(420, 478);
+            this.panel2.Size = new System.Drawing.Size(378, 478);
             this.panel2.TabIndex = 1;
             // 
             // label3
@@ -113,7 +113,7 @@ namespace sistemaHoteles.UI
             this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 75);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(405, 44);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(363, 44);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // label2
@@ -151,7 +151,7 @@ namespace sistemaHoteles.UI
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(101, 364);
+            this.btnSubmit.Location = new System.Drawing.Point(80, 364);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(223, 47);
             this.btnSubmit.TabIndex = 5;
@@ -166,9 +166,9 @@ namespace sistemaHoteles.UI
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(81)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(147, 6);
+            this.label1.Location = new System.Drawing.Point(126, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 44);
+            this.label1.Size = new System.Drawing.Size(139, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pedidos";
             // 
@@ -180,7 +180,7 @@ namespace sistemaHoteles.UI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(420, 478);
+            this.panel1.Size = new System.Drawing.Size(462, 478);
             this.panel1.TabIndex = 0;
             // 
             // dgvProducts
@@ -221,7 +221,7 @@ namespace sistemaHoteles.UI
             this.dgvProducts.RowTemplate.Height = 250;
             this.dgvProducts.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProducts.Size = new System.Drawing.Size(420, 478);
+            this.dgvProducts.Size = new System.Drawing.Size(462, 478);
             this.dgvProducts.TabIndex = 0;
             this.dgvProducts.SelectionChanged += new System.EventHandler(this.dgvProducts_SelectionChanged);
             // 

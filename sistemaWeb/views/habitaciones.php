@@ -39,13 +39,25 @@ require_once "modelos/habitaciones.php";
     <!--------------------------------coso-->
     <div class="container bg-gray p-3 pb-0 rounded">
         <div class="row row-cols-2">
-            <?php foreach (explode(";", $hab["servicios"]) as $servicios) { ?>
-                <div class="col mb-3">
+                            <div class="col mb-3">
                     <span class="material-symbols-outlined h6">check_box</span>
-                    <?php echo $servicios ?>
-                </div>
-            <?php } ?>
-        </div>
+                    I-FI sin cargo                </div>
+                            <div class="col mb-3">
+                    <span class="material-symbols-outlined h6">check_box</span>
+                    LCD TV 32"                 </div>
+                            <div class="col mb-3">
+                    <span class="material-symbols-outlined h6">check_box</span>
+                    Caja de seguridad                </div>
+                            <div class="col mb-3">
+                    <span class="material-symbols-outlined h6">check_box</span>
+                    Teléfono                </div>
+                            <div class="col mb-3">
+                    <span class="material-symbols-outlined h6">check_box</span>
+                    Minibar                </div>
+                            <div class="col mb-3">
+                    <span class="material-symbols-outlined h6">check_box</span>
+                    Baño con hidromasaje                </div>
+                    </div>
     </div>
     <!---------------------------------------------------------->
     <p class="h3 m-3 border-bottom">Ubicacion</p>

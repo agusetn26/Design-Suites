@@ -35,4 +35,3 @@ C:\Users\Alumno\Documents\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrinci
 C:\Users\Alumno\Documents\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.csproj.CoreCompileInputs.cache
 C:\Users\Alumno\Documents\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.exe
 C:\Users\Alumno\Documents\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.pdb
-C:\xampp\htdocs\Design-Suites\sistemaPrincipal\obj\Debug\sistemaPrincipal.csproj.SuggestedBindingRedirects.cache

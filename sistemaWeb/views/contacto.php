@@ -1,69 +1,37 @@
-<div class="album py-5 bg-body-tertiary">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title mb-55 mt-30 text-center">
-                            <h2 class="uppercase mb-25">HOTELES</h2>
-                        </div>
-                    </div>
+<?php
+    require_once "modelos/home.php";    
+?>
+<div class="row m-5">
+            <div id="myCarousel" class="carousel slide mb-6 col-xl-6 " data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <?php for ($i = 0; $i < $cantidadHoteles; $i++) { ?>
+                        <button type="button" data-bs-target="#myCarousl" data-bs-slide-to="<?php echo $i ?>" <?php if ($i == 0) { ?>class="active" aria-current="true" <?php } ?>aria-label="Slide <?php echo $i + 1 ?>"></button>
+                    <?php } ?>
                 </div>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-5">
-                    <div class="col hentai">
-                        <div class="card shadow-sm">
-                            <a href="#">
-                                <img class="bd-placeholder-img card-img-top" width="100%" height="200" src="../img/home_bariloche.jpg" alt="Design Suites Bariloche">
-                            </a>
-                            <div class="card-body py-3 px-5" style="background-color: #20233f; ">
-                                <p class="card-text" style="color: white; font-size:20px; font-weight:bold;">BARILOCHE <br>
-                                <p style="color: white;"> Av. Bustillo Km. 2,5 </p>
-                                </p>
+                <div class=" carousel-inner">
+                    <?php foreach ($hotelesCarrusel as $i => $hotel) { ?>
+                        <div class="carousel-item <?php if ($i == 0) { ?>active<?php } ?>">
+                            <div class="content">
+                                <div class="content-overlay"></div> <img class="content-image img-carrusel" src="../img/hoteles/<?php echo basename(dirname($hotel['imagen'])) . "/" . basename($hotel['imagen'])?>" style="width: 1903; height: auto;" alt="">
+                                <div class="content-details fadeIn-bottom">
+                                    <h3 class="content-title" style="font-size: 50px;"><?php echo $hotel["nombre"]?></h3>
+                                    <p class="content-text" style="font-size: 35px;"><i class="fa fa-map-marker"></i> Design Suites Hoteles</p>
+                                </div>
+                    
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col hentai">
-                        <div class="card shadow-sm">
-                            <a href="#">
-                                <img class="bd-placeholder-img card-img-top" width="100%" height="200" src="../img/home_buenos_aires.jpg" alt="Design Suites Bariloche">
-                            </a>
-                            <div class="card-body py-3 px-5" style="background-color: #20233f; ">
-                                <p class="card-text" style="color: white; font-size:20px; font-weight:bold;">BUENOS AIRES <br>
-                                <p style="color: white;"> Tacuarí 243 </p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col hentai">
-                        <div class="card shadow-sm">
-                            <a href="#">
-                                <img class="bd-placeholder-img card-img-top" width="100%" height="200" src="../img/home_calafate.jpg" alt="Design Suites Bariloche">
-                            </a>
-                            <div class="card-body py-3 px-5" style="background-color: #20233f; ">
-                                <p class="card-text" style="color: white; font-size:20px; font-weight:bold;">CALAFATE <br>
-                                <p style="color: white;"> Calle 598, Playa Lago Arg</p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col hentai">
-                        <div class="card shadow-sm">
-                            <a href="#">
-                                <img class="bd-placeholder-img card-img-top" width="100%" height="200" src="../img/home_salta.jpg" alt="Design Suites Bariloche">
-                            </a>
-                            <div class="card-body py-3 px-5" style="background-color: #20233f; ">
-                                <p class="card-text" style="color: white; font-size:20px; font-weight:bold;">SALTA <br>
-                                <p style="color: white;"> Pasaje Castro 215 </p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="col-md-6 ">
+            <div class="col-xl-6 ">
                 <div class="d-none d-md-block contact-form-area fix mtb-30">
                     <h3 class="uppercase mb-25 text-center">CONTACTO</h3>
                     <p></p>
@@ -81,11 +49,9 @@
                             <ul>
                                 <li class="nav-item list-unstyled mx-1">
                                     <select class="form-select">
-                                        <option selected>Seleccione el hotel</option>
-                                        <option value="1">Buenos Aires</option>
-                                        <option value="2">Bariloche</option>
-                                        <option value="3">Calafate</option>
-                                        <option value="4">Salta</option>
+                                        <?php   
+                                            echo $hotelesOp;
+                                        ?>
                                     </select>
                                 </li>
                             </ul>
@@ -139,4 +105,4 @@
             </div>
         </div>
     </div>
-</div>
+</div></div>

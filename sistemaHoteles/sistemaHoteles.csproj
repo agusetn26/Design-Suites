@@ -46,9 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\reservasBLL.cs" />
+    <Compile Include="BLL\reservaEventosBLL.cs" />
+    <Compile Include="BLL\ReservasBLL.cs" />
+    <Compile Include="BLL\reservaHabitacionesBLL.cs" />
     <Compile Include="BLL\suministroBLL.cs" />
-    <Compile Include="DAL\reservasDAL.cs" />
+    <Compile Include="DAL\reservaEventosDAL.cs" />
+    <Compile Include="DAL\reservaHabitacionesDAL.cs" />
     <Compile Include="DAL\suministroDAL.cs" />
     <Compile Include="UI\baseForm.cs">
       <SubType>Form</SubType>
