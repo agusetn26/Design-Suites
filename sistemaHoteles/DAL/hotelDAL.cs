@@ -34,6 +34,7 @@ namespace sistemaHoteles.DAL
         {
             string sql = "UPDATE hoteles SET nombre = @nom, ubicacion = @ubi, descripcion = @desc, telefono = @tel, direccion = @dir, imagen = @img WHERE id_hotel = @idH";
             SqlCommand sqlCom = new SqlCommand(sql);
+            Console.WriteLine(hotel.nombre);
             sqlCom.Parameters.AddWithValue("@nom", hotel.nombre);
             sqlCom.Parameters.AddWithValue("@ubi", hotel.ubicacion);
             sqlCom.Parameters.AddWithValue("@desc", hotel.descripcion);

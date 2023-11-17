@@ -108,7 +108,7 @@ function cancelar_reserva(){
     }
 
     xhr.open("GET", "modelos/cancelar-reserva.php?input-codigo=" + codigo, true);
-console.log(codigo);
+
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4){
             console.log(xhr.status);

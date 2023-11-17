@@ -120,7 +120,7 @@
     </nav>
     
     <div id="reservasOp" style="display: none;">
-        <form action="?sec=reservas" method="POST" class="d-flex flex-wrap justify-content-center align-items-center" onsubmit="alert('Se ha enviado queja'); return false;">
+        <form action="?sec=reservas" method="POST" class="d-flex flex-wrap justify-content-center align-items-center" onsubmit="verifData()">
             <li class="nav-item px-5 my-1">
                 <div class="d-flex gap-2 align-items-center">
                     <span class="material-symbols-outlined" onclick="back()" style="color: white; cursor: pointer;">reply</span>

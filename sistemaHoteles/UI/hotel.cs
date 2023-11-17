@@ -97,7 +97,7 @@ namespace sistemaHoteles
             {
                 hotelBLL hotel = new hotelBLL();
                 hotel.id = idHotel;
-               // hotel.nombre = txtHotel.Text;
+                hotel.nombre = txtHotel.Text;
                 hotel.descripcion = rtxtHotelDesc.Text;
                 hotel.ubicacion = txtUbi.Text;
                 hotel.direccion = txtDir.Text;

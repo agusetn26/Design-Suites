@@ -8,7 +8,7 @@
 
     function selectEvent(id, button){
         let evento = document.querySelector("#event-"+id);
-        let precioEvento = parseInt(evento.querySelector("#costoEvento").innerHTML.split("$")[1]);
+        let precioEvento = parseInt(evento.querySelector("#AcostoEvento").innerHTML);
         let rFinal = document.querySelector("#resultado_final");
 
         let index = seleccionadas.indexOf(id);

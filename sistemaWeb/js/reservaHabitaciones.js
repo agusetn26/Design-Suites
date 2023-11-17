@@ -1,6 +1,8 @@
     let loadingScreen = document.getElementById("loadingScreen");
     let seleccionadas = [];
     let pagoTotal = 0;
+    let roomsAmount = 2;
+    loadRooms(roomsAmount);
 
     function roomPersons(id){
 
@@ -18,8 +20,9 @@
             seleccionadas.push(id);
             roomFocus(id);
         } 
+        console.log(room.querySelector("#costoRoom").innerHTML.split("$"));
 
-        let costo = parseFloat(room.querySelector("#costoRoom").innerHTML.split("$")[1]);
+        let costo = parseFloat(room.querySelector("#AcostoRoom").innerHTML);
         let valorActual = costo * cantPersonas;
 
         room.querySelector("#currentValue").innerHTML = valorActual;
@@ -62,12 +65,12 @@
         submit.disabled = true;
         
         if(seleccionadas.length == 0){                    
-
             alert("Seleccione al menos una habitación para reservar");
             submit.disabled = false;
 
             return;
         }
+
         showLoadingScreen();
 
         for(let i=0; i<seleccionadas.length; i++){
@@ -176,6 +179,24 @@
         xhr.send(formData);
 
         return false;
+    }
+
+    function loadRooms(amount){
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "modelos/paginadorRooms.php", true);
+        
+        xhr.onreadystatechange = function (){
+            if (xhr.readyState == 4){
+                if (xhr.status == 200){
+                    document.getElementById("roomsPaginator").innerHTML = xhr.response;
+                    roomsAmount += 2;
+                } else {
+                    alert("Error de conexión, intentelo más tarde. Estado: " + xhr.status);
+                }
+            }
+        }
+
+        xhr.send("rooms="+amount);
     }
 
     function showLoadingScreen() {
