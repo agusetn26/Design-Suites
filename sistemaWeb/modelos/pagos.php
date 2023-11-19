@@ -1,7 +1,10 @@
 <?php
     require_once "../includes/config.php";
 
-    //print_r($_POST);
+    if(empty($_POST)){
+        echo "<script>window.location.href='index.php';</script>";
+        exit;
+    }
 
     $reservas = json_decode($_POST['reservas']);
     $ids = [];

@@ -28,13 +28,13 @@
         exit;
     }
 
-   /*
+    $sqlRooms = "SELECT * FROM habitaciones INNER JOIN tipoHabitacion ON tipoHabitacion.id_tipoHabitacion = habitaciones.id_tipoHabitacion 
+    WHERE habitaciones.id_hotel = '".$filas[$hotel]['id_hotel']."' AND habitaciones.fecha_baja IS NULL AND habitaciones.id_habitacion NOT IN 
+    (SELECT DISTINCT id_habitacion FROM reservaHabitaciones WHERE checkIn <= '".$checkOut."' AND checkout >= '".$checkIn."')
+    ";
     $qryRooms = sqlsrv_query($conn, $sqlRooms);
 
     if(!$qryRooms){
         die("Error de consulta, comunicarse con soporte");
     }
-    
-    while ($room = sqlsrv_fetch_array($qryRooms, SQLSRV_FETCH_ASSOC));
-    */
 ?>

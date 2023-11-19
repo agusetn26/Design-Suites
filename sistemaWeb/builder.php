@@ -18,13 +18,6 @@
     <?php
         require_once "includes/config.php";
         require_once "modelos/builder.php";
-
-        $hotelesButtons = "";
-        $hotelesOp = "";
-        foreach($filas as $index => $fila){
-            $hotelesButtons .= '<button class="dropdown-item" type="submit" name="hotel" value="'.$index.'">'.$fila['nombre'].'</button>';
-            $hotelesOp .= '<option value="'.$index.'">'.$fila['nombre'].'</option>';
-        }
     ?>
     <!-- Top -->
 
@@ -120,7 +113,7 @@
     </nav>
     
     <div id="reservasOp" style="display: none;">
-        <form action="?sec=reservas" method="POST" class="d-flex flex-wrap justify-content-center align-items-center" onsubmit="verifData()">
+        <form action="?sec=reservas" method="POST" class="d-flex flex-wrap justify-content-center align-items-center" onsubmit="return verifData(this);">
             <li class="nav-item px-5 my-1">
                 <div class="d-flex gap-2 align-items-center">
                     <span class="material-symbols-outlined" onclick="back()" style="color: white; cursor: pointer;">reply</span>

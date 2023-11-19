@@ -1,6 +1,11 @@
 <?php
     date_default_timezone_set("America/Argentina/Buenos_Aires");
-    //echo  date_default_timezone_get();
+
+    if(empty($_POST)){
+      echo "<script>window.location.href='index.php';</script>";
+      exit;
+    }
+    
     $archivo = "reserva" . ucfirst($_POST["type"]) . ".php";
 
     if(!file_exists("modelos/" . $archivo)){

@@ -1,8 +1,8 @@
     let loadingScreen = document.getElementById("loadingScreen");
     let seleccionadas = [];
     let pagoTotal = 0;
-    let roomsAmount = 2;
-    loadRooms(roomsAmount);
+
+    showRooms();
 
     function roomPersons(id){
 
@@ -181,22 +181,19 @@
         return false;
     }
 
-    function loadRooms(amount){
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "modelos/paginadorRooms.php", true);
-        
-        xhr.onreadystatechange = function (){
-            if (xhr.readyState == 4){
-                if (xhr.status == 200){
-                    document.getElementById("roomsPaginator").innerHTML = xhr.response;
-                    roomsAmount += 2;
-                } else {
-                    alert("Error de conexión, intentelo más tarde. Estado: " + xhr.status);
-                }
-            }
+    function showRooms(){
+        let notDisplayed = document.querySelectorAll("#roomsPaginator > div.d-none");
+
+        if (notDisplayed.length == 0) {
+            document.getElementById("displayRooms").classList.add("d-none");
+            return;
         }
 
-        xhr.send("rooms="+amount);
+        for(let i=0; i< Math.min(5, notDisplayed.length); i++){
+            notDisplayed[i].classList.remove("d-none");
+            notDisplayed[i].classList.add("d-block");
+        }
+
     }
 
     function showLoadingScreen() {

@@ -1,3 +1,9 @@
+<?php
+    if(empty($_POST)){
+        echo "<script>window.location.href='index.php';</script>";
+        exit;
+    }
+?>
 
 <div class="container my-5" style="max-width: 500px;">
     <div class="alert alert-success text-center p-4">

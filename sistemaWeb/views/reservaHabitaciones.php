@@ -30,17 +30,15 @@
         <div class="col-sm bg-dark h4 p-3 text-light rounded">
             Habitaciones
         </div>
+        <div id="roomsPaginator">
         <?php
         if (sqlsrv_has_rows($qryRooms) == 0) {
             echo '<div class="fs-1 fw-bold text-center my-5">No se encontraron habitaciones disponibles para las fechas ingresadas</div>';
         } 
         else {
-            //while ($room = sqlsrv_fetch_array($qryRooms, SQLSRV_FETCH_ASSOC)) {
+            while ($room = sqlsrv_fetch_array($qryRooms, SQLSRV_FETCH_ASSOC)) {
         ?>
-        <div id="roomsPaginator">
-
-        </div>
-                <div class="col bg-gris text-light p-3 mb-2 rounded rectangulo border border-2" id="room-<?php echo $room['id_habitacion'] ?>">
+            <div class="col bg-gris text-light p-3 mb-2 rounded rectangulo border border-2 d-none" id="room-<?php echo $room['id_habitacion'] ?>">
                     <div class="row">
                         <div class="col-lg-6">
                             <a href="?sec=habitaciones&idHab=1&idH=1">
@@ -98,7 +96,6 @@
                                 </div>
                             </div>
                             <div class="my-3"></div>
-
                             <div>
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h6>Cant. de personas</h6><abbr class="derecha" title="Para seleccionar el hotel cambie la cantidad de personas">
@@ -129,8 +126,10 @@
                         </div>
                     </div>
                 </div>
-        <?php //}
+        <?php }
         } ?>
+        </div>
+        <div class="btn btn-dark w-100 fs-3" onclick="showRooms()" id="displayRooms">...</div>
     </div>
 
     <!-- der -->

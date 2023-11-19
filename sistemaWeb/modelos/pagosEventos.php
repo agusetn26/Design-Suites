@@ -50,8 +50,8 @@
     $qry = sqlsrv_query($conn, $sql, $params);
 
     if (!$qry) {
-        die(print_r(sqlsrv_errors(), true));
-      
+        header("HTTP/1.1 500 Internal Server Error");
+        exit;
     }
 
     if(sqlsrv_fetch($qry)){
