@@ -38,12 +38,7 @@
                         </div>
                     </div>
                     <!-- Otros campos del formulario aquí -->
-                    <div class="row mb-3">
-                        <div class="col-md-8">
-                            <label for="cupon_membresia" class="form-label text-muted">Ingrese cupón de Membresía (opcional):</label>
-                            <input type="text" id="cupon_membresia" name="cupon_membresia" class="form-control bg-light border">
-                        </div>
-                    </div>
+                  
                     <input type="hidden" id="inDateValue" name="inDate">
                     <input type="hidden" id="checkInValue" name="checkIn">
                     <input type="hidden" id="checkOutValue" name="checkOut">
